@@ -1,0 +1,2 @@
+# idempierelpy
+LPY Idempiere Localization
