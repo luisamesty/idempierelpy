@@ -59,9 +59,18 @@ CREATE Database:
 ````
 </div>
 
+##### RENAME Postgres Database
+<div style="padding-left: 20px;">
+RENAME IF NECESSARY ONLY FOR KEEP a BACKUP
+
+````
+Postgres Commands:
+# ALTER DATABASE "idempiereSeed11" RENAME TO "idempiereSeed11_Backup"
+````
+</div>
+
 ##### EXIT Postgres
 <div style="padding-left: 20px;">
-DROP IF NECESSARY ONLY
 
 ````
 Postgres Commands:
