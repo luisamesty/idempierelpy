@@ -1,10 +1,10 @@
 
 &lArr;[Installing CentOS](./README_installCentOS.md) | [Installing CentOS](./README_installCentOS.md) | [Config PostgreSQL 15 ](./ConfigPostgreSQL.md) &rArr;
 
-#### MAQUINA BASE DATOS
+#### DATABASE MACHINE
 ````
-Instalar en la maquina que ejecuta el manejador de base de datos.
-ssh root@maquina-postgresql.com -p 22
+Install in the machine that it is executing DDBB.
+$ ssh root@maquina-postgresql.com -p 22
 ````
 
 #### Install the repository RPM:
