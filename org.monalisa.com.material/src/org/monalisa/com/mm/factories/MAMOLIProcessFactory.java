@@ -1,12 +1,13 @@
 package org.monalisa.com.mm.factories;
 
+
 import org.adempiere.base.IProcessFactory;
 import org.compiere.process.ProcessCall;
 import org.compiere.util.CLogger;
 import org.monalisa.com.mm.process.MOLIImportProduct;
 
-public class MOLIProcessFactory implements IProcessFactory {
-	private final static CLogger log = CLogger.getCLogger(MOLIProcessFactory.class);
+public class MAMOLIProcessFactory implements IProcessFactory {
+	private final static CLogger log = CLogger.getCLogger(MAMOLIProcessFactory.class);
 
 	@Override
 	public ProcessCall newProcessInstance(String p_className) {

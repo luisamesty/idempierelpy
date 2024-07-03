@@ -1,5 +1,6 @@
 package org.monalisa.com.mm.factories;
 
+
 import java.sql.ResultSet;
 
 import org.adempiere.base.IModelFactory;
@@ -9,9 +10,10 @@ import org.compiere.util.Env;
 import org.monalisa.com.mm.model.I_I_Product_Moli;
 import org.monalisa.com.mm.model.MOLI_I_Product;
 
-public class MOLIModelFactory implements IModelFactory {
 
-	private final static CLogger log = CLogger.getCLogger(MOLIModelFactory.class);
+public class MAMOLIModelFactory implements IModelFactory {
+
+	private final static CLogger log = CLogger.getCLogger(MAMOLIModelFactory.class);
 
 	@Override
 	public Class<?> getClass(String tableName) {

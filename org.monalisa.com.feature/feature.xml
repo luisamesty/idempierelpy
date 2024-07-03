@@ -17,7 +17,20 @@
    </license>
    
    <plugin
+         id="org.monalisa.com.bpartners"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+   <plugin
          id="org.monalisa.com.material"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.monalisa.com.personnel"
          download-size="0"
          install-size="0"
          version="0.0.0"

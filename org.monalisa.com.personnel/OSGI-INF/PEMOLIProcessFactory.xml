@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.monalisa.com.mm.process.factory">
-   <implementation class="org.monalisa.com.mm.factories.MOLIProcessFactory"/>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.monalisa.com.pe.process.factory">
+   <implementation class="org.monalisa.com.pe.factories.PEMOLIProcessFactory"/>
    <property name="service.ranking" type="Integer" value="100"/>
    <service>
       <provide interface="org.adempiere.base.IProcessFactory"/>
