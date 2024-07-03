@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>org.monalisa.com.base</artifactId>
+  <name>org.monalisa.com.base</name>
+  <description>MOLI Models </description>
+  <parent>
+  	<groupId>org.idempiere</groupId>
+  	<artifactId>org.idempiere.parent</artifactId>
+  	<relativePath>../../idempiere/org.idempiere.parent/pom.xml</relativePath>
+  	<version>11.0.0-SNAPSHOT</version>
+  </parent>
+  <packaging>eclipse-plugin</packaging>
+  <build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-clean-plugin</artifactId>
+            <configuration>
+                <excludeDefaultDirectories>true</excludeDefaultDirectories>
+            </configuration>
+        </plugin>
+    </plugins>
+   </build>  
+</project>

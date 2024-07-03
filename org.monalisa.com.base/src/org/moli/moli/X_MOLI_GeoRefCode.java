@@ -1,0 +1,209 @@
+/******************************************************************************
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
+ * This program is free software, you can redistribute it and/or modify it    *
+ * under the terms version 2 of the GNU General Public License as published   *
+ * by the Free Software Foundation. This program is distributed in the hope   *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
+ * See the GNU General Public License for more details.                       *
+ * You should have received a copy of the GNU General Public License along    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
+ * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
+ * For the text or an alternative of this public license, you may reach us    *
+ * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
+ * or via info@compiere.org or http://www.compiere.org/license.html           *
+ *****************************************************************************/
+/** Generated Model - DO NOT CHANGE */
+package org.moli.moli;
+
+import java.sql.ResultSet;
+import java.util.Properties;
+import org.compiere.model.*;
+
+/** Generated Model for MOLI_GEOREFCODE
+ *  @author iDempiere (generated)
+ *  @version Release 11 - $Id$ */
+@org.adempiere.base.Model(table="MOLI_GEOREFCODE")
+public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persistent
+{
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 20241009L;
+
+    /** Standard Constructor */
+    public X_MOLI_GeoRefCode (Properties ctx, int MOLI_GEOREFCODE_ID, String trxName)
+    {
+      super (ctx, MOLI_GEOREFCODE_ID, trxName);
+      /** if (MOLI_GEOREFCODE_ID == 0)
+        {
+        } */
+    }
+
+    /** Standard Constructor */
+    public X_MOLI_GeoRefCode (Properties ctx, int MOLI_GEOREFCODE_ID, String trxName, String ... virtualColumns)
+    {
+      super (ctx, MOLI_GEOREFCODE_ID, trxName, virtualColumns);
+      /** if (MOLI_GEOREFCODE_ID == 0)
+        {
+        } */
+    }
+
+    /** Standard Constructor */
+    public X_MOLI_GeoRefCode (Properties ctx, String MOLI_GEOREFCODE_UU, String trxName)
+    {
+      super (ctx, MOLI_GEOREFCODE_UU, trxName);
+      /** if (MOLI_GEOREFCODE_UU == null)
+        {
+        } */
+    }
+
+    /** Standard Constructor */
+    public X_MOLI_GeoRefCode (Properties ctx, String MOLI_GEOREFCODE_UU, String trxName, String ... virtualColumns)
+    {
+      super (ctx, MOLI_GEOREFCODE_UU, trxName, virtualColumns);
+      /** if (MOLI_GEOREFCODE_UU == null)
+        {
+        } */
+    }
+
+    /** Load Constructor */
+    public X_MOLI_GeoRefCode (Properties ctx, ResultSet rs, String trxName)
+    {
+      super (ctx, rs, trxName);
+    }
+
+    /** AccessLevel
+      * @return 4 - System
+      */
+    protected int get_AccessLevel()
+    {
+      return accessLevel.intValue();
+    }
+
+    /** Load Meta Data */
+    protected POInfo initPO (Properties ctx)
+    {
+      POInfo poi = POInfo.getPOInfo (ctx, Table_ID, get_TrxName());
+      return poi;
+    }
+
+    public String toString()
+    {
+      StringBuilder sb = new StringBuilder ("X_MOLI_GEOREFCODE[")
+        .append(get_ID()).append(",Name=").append(getName()).append("]");
+      return sb.toString();
+    }
+
+	/** Set Geo Ref Code Department Key.
+		@param MOLI_GeoRefCode_DepartmentKey Geo Ref Code Department Key
+	*/
+	public void setMOLI_GeoRefCode_DepartmentKey (String MOLI_GeoRefCode_DepartmentKey)
+	{
+		set_Value (COLUMNNAME_MOLI_GeoRefCode_DepartmentKey, MOLI_GeoRefCode_DepartmentKey);
+	}
+
+	/** Get Geo Ref Code Department Key.
+		@return Geo Ref Code Department Key	  */
+	public String getMOLI_GeoRefCode_DepartmentKey()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_GeoRefCode_DepartmentKey);
+	}
+
+	/** Set Geo Ref Code Department Name.
+		@param MOLI_GeoRefCode_DepartmentName Geo Ref Code Department Name
+	*/
+	public void setMOLI_GeoRefCode_DepartmentName (String MOLI_GeoRefCode_DepartmentName)
+	{
+		set_Value (COLUMNNAME_MOLI_GeoRefCode_DepartmentName, MOLI_GeoRefCode_DepartmentName);
+	}
+
+	/** Get Geo Ref Code Department Name.
+		@return Geo Ref Code Department Name	  */
+	public String getMOLI_GeoRefCode_DepartmentName()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_GeoRefCode_DepartmentName);
+	}
+
+	/** Set Geo Ref Code ID.
+		@param MOLI_GeoRefCode_Id Geo Ref Code ID
+	*/
+	public void setMOLI_GeoRefCode_Id (int MOLI_GeoRefCode_Id)
+	{
+		set_ValueNoCheck (COLUMNNAME_MOLI_GeoRefCode_Id, Integer.valueOf(MOLI_GeoRefCode_Id));
+	}
+
+	/** Get Geo Ref Code ID.
+		@return Geo Ref Code ID	  */
+	public int getMOLI_GeoRefCode_Id()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_MOLI_GeoRefCode_Id);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Geo Ref Code Section Key.
+		@param MOLI_GeoRefCode_SectionKey Geo Ref Code Section Key
+	*/
+	public void setMOLI_GeoRefCode_SectionKey (String MOLI_GeoRefCode_SectionKey)
+	{
+		set_Value (COLUMNNAME_MOLI_GeoRefCode_SectionKey, MOLI_GeoRefCode_SectionKey);
+	}
+
+	/** Get Geo Ref Code Section Key.
+		@return Geo Ref Code Section Key	  */
+	public String getMOLI_GeoRefCode_SectionKey()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_GeoRefCode_SectionKey);
+	}
+
+	/** Set Geo Ref Code Section Name.
+		@param MOLI_GeoRefCode_SectionName Geo Ref Code Section Name
+	*/
+	public void setMOLI_GeoRefCode_SectionName (String MOLI_GeoRefCode_SectionName)
+	{
+		set_Value (COLUMNNAME_MOLI_GeoRefCode_SectionName, MOLI_GeoRefCode_SectionName);
+	}
+
+	/** Get Geo Ref Code Section Name.
+		@return Geo Ref Code Section Name	  */
+	public String getMOLI_GeoRefCode_SectionName()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_GeoRefCode_SectionName);
+	}
+
+	/** Set Name.
+		@param Name Alphanumeric identifier of the entity
+	*/
+	public void setName (String Name)
+	{
+		set_Value (COLUMNNAME_Name, Name);
+	}
+
+	/** Get Name.
+		@return Alphanumeric identifier of the entity
+	  */
+	public String getName()
+	{
+		return (String)get_Value(COLUMNNAME_Name);
+	}
+
+	/** Set Search Key.
+		@param Value Search key for the record in the format required - must be unique
+	*/
+	public void setValue (String Value)
+	{
+		set_Value (COLUMNNAME_Value, Value);
+	}
+
+	/** Get Search Key.
+		@return Search key for the record in the format required - must be unique
+	  */
+	public String getValue()
+	{
+		return (String)get_Value(COLUMNNAME_Value);
+	}
+}
