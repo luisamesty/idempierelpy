@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+    <feature 
+    	url="features/org.monalisa.com.feature_11.0.0.qualifier.jar" 
+    	id="org.monalisa.com.feature" version="11.0.0.qualifier">
+	    <category name="org.monalisa.com"/>
+    </feature>
+</site>
