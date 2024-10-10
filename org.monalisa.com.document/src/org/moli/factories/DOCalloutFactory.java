@@ -23,21 +23,21 @@ public class DOCalloutFactory implements IColumnCalloutFactory {
 		// TableRef: C_Invoice
 		// *********************************
 		if (tableName.equalsIgnoreCase(MInvoice.Table_Name)) {
-			// FieldRef: C_DocType_ID
-			if (columnName.equalsIgnoreCase(MInvoice.COLUMNNAME_C_DocType_ID)) {
-				log.warning("-------------AMDCalloutFactory tableName:"+tableName+"  columnName:"+columnName);
-				list.add(new DO_Invoice_callout());
-			}
-			// FieldRef: C_DocTypeTarget_ID
-			if (columnName.equalsIgnoreCase(MInvoice.COLUMNNAME_C_DocTypeTarget_ID)) {
-				log.warning("-------------AMDCalloutFactory tableName:"+tableName+"  columnName:"+columnName);
-				list.add(new DO_Invoice_callout());
-			}
-			// FieldRef: AD_Org_ID
-			if (columnName.equalsIgnoreCase(MInvoice.COLUMNNAME_AD_Org_ID)) {
-				log.warning("-------------AMDCalloutFactory tableName:"+tableName+"  columnName:"+columnName);
-				list.add(new DO_Invoice_callout());
-			}
+//			// FieldRef: C_DocType_ID
+//			if (columnName.equalsIgnoreCase(MInvoice.COLUMNNAME_C_DocType_ID)) {
+//				log.warning("------------MO-AMDCalloutFactory tableName:"+tableName+"  columnName:"+columnName);
+//				list.add(new DO_Invoice_callout());
+//			}
+//			// FieldRef: C_DocTypeTarget_ID
+//			if (columnName.equalsIgnoreCase(MInvoice.COLUMNNAME_C_DocTypeTarget_ID)) {
+//				log.warning("------------MO-AMDCalloutFactory tableName:"+tableName+"  columnName:"+columnName);
+//				list.add(new DO_Invoice_callout());
+//			}
+//			// FieldRef: AD_Org_ID
+//			if (columnName.equalsIgnoreCase(MInvoice.COLUMNNAME_AD_Org_ID)) {
+//				log.warning("------------MO-AMDCalloutFactory tableName:"+tableName+"  columnName:"+columnName);
+//				list.add(new DO_Invoice_callout());
+//			}
 		}
 		return list != null ? list.toArray(new IColumnCallout[0]) : new IColumnCallout[0];
 	}
