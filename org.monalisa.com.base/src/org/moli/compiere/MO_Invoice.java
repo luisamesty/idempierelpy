@@ -58,10 +58,12 @@ public class MO_Invoice extends MInvoice {
 	{
 		log.warning("---- MO_Invoice afterSave ------ newRecord="+newRecord );
 		// Set DocumentNo Field 
-		String OrgDocumentNo = getAD_Sequence_No( getCtx(), getC_DocTypeTarget_ID(), getAD_Org_ID());
-		log.warning("---- MO_Invoice afterSave ------ OrgDocumentNo="+OrgDocumentNo );
-		if (OrgDocumentNo.compareToIgnoreCase("?") != 0)
-			updateDocumentNoOrg(OrgDocumentNo);
+		if(newRecord) {
+			String OrgDocumentNo = getAD_Sequence_No( getCtx(), getC_DocTypeTarget_ID(), getAD_Org_ID());
+			log.warning("---- MO_Invoice afterSave ------ OrgDocumentNo="+OrgDocumentNo );
+			if (OrgDocumentNo.compareToIgnoreCase("?") != 0)
+				updateDocumentNoOrg(OrgDocumentNo);
+		}
 		return success;
 	}	//	afterSave
 
