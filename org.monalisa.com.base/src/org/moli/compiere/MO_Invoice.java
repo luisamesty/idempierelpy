@@ -126,8 +126,13 @@ public class MO_Invoice extends MInvoice {
 					DocumentNo = String.valueOf(AD_Sequence_No);
 				if (DocumentNo == null)
 					DocumentNo = "?????";
-				retValue= Prefix+DocumentNo+Suffix;
+				// COncatenate Prefix and Suffix When not null
+				if (Prefix !=null && !Prefix.isEmpty())
+					retValue= Prefix+DocumentNo;
+				if (Suffix !=null && !Suffix.isEmpty())
+					retValue= retValue+Suffix;
 			} else {
+				// Default AD_Sequence Number when no Org Sequence is found
 				retValue= DocumentNo;
 			}
 			//	
