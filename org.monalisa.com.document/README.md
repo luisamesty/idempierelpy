@@ -25,8 +25,8 @@ Monalisa Document Plugin is related to Business Logic applied to Documents.
 | Item  | Description                                    | Table             
 | ----: | ---------------------------------------------- | -----------------
 |     1 | [Invoices ](#step1)                			 | C_Invoice  
-|     2 | [Payments ](#step2)                | C_Payment 
-|     3 | [Inventory Movements ](#step3)              | M_InOut 
+|     2 | [Payments ](#step2)                            | C_Payment 
+|     3 | [Inventory Movements ](#step3)                 | M_InOut 
 
 ## <a name="step1"></a>⭐️1 <b>Invoices</b>
 
@@ -57,7 +57,7 @@ This feature ..
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 
-## <a name="step2"></a>⭐️3.<b>Inventory Movements</b>
+## <a name="step3"></a>⭐️3.<b>Inventory Movements</b>
 
 This feature ..
 
