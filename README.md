@@ -29,12 +29,10 @@ For more information on How to build idempiere Maven projects, see on Wiki:
 - [Monalisa Personnel](./org.monalisa.com.personnel/README.md)
 
 ## <b>Wiki Idempiere</b>
--[AMERPSOFT Editor - Extended Location](http://wiki.idempiere.org/en/Plugin:_Extended_Location)
-
--[AMERPSOFT Themes](https://wiki.idempiere.org/en/Plugin:_Themes_Amerpsoft)
-
--[Building iDempiere Plugins with Maven](https://wiki.idempiere.org/en/Building_iDempiere_Plugins_with_Maven)
+- [AMERPSOFT Editor - Extended Location](http://wiki.idempiere.org/en/Plugin:_Extended_Location)
+- [AMERPSOFT Themes](https://wiki.idempiere.org/en/Plugin:_Themes_Amerpsoft)
+- [Building iDempiere Plugins with Maven](https://wiki.idempiere.org/en/Building_iDempiere_Plugins_with_Maven)
 
 
-#### Updated for Idempiere release 11 - March 2024
-  Under Test - See release-11 branch.
+#### Updated for Idempiere release 11 -October 2024
+  Under Test - See main branch.
