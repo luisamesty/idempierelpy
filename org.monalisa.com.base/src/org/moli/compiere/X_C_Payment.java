@@ -35,7 +35,7 @@ public class X_C_Payment extends PO implements I_C_Payment, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241009L;
+	private static final long serialVersionUID = 20241017L;
 
     /** Standard Constructor */
     public X_C_Payment (Properties ctx, int C_Payment_ID, String trxName)
@@ -1654,6 +1654,22 @@ public class X_C_Payment extends PO implements I_C_Payment, I_Persistent
 	public String getMicr()
 	{
 		return (String)get_Value(COLUMNNAME_Micr);
+	}
+
+	/** Set Fiscal Document NO.
+		@param MOLI_FiscalDocumentNo Fiscal Document NO
+	*/
+	public void setMOLI_FiscalDocumentNo (String MOLI_FiscalDocumentNo)
+	{
+		set_Value (COLUMNNAME_MOLI_FiscalDocumentNo, MOLI_FiscalDocumentNo);
+	}
+
+	/** Get Fiscal Document NO.
+		@return Fiscal Document NO
+	  */
+	public String getMOLI_FiscalDocumentNo()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_FiscalDocumentNo);
 	}
 
 	/** Set Floreant Data.

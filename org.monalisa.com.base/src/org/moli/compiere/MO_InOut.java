@@ -8,88 +8,58 @@ import java.text.DecimalFormat;
 import java.util.Properties;
 import java.util.logging.Level;
 
-import org.adempiere.exceptions.AdempiereException;
-import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
 import org.compiere.model.MInvoice;
-import org.compiere.model.MInvoiceBatch;
-import org.compiere.model.MInvoiceBatchLine;
 import org.compiere.model.MOrder;
 import org.compiere.model.MSequence;
 import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
 
-public class MO_Invoice extends MInvoice {
+public class MO_InOut extends MInOut{
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 3900680924929341732L;
 
-	/**	Process Message 			*/
-	private String		am_processMsg = null;
+	static CLogger log = CLogger.getCLogger(MO_InOut.class);
 	
-	static CLogger log = CLogger.getCLogger(MO_Invoice.class);
-	
-	public MO_Invoice(MInOut ship, Timestamp invoiceDate) {
-		super(ship, invoiceDate);
-		// 
-	}
-
-	public MO_Invoice(MInvoice copy) {
-		super(copy);
-		// 
-	}
-
-	public MO_Invoice(MInvoiceBatch batch, MInvoiceBatchLine line) {
-		super(batch, line);
-		// 
-	}
-
-	public MO_Invoice(MOrder order, int C_DocTypeTarget_ID, Timestamp invoiceDate) {
-		super(order, C_DocTypeTarget_ID, invoiceDate);
+	public MO_InOut(MInOut original, int C_DocTypeShipment_ID, Timestamp movementDate) {
+		super(original, C_DocTypeShipment_ID, movementDate);
 		// 
 	}
 	
-	public MO_Invoice(Properties ctx, int C_Invoice_ID, String trxName) {
-		super(ctx, C_Invoice_ID, trxName);
+	public MO_InOut(MInvoice invoice, int C_DocTypeShipment_ID, Timestamp movementDate, int M_Warehouse_ID) {
+		super(invoice, C_DocTypeShipment_ID, movementDate, M_Warehouse_ID);
+		// 
+	}
+	
+	public MO_InOut(MOrder order, int C_DocTypeShipment_ID, Timestamp movementDate) {
+		super(order, C_DocTypeShipment_ID, movementDate);
 		// 
 	}
 
-	public MO_Invoice(Properties ctx, int C_Invoice_ID, String trxName, String[] virtualColumns) {
-		super(ctx, C_Invoice_ID, trxName, virtualColumns);
+
+	public MO_InOut(Properties ctx, int M_InOut_ID, String trxName) {
+		super(ctx, M_InOut_ID, trxName);
 		// 
 	}
 
-	public MO_Invoice(Properties ctx, MInvoice copy) {
-		super(ctx, copy);
-		// TODO Auto-generated constructor stub
+
+	public MO_InOut(Properties ctx, int M_InOut_ID, String trxName, String[] virtualColumns) {
+		super(ctx, M_InOut_ID, trxName, virtualColumns);
+		// 
 	}
 
 
-	public MO_Invoice(Properties ctx, MInvoice copy, String trxName) {
-		super(ctx, copy, trxName);
-		// TODO Auto-generated constructor stub
-	}
-
-	public MO_Invoice(Properties ctx, ResultSet rs, String trxName) {
+	public MO_InOut(Properties ctx, ResultSet rs, String trxName) {
 		super(ctx, rs, trxName);
-		// TODO Auto-generated constructor stub
+		// 
 	}
 
-	public MO_Invoice(Properties ctx, String C_Invoice_UU, String trxName) {
-		super(ctx, C_Invoice_UU, trxName);
-		// TODO Auto-generated constructor stub
+	public MO_InOut(Properties ctx, String M_InOut_UU, String trxName) {
+		super(ctx, M_InOut_UU, trxName);
+		//
 	}
 
-
-
-	public String getAm_processMsg() {
-		return am_processMsg;
-	}
-
-	public void setAm_processMsg(String am_processMsg) {
-		this.am_processMsg = am_processMsg;
-	}
-	
 	/**
 	 * 	Called after Save for Post-Save Operation
 	 * 	@param newRecord new record
@@ -98,11 +68,11 @@ public class MO_Invoice extends MInvoice {
 	 */
 	protected boolean afterSave (boolean newRecord, boolean success)
 	{
-		log.warning("---- MO_Invoice afterSave ------ newRecord="+newRecord );
+		log.warning("---- MO_InOut afterSave ------ newRecord="+newRecord );
 		// Set DocumentNo Field 
 		if(newRecord) {
-			String OrgDocumentNo = getAD_Sequence_No( getCtx(), getC_DocTypeTarget_ID(), getAD_Org_ID());
-			log.warning("---- MO_Invoice afterSave ------ OrgDocumentNo="+OrgDocumentNo );
+			String OrgDocumentNo = getAD_Sequence_No( getCtx(), getC_DocType_ID(), getAD_Org_ID());
+			log.warning("---- MO_InOut afterSave ------ OrgDocumentNo="+OrgDocumentNo );
 			if (OrgDocumentNo.compareToIgnoreCase("?") != 0) {
 				updateDocumentNoOrg(OrgDocumentNo);
 				updateMOLIDocumentNoOrg(OrgDocumentNo);
@@ -110,7 +80,7 @@ public class MO_Invoice extends MInvoice {
 		}
 		return success;
 	}	//	afterSave
-
+	
 	/**
 	 * getAD_Sequence_No
 	 * @param ctx
@@ -186,7 +156,7 @@ public class MO_Invoice extends MInvoice {
 	}
 	
 	/**
-	 * updateDocumentNoOrg
+	 * updateDocumentNoOrg on M_InOut
 	 * @param DocumentNoOrg
 	 * @return
 	 */
@@ -196,7 +166,7 @@ public class MO_Invoice extends MInvoice {
 		if (DocumentNoOrg == null || DocumentNoOrg.isEmpty())
 			return 0;
 		// Update
-		StringBuilder msgdb = new StringBuilder("UPDATE C_Invoice Set DocumentNo='"+DocumentNoOrg+"' WHERE C_Invoice_ID=").append(getC_Invoice_ID());
+		StringBuilder msgdb = new StringBuilder("UPDATE M_InOut Set DocumentNo='"+DocumentNoOrg+"' WHERE M_InOut_ID=").append(getM_InOut_ID());
 		return DB.executeUpdateEx(msgdb.toString(), get_TrxName());
 	}	//	updateDocumentNoOrg
 	
@@ -211,7 +181,8 @@ public class MO_Invoice extends MInvoice {
 		if (DocumentNoOrg == null || DocumentNoOrg.isEmpty())
 			return 0;
 		// Update
-		StringBuilder msgdb = new StringBuilder("UPDATE C_Invoice Set MOLI_FiscalDocumentNo='"+DocumentNoOrg+"' WHERE C_Invoice_ID=").append(getC_Invoice_ID());
+		StringBuilder msgdb = new StringBuilder("UPDATE M_InOut Set MOLI_FiscalDocumentNo='"+DocumentNoOrg+"' WHERE M_InOut_ID=").append(getM_InOut_ID());
 		return DB.executeUpdateEx(msgdb.toString(), get_TrxName());
 	}	//	updateDocumentNoOrg
+	
 }
