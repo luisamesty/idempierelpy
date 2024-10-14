@@ -22,7 +22,8 @@ Require-Bundle: org.adempiere.base;bundle-version="0.0.0",
  zul;bundle-version="0.0.0",
  zweb;bundle-version="0.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Service-Component: OSGI-INF/DOModelFactory.xml,OSGI-INF/DOCalloutFactory.xml
+Service-Component: OSGI-INF/DOModelFactory.xml,OSGI-INF/DOCalloutFactory.xml,
+ OSGI-INF/DOProcessFactory.xml
 Import-Package: 
  org.compiere.apps
 Bundle-Vendor: Monalisa
