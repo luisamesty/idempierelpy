@@ -920,6 +920,19 @@ public interface I_C_Payment
 	  */
 	public String getMicr();
 
+    /** Column name MOLI_FiscalDocumentNo */
+    public static final String COLUMNNAME_MOLI_FiscalDocumentNo = "MOLI_FiscalDocumentNo";
+
+	/** Set Fiscal Document NO.
+	  * Fiscal Document NO
+	  */
+	public void setMOLI_FiscalDocumentNo (String MOLI_FiscalDocumentNo);
+
+	/** Get Fiscal Document NO.
+	  * Fiscal Document NO
+	  */
+	public String getMOLI_FiscalDocumentNo();
+
     /** Column name MOLI_Floreant_Data */
     public static final String COLUMNNAME_MOLI_Floreant_Data = "MOLI_Floreant_Data";
 
