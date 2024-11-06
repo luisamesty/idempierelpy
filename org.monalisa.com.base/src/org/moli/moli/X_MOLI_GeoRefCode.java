@@ -21,51 +21,55 @@ import java.sql.ResultSet;
 import java.util.Properties;
 import org.compiere.model.*;
 
-/** Generated Model for MOLI_GEOREFCODE
+/** Generated Model for MOLI_GeoRefCode
  *  @author iDempiere (generated)
  *  @version Release 11 - $Id$ */
-@org.adempiere.base.Model(table="MOLI_GEOREFCODE")
+@org.adempiere.base.Model(table="MOLI_GeoRefCode")
 public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persistent
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241009L;
+	private static final long serialVersionUID = 20241111L;
 
     /** Standard Constructor */
-    public X_MOLI_GeoRefCode (Properties ctx, int MOLI_GEOREFCODE_ID, String trxName)
+    public X_MOLI_GeoRefCode (Properties ctx, int MOLI_GeoRefCode_ID, String trxName)
     {
-      super (ctx, MOLI_GEOREFCODE_ID, trxName);
-      /** if (MOLI_GEOREFCODE_ID == 0)
+      super (ctx, MOLI_GeoRefCode_ID, trxName);
+      /** if (MOLI_GeoRefCode_ID == 0)
         {
+			setMOLI_GeoRefCode_Id (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_MOLI_GeoRefCode (Properties ctx, int MOLI_GEOREFCODE_ID, String trxName, String ... virtualColumns)
+    public X_MOLI_GeoRefCode (Properties ctx, int MOLI_GeoRefCode_ID, String trxName, String ... virtualColumns)
     {
-      super (ctx, MOLI_GEOREFCODE_ID, trxName, virtualColumns);
-      /** if (MOLI_GEOREFCODE_ID == 0)
+      super (ctx, MOLI_GeoRefCode_ID, trxName, virtualColumns);
+      /** if (MOLI_GeoRefCode_ID == 0)
         {
+			setMOLI_GeoRefCode_Id (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_MOLI_GeoRefCode (Properties ctx, String MOLI_GEOREFCODE_UU, String trxName)
+    public X_MOLI_GeoRefCode (Properties ctx, String MOLI_GeoRefCode_UU, String trxName)
     {
-      super (ctx, MOLI_GEOREFCODE_UU, trxName);
-      /** if (MOLI_GEOREFCODE_UU == null)
+      super (ctx, MOLI_GeoRefCode_UU, trxName);
+      /** if (MOLI_GeoRefCode_UU == null)
         {
+			setMOLI_GeoRefCode_Id (0);
         } */
     }
 
     /** Standard Constructor */
-    public X_MOLI_GeoRefCode (Properties ctx, String MOLI_GEOREFCODE_UU, String trxName, String ... virtualColumns)
+    public X_MOLI_GeoRefCode (Properties ctx, String MOLI_GeoRefCode_UU, String trxName, String ... virtualColumns)
     {
-      super (ctx, MOLI_GEOREFCODE_UU, trxName, virtualColumns);
-      /** if (MOLI_GEOREFCODE_UU == null)
+      super (ctx, MOLI_GeoRefCode_UU, trxName, virtualColumns);
+      /** if (MOLI_GeoRefCode_UU == null)
         {
+			setMOLI_GeoRefCode_Id (0);
         } */
     }
 
@@ -76,7 +80,7 @@ public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persis
     }
 
     /** AccessLevel
-      * @return 4 - System
+      * @return 3 - Client - Org
       */
     protected int get_AccessLevel()
     {
@@ -92,7 +96,7 @@ public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persis
 
     public String toString()
     {
-      StringBuilder sb = new StringBuilder ("X_MOLI_GEOREFCODE[")
+      StringBuilder sb = new StringBuilder ("X_MOLI_GeoRefCode[")
         .append(get_ID()).append(",Name=").append(getName()).append("]");
       return sb.toString();
     }
@@ -173,6 +177,21 @@ public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persis
 	public String getMOLI_GeoRefCode_SectionName()
 	{
 		return (String)get_Value(COLUMNNAME_MOLI_GeoRefCode_SectionName);
+	}
+
+	/** Set Geo Ref Code UUID.
+		@param MOLI_GeoRefCode_UU Geo Ref Code UUID
+	*/
+	public void setMOLI_GeoRefCode_UU (String MOLI_GeoRefCode_UU)
+	{
+		set_Value (COLUMNNAME_MOLI_GeoRefCode_UU, MOLI_GeoRefCode_UU);
+	}
+
+	/** Get Geo Ref Code UUID.
+		@return Geo Ref Code UUID	  */
+	public String getMOLI_GeoRefCode_UU()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_GeoRefCode_UU);
 	}
 
 	/** Set Name.
