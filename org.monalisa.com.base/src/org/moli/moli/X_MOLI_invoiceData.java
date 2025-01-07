@@ -31,7 +31,7 @@ public class X_MOLI_invoiceData extends PO implements I_MOLI_invoiceData, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20250107L;
 
     /** Standard Constructor */
     public X_MOLI_invoiceData (Properties ctx, int MOLI_invoiceData_ID, String trxName)
@@ -39,6 +39,7 @@ public class X_MOLI_invoiceData extends PO implements I_MOLI_invoiceData, I_Pers
       super (ctx, MOLI_invoiceData_ID, trxName);
       /** if (MOLI_invoiceData_ID == 0)
         {
+			setMOLI_InvoiceData_ID (0);
         } */
     }
 
@@ -48,6 +49,7 @@ public class X_MOLI_invoiceData extends PO implements I_MOLI_invoiceData, I_Pers
       super (ctx, MOLI_invoiceData_ID, trxName, virtualColumns);
       /** if (MOLI_invoiceData_ID == 0)
         {
+			setMOLI_InvoiceData_ID (0);
         } */
     }
 
@@ -57,6 +59,7 @@ public class X_MOLI_invoiceData extends PO implements I_MOLI_invoiceData, I_Pers
       super (ctx, MOLI_invoiceData_UU, trxName);
       /** if (MOLI_invoiceData_UU == null)
         {
+			setMOLI_InvoiceData_ID (0);
         } */
     }
 
@@ -66,6 +69,7 @@ public class X_MOLI_invoiceData extends PO implements I_MOLI_invoiceData, I_Pers
       super (ctx, MOLI_invoiceData_UU, trxName, virtualColumns);
       /** if (MOLI_invoiceData_UU == null)
         {
+			setMOLI_InvoiceData_ID (0);
         } */
     }
 
