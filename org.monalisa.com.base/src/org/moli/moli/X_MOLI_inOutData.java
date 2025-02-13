@@ -31,7 +31,7 @@ public class X_MOLI_inOutData extends PO implements I_MOLI_inOutData, I_Persiste
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20250213L;
 
     /** Standard Constructor */
     public X_MOLI_inOutData (Properties ctx, int MOLI_inOutData_ID, String trxName)

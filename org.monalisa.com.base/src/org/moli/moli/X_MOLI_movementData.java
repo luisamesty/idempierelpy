@@ -31,7 +31,7 @@ public class X_MOLI_movementData extends PO implements I_MOLI_movementData, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20250213L;
 
     /** Standard Constructor */
     public X_MOLI_movementData (Properties ctx, int MOLI_movementData_ID, String trxName)

@@ -31,7 +31,7 @@ public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persis
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20250213L;
 
     /** Standard Constructor */
     public X_MOLI_GeoRefCode (Properties ctx, int MOLI_GeoRefCode_ID, String trxName)
@@ -39,7 +39,7 @@ public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persis
       super (ctx, MOLI_GeoRefCode_ID, trxName);
       /** if (MOLI_GeoRefCode_ID == 0)
         {
-			setMOLI_GeoRefCode_Id (0);
+			setMOLI_GeoRefCode_ID (0);
         } */
     }
 
@@ -49,7 +49,7 @@ public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persis
       super (ctx, MOLI_GeoRefCode_ID, trxName, virtualColumns);
       /** if (MOLI_GeoRefCode_ID == 0)
         {
-			setMOLI_GeoRefCode_Id (0);
+			setMOLI_GeoRefCode_ID (0);
         } */
     }
 
@@ -59,7 +59,7 @@ public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persis
       super (ctx, MOLI_GeoRefCode_UU, trxName);
       /** if (MOLI_GeoRefCode_UU == null)
         {
-			setMOLI_GeoRefCode_Id (0);
+			setMOLI_GeoRefCode_ID (0);
         } */
     }
 
@@ -69,7 +69,7 @@ public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persis
       super (ctx, MOLI_GeoRefCode_UU, trxName, virtualColumns);
       /** if (MOLI_GeoRefCode_UU == null)
         {
-			setMOLI_GeoRefCode_Id (0);
+			setMOLI_GeoRefCode_ID (0);
         } */
     }
 
@@ -132,18 +132,21 @@ public class X_MOLI_GeoRefCode extends PO implements I_MOLI_GeoRefCode, I_Persis
 	}
 
 	/** Set Geo Ref Code ID.
-		@param MOLI_GeoRefCode_Id Geo Ref Code ID
+		@param MOLI_GeoRefCode_ID Geo Ref Code ID
 	*/
-	public void setMOLI_GeoRefCode_Id (int MOLI_GeoRefCode_Id)
+	public void setMOLI_GeoRefCode_ID (int MOLI_GeoRefCode_ID)
 	{
-		set_ValueNoCheck (COLUMNNAME_MOLI_GeoRefCode_Id, Integer.valueOf(MOLI_GeoRefCode_Id));
+		if (MOLI_GeoRefCode_ID < 1)
+			set_ValueNoCheck (COLUMNNAME_MOLI_GeoRefCode_ID, null);
+		else
+			set_ValueNoCheck (COLUMNNAME_MOLI_GeoRefCode_ID, Integer.valueOf(MOLI_GeoRefCode_ID));
 	}
 
 	/** Get Geo Ref Code ID.
 		@return Geo Ref Code ID	  */
-	public int getMOLI_GeoRefCode_Id()
+	public int getMOLI_GeoRefCode_ID()
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_MOLI_GeoRefCode_Id);
+		Integer ii = (Integer)get_Value(COLUMNNAME_MOLI_GeoRefCode_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

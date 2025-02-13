@@ -34,7 +34,7 @@ public class X_MOLI_PeopleCount extends PO implements I_MOLI_PeopleCount, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20250213L;
 
     /** Standard Constructor */
     public X_MOLI_PeopleCount (Properties ctx, int MOLI_PeopleCount_ID, String trxName)

@@ -31,7 +31,7 @@ public class X_MOLI_ProductBrand extends PO implements I_MOLI_ProductBrand, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20250213L;
 
     /** Standard Constructor */
     public X_MOLI_ProductBrand (Properties ctx, int MOLI_ProductBrand_ID, String trxName)

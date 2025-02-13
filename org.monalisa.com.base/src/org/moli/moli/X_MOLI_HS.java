@@ -33,7 +33,7 @@ public class X_MOLI_HS extends PO implements I_MOLI_HS, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20250213L;
 
     /** Standard Constructor */
     public X_MOLI_HS (Properties ctx, int MOLI_HS_ID, String trxName)

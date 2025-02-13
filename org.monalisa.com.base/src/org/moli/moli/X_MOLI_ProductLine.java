@@ -17,9 +17,11 @@
 /** Generated Model - DO NOT CHANGE */
 package org.moli.moli;
 
+import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.util.Properties;
 import org.compiere.model.*;
+import org.compiere.util.Env;
 
 /** Generated Model for MOLI_ProductLine
  *  @author iDempiere (generated)
@@ -31,7 +33,7 @@ public class X_MOLI_ProductLine extends PO implements I_MOLI_ProductLine, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20250213L;
 
     /** Standard Constructor */
     public X_MOLI_ProductLine (Properties ctx, int MOLI_ProductLine_ID, String trxName)
@@ -41,6 +43,8 @@ public class X_MOLI_ProductLine extends PO implements I_MOLI_ProductLine, I_Pers
         {
 			setMOLI_isApproval (false);
 // N
+			setMOLI_IsLocalVendor (true);
+// Y
 			setMOLI_isWHS (false);
 // N
 			setMOLI_LineSymbol (null);
@@ -58,6 +62,8 @@ public class X_MOLI_ProductLine extends PO implements I_MOLI_ProductLine, I_Pers
         {
 			setMOLI_isApproval (false);
 // N
+			setMOLI_IsLocalVendor (true);
+// Y
 			setMOLI_isWHS (false);
 // N
 			setMOLI_LineSymbol (null);
@@ -75,6 +81,8 @@ public class X_MOLI_ProductLine extends PO implements I_MOLI_ProductLine, I_Pers
         {
 			setMOLI_isApproval (false);
 // N
+			setMOLI_IsLocalVendor (true);
+// Y
 			setMOLI_isWHS (false);
 // N
 			setMOLI_LineSymbol (null);
@@ -92,6 +100,8 @@ public class X_MOLI_ProductLine extends PO implements I_MOLI_ProductLine, I_Pers
         {
 			setMOLI_isApproval (false);
 // N
+			setMOLI_IsLocalVendor (true);
+// Y
 			setMOLI_isWHS (false);
 // N
 			setMOLI_LineSymbol (null);
@@ -152,6 +162,28 @@ public class X_MOLI_ProductLine extends PO implements I_MOLI_ProductLine, I_Pers
 		return false;
 	}
 
+	/** Set Local Vendor.
+		@param MOLI_IsLocalVendor Local Vendor
+	*/
+	public void setMOLI_IsLocalVendor (boolean MOLI_IsLocalVendor)
+	{
+		set_Value (COLUMNNAME_MOLI_IsLocalVendor, Boolean.valueOf(MOLI_IsLocalVendor));
+	}
+
+	/** Get Local Vendor.
+		@return Local Vendor	  */
+	public boolean isMOLI_IsLocalVendor()
+	{
+		Object oo = get_Value(COLUMNNAME_MOLI_IsLocalVendor);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
 	/** Set Whole Sale.
 		@param MOLI_isWHS Whole Sale
 	*/
@@ -188,6 +220,24 @@ public class X_MOLI_ProductLine extends PO implements I_MOLI_ProductLine, I_Pers
 	public String getMOLI_LineSymbol()
 	{
 		return (String)get_Value(COLUMNNAME_MOLI_LineSymbol);
+	}
+
+	/** Set Local Vendor Rate.
+		@param MOLI_LocalVendorRate Local Vendor Rate
+	*/
+	public void setMOLI_LocalVendorRate (BigDecimal MOLI_LocalVendorRate)
+	{
+		set_Value (COLUMNNAME_MOLI_LocalVendorRate, MOLI_LocalVendorRate);
+	}
+
+	/** Get Local Vendor Rate.
+		@return Local Vendor Rate	  */
+	public BigDecimal getMOLI_LocalVendorRate()
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_MOLI_LocalVendorRate);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
 	}
 
 	public I_MOLI_ProductBrand getMOLI_ProductBrand() throws RuntimeException
@@ -255,6 +305,25 @@ public class X_MOLI_ProductLine extends PO implements I_MOLI_ProductLine, I_Pers
 		return (String)get_Value(COLUMNNAME_MOLI_ProductLine_UU);
 	}
 
+	/** Set RTL Commission Rate.
+		@param MOLI_RTLCommissionRate RTL Commission Rate
+	*/
+	public void setMOLI_RTLCommissionRate (BigDecimal MOLI_RTLCommissionRate)
+	{
+		set_Value (COLUMNNAME_MOLI_RTLCommissionRate, MOLI_RTLCommissionRate);
+	}
+
+	/** Get RTL Commission Rate.
+		@return RTL Commission Rate
+	  */
+	public BigDecimal getMOLI_RTLCommissionRate()
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_MOLI_RTLCommissionRate);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
 	/** Set SKU Group.
 		@param MOLI_SKUGroup SKU Group
 	*/
@@ -269,6 +338,25 @@ public class X_MOLI_ProductLine extends PO implements I_MOLI_ProductLine, I_Pers
 	public String getMOLI_SKUGroup()
 	{
 		return (String)get_Value(COLUMNNAME_MOLI_SKUGroup);
+	}
+
+	/** Set WHS Commission Rate.
+		@param MOLI_WHSCommissionRate WHS Commission Rate
+	*/
+	public void setMOLI_WHSCommissionRate (BigDecimal MOLI_WHSCommissionRate)
+	{
+		set_Value (COLUMNNAME_MOLI_WHSCommissionRate, MOLI_WHSCommissionRate);
+	}
+
+	/** Get WHS Commission Rate.
+		@return WHS Commission Rate
+	  */
+	public BigDecimal getMOLI_WHSCommissionRate()
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_MOLI_WHSCommissionRate);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
 	}
 
 	/** Set Name.

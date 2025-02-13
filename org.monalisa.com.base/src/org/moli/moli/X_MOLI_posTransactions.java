@@ -34,7 +34,7 @@ public class X_MOLI_posTransactions extends PO implements I_MOLI_posTransactions
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20250213L;
 
     /** Standard Constructor */
     public X_MOLI_posTransactions (Properties ctx, int MOLI_posTransactions_ID, String trxName)

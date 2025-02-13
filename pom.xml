@@ -7,13 +7,13 @@
   <modules>
   	<module>org.monalisa.com.base</module>
 	<module>org.monalisa.com.bpartners</module>
+	<module>org.monalisa.com.commission</module>
   	<module>org.monalisa.com.document</module>	  
    	<module>org.monalisa.com.feature</module> 	
   	<module>org.monalisa.com.material</module>
   	<module>org.monalisa.com.personnel</module>
   	<module>org.monalisa.com.p2.site</module>
   	<module>org.monalisa.com.p2.targetplatform</module>
-
   </modules>
   <groupId>org.monalisa.com</groupId>
   <properties>

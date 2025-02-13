@@ -106,6 +106,15 @@ public interface I_MOLI_ProductLine
 	  */
 	public boolean isMOLI_isApproval();
 
+    /** Column name MOLI_IsLocalVendor */
+    public static final String COLUMNNAME_MOLI_IsLocalVendor = "MOLI_IsLocalVendor";
+
+	/** Set Local Vendor	  */
+	public void setMOLI_IsLocalVendor (boolean MOLI_IsLocalVendor);
+
+	/** Get Local Vendor	  */
+	public boolean isMOLI_IsLocalVendor();
+
     /** Column name MOLI_isWHS */
     public static final String COLUMNNAME_MOLI_isWHS = "MOLI_isWHS";
 
@@ -127,6 +136,15 @@ public interface I_MOLI_ProductLine
 
 	/** Get MOLI_LineSymbol	  */
 	public String getMOLI_LineSymbol();
+
+    /** Column name MOLI_LocalVendorRate */
+    public static final String COLUMNNAME_MOLI_LocalVendorRate = "MOLI_LocalVendorRate";
+
+	/** Set Local Vendor Rate	  */
+	public void setMOLI_LocalVendorRate (BigDecimal MOLI_LocalVendorRate);
+
+	/** Get Local Vendor Rate	  */
+	public BigDecimal getMOLI_LocalVendorRate();
 
     /** Column name MOLI_ProductBrand_ID */
     public static final String COLUMNNAME_MOLI_ProductBrand_ID = "MOLI_ProductBrand_ID";
@@ -165,6 +183,19 @@ public interface I_MOLI_ProductLine
 	/** Get Product Line UU	  */
 	public String getMOLI_ProductLine_UU();
 
+    /** Column name MOLI_RTLCommissionRate */
+    public static final String COLUMNNAME_MOLI_RTLCommissionRate = "MOLI_RTLCommissionRate";
+
+	/** Set RTL Commission Rate.
+	  * RTL Commission Rate
+	  */
+	public void setMOLI_RTLCommissionRate (BigDecimal MOLI_RTLCommissionRate);
+
+	/** Get RTL Commission Rate.
+	  * RTL Commission Rate
+	  */
+	public BigDecimal getMOLI_RTLCommissionRate();
+
     /** Column name MOLI_SKUGroup */
     public static final String COLUMNNAME_MOLI_SKUGroup = "MOLI_SKUGroup";
 
@@ -177,6 +208,19 @@ public interface I_MOLI_ProductLine
 	  * SKU Group
 	  */
 	public String getMOLI_SKUGroup();
+
+    /** Column name MOLI_WHSCommissionRate */
+    public static final String COLUMNNAME_MOLI_WHSCommissionRate = "MOLI_WHSCommissionRate";
+
+	/** Set WHS Commission Rate.
+	  * WHS Commission Rate
+	  */
+	public void setMOLI_WHSCommissionRate (BigDecimal MOLI_WHSCommissionRate);
+
+	/** Get WHS Commission Rate.
+	  * WHS Commission Rate
+	  */
+	public BigDecimal getMOLI_WHSCommissionRate();
 
     /** Column name Name */
     public static final String COLUMNNAME_Name = "Name";

@@ -21,18 +21,18 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for MOLI_GeoRefCode
+/** Generated Interface for MOLI_RegFormProduct
  *  @author iDempiere (generated) 
  *  @version Release 11
  */
 @SuppressWarnings("all")
-public interface I_MOLI_GeoRefCode 
+public interface I_MOLI_RegFormProduct 
 {
 
-    /** TableName=MOLI_GeoRefCode */
-    public static final String Table_Name = "MOLI_GeoRefCode";
+    /** TableName=MOLI_RegFormProduct */
+    public static final String Table_Name = "MOLI_RegFormProduct";
 
-    /** AD_Table_ID=1000068 */
+    /** AD_Table_ID=1000085 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -46,8 +46,8 @@ public interface I_MOLI_GeoRefCode
     /** Column name AD_Client_ID */
     public static final String COLUMNNAME_AD_Client_ID = "AD_Client_ID";
 
-	/** Get Client.
-	  * Client/Tenant for this installation.
+	/** Get Tenant.
+	  * Tenant for this installation.
 	  */
 	public int getAD_Client_ID();
 
@@ -55,14 +55,27 @@ public interface I_MOLI_GeoRefCode
     public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
 
 	/** Set Organization.
-	  * Organizational entity within client
+	  * Organizational entity within tenant
 	  */
 	public void setAD_Org_ID (int AD_Org_ID);
 
 	/** Get Organization.
-	  * Organizational entity within client
+	  * Organizational entity within tenant
 	  */
 	public int getAD_Org_ID();
+
+    /** Column name CategoryName */
+    public static final String COLUMNNAME_CategoryName = "CategoryName";
+
+	/** Set Category Name.
+	  * Name of the Category
+	  */
+	public void setCategoryName (String CategoryName);
+
+	/** Get Category Name.
+	  * Name of the Category
+	  */
+	public String getCategoryName();
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -93,72 +106,88 @@ public interface I_MOLI_GeoRefCode
 	  */
 	public boolean isActive();
 
-    /** Column name MOLI_GeoRefCode_DepartmentKey */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_DepartmentKey = "MOLI_GeoRefCode_DepartmentKey";
+    /** Column name MOLI_RegForm_ID */
+    public static final String COLUMNNAME_MOLI_RegForm_ID = "MOLI_RegForm_ID";
 
-	/** Set Geo Ref Code Department Key	  */
-	public void setMOLI_GeoRefCode_DepartmentKey (String MOLI_GeoRefCode_DepartmentKey);
+	/** Set Regulation Form ID	  */
+	public void setMOLI_RegForm_ID (int MOLI_RegForm_ID);
 
-	/** Get Geo Ref Code Department Key	  */
-	public String getMOLI_GeoRefCode_DepartmentKey();
+	/** Get Regulation Form ID	  */
+	public int getMOLI_RegForm_ID();
 
-    /** Column name MOLI_GeoRefCode_DepartmentName */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_DepartmentName = "MOLI_GeoRefCode_DepartmentName";
+	public I_MOLI_RegForm getMOLI_RegForm() throws RuntimeException;
 
-	/** Set Geo Ref Code Department Name	  */
-	public void setMOLI_GeoRefCode_DepartmentName (String MOLI_GeoRefCode_DepartmentName);
+    /** Column name MOLI_RegFormProduct_ID */
+    public static final String COLUMNNAME_MOLI_RegFormProduct_ID = "MOLI_RegFormProduct_ID";
 
-	/** Get Geo Ref Code Department Name	  */
-	public String getMOLI_GeoRefCode_DepartmentName();
+	/** Set Regulation Form Product	  */
+	public void setMOLI_RegFormProduct_ID (int MOLI_RegFormProduct_ID);
 
-    /** Column name MOLI_GeoRefCode_ID */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_ID = "MOLI_GeoRefCode_ID";
+	/** Get Regulation Form Product	  */
+	public int getMOLI_RegFormProduct_ID();
 
-	/** Set Geo Ref Code ID	  */
-	public void setMOLI_GeoRefCode_ID (int MOLI_GeoRefCode_ID);
+    /** Column name MOLI_RegFormProduct_UU */
+    public static final String COLUMNNAME_MOLI_RegFormProduct_UU = "MOLI_RegFormProduct_UU";
 
-	/** Get Geo Ref Code ID	  */
-	public int getMOLI_GeoRefCode_ID();
+	/** Set MOLI_RegFormProduct_UU	  */
+	public void setMOLI_RegFormProduct_UU (String MOLI_RegFormProduct_UU);
 
-    /** Column name MOLI_GeoRefCode_SectionKey */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_SectionKey = "MOLI_GeoRefCode_SectionKey";
+	/** Get MOLI_RegFormProduct_UU	  */
+	public String getMOLI_RegFormProduct_UU();
 
-	/** Set Geo Ref Code Section Key	  */
-	public void setMOLI_GeoRefCode_SectionKey (String MOLI_GeoRefCode_SectionKey);
+    /** Column name M_Product_ID */
+    public static final String COLUMNNAME_M_Product_ID = "M_Product_ID";
 
-	/** Get Geo Ref Code Section Key	  */
-	public String getMOLI_GeoRefCode_SectionKey();
-
-    /** Column name MOLI_GeoRefCode_SectionName */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_SectionName = "MOLI_GeoRefCode_SectionName";
-
-	/** Set Geo Ref Code Section Name	  */
-	public void setMOLI_GeoRefCode_SectionName (String MOLI_GeoRefCode_SectionName);
-
-	/** Get Geo Ref Code Section Name	  */
-	public String getMOLI_GeoRefCode_SectionName();
-
-    /** Column name MOLI_GeoRefCode_UU */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_UU = "MOLI_GeoRefCode_UU";
-
-	/** Set Geo Ref Code UUID	  */
-	public void setMOLI_GeoRefCode_UU (String MOLI_GeoRefCode_UU);
-
-	/** Get Geo Ref Code UUID	  */
-	public String getMOLI_GeoRefCode_UU();
-
-    /** Column name Name */
-    public static final String COLUMNNAME_Name = "Name";
-
-	/** Set Name.
-	  * Alphanumeric identifier of the entity
+	/** Set Product.
+	  * Product, Service, Item
 	  */
-	public void setName (String Name);
+	public void setM_Product_ID (int M_Product_ID);
 
-	/** Get Name.
-	  * Alphanumeric identifier of the entity
+	/** Get Product.
+	  * Product, Service, Item
 	  */
-	public String getName();
+	public int getM_Product_ID();
+
+	public org.compiere.model.I_M_Product getM_Product() throws RuntimeException;
+
+    /** Column name Name2 */
+    public static final String COLUMNNAME_Name2 = "Name2";
+
+	/** Set Name 2.
+	  * Additional Name
+	  */
+	public void setName2 (String Name2);
+
+	/** Get Name 2.
+	  * Additional Name
+	  */
+	public String getName2();
+
+    /** Column name ProductBrand_Value */
+    public static final String COLUMNNAME_ProductBrand_Value = "ProductBrand_Value";
+
+	/** Set ProductBrand  Key.
+	  * ProductBrand Value for search
+	  */
+	public void setProductBrand_Value (String ProductBrand_Value);
+
+	/** Get ProductBrand  Key.
+	  * ProductBrand Value for search
+	  */
+	public String getProductBrand_Value();
+
+    /** Column name SKU */
+    public static final String COLUMNNAME_SKU = "SKU";
+
+	/** Set SKU.
+	  * Stock Keeping Unit
+	  */
+	public void setSKU (String SKU);
+
+	/** Get SKU.
+	  * Stock Keeping Unit
+	  */
+	public String getSKU();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -175,17 +204,4 @@ public interface I_MOLI_GeoRefCode
 	  * User who updated this records
 	  */
 	public int getUpdatedBy();
-
-    /** Column name Value */
-    public static final String COLUMNNAME_Value = "Value";
-
-	/** Set Search Key.
-	  * Search key for the record in the format required - must be unique
-	  */
-	public void setValue (String Value);
-
-	/** Get Search Key.
-	  * Search key for the record in the format required - must be unique
-	  */
-	public String getValue();
 }

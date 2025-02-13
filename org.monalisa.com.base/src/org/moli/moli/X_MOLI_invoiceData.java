@@ -31,7 +31,7 @@ public class X_MOLI_invoiceData extends PO implements I_MOLI_invoiceData, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250107L;
+	private static final long serialVersionUID = 20250213L;
 
     /** Standard Constructor */
     public X_MOLI_invoiceData (Properties ctx, int MOLI_invoiceData_ID, String trxName)
