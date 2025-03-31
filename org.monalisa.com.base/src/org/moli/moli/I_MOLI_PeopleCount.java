@@ -21,18 +21,18 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for MOLI_GeoRefCode
+/** Generated Interface for MOLI_PeopleCount
  *  @author iDempiere (generated) 
  *  @version Release 11
  */
 @SuppressWarnings("all")
-public interface I_MOLI_GeoRefCode 
+public interface I_MOLI_PeopleCount 
 {
 
-    /** TableName=MOLI_GeoRefCode */
-    public static final String Table_Name = "MOLI_GeoRefCode";
+    /** TableName=MOLI_PeopleCount */
+    public static final String Table_Name = "MOLI_PeopleCount";
 
-    /** AD_Table_ID=1000068 */
+    /** AD_Table_ID=1000077 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -93,72 +93,81 @@ public interface I_MOLI_GeoRefCode
 	  */
 	public boolean isActive();
 
-    /** Column name MOLI_GeoRefCode_DepartmentKey */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_DepartmentKey = "MOLI_GeoRefCode_DepartmentKey";
+    /** Column name M_Locator_ID */
+    public static final String COLUMNNAME_M_Locator_ID = "M_Locator_ID";
 
-	/** Set Geo Ref Code Department Key	  */
-	public void setMOLI_GeoRefCode_DepartmentKey (String MOLI_GeoRefCode_DepartmentKey);
-
-	/** Get Geo Ref Code Department Key	  */
-	public String getMOLI_GeoRefCode_DepartmentKey();
-
-    /** Column name MOLI_GeoRefCode_DepartmentName */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_DepartmentName = "MOLI_GeoRefCode_DepartmentName";
-
-	/** Set Geo Ref Code Department Name	  */
-	public void setMOLI_GeoRefCode_DepartmentName (String MOLI_GeoRefCode_DepartmentName);
-
-	/** Get Geo Ref Code Department Name	  */
-	public String getMOLI_GeoRefCode_DepartmentName();
-
-    /** Column name MOLI_GeoRefCode_ID */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_ID = "MOLI_GeoRefCode_ID";
-
-	/** Set Geo Ref Code ID	  */
-	public void setMOLI_GeoRefCode_ID (int MOLI_GeoRefCode_ID);
-
-	/** Get Geo Ref Code ID	  */
-	public int getMOLI_GeoRefCode_ID();
-
-    /** Column name MOLI_GeoRefCode_SectionKey */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_SectionKey = "MOLI_GeoRefCode_SectionKey";
-
-	/** Set Geo Ref Code Section Key	  */
-	public void setMOLI_GeoRefCode_SectionKey (String MOLI_GeoRefCode_SectionKey);
-
-	/** Get Geo Ref Code Section Key	  */
-	public String getMOLI_GeoRefCode_SectionKey();
-
-    /** Column name MOLI_GeoRefCode_SectionName */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_SectionName = "MOLI_GeoRefCode_SectionName";
-
-	/** Set Geo Ref Code Section Name	  */
-	public void setMOLI_GeoRefCode_SectionName (String MOLI_GeoRefCode_SectionName);
-
-	/** Get Geo Ref Code Section Name	  */
-	public String getMOLI_GeoRefCode_SectionName();
-
-    /** Column name MOLI_GeoRefCode_UU */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_UU = "MOLI_GeoRefCode_UU";
-
-	/** Set Geo Ref Code UUID	  */
-	public void setMOLI_GeoRefCode_UU (String MOLI_GeoRefCode_UU);
-
-	/** Get Geo Ref Code UUID	  */
-	public String getMOLI_GeoRefCode_UU();
-
-    /** Column name Name */
-    public static final String COLUMNNAME_Name = "Name";
-
-	/** Set Name.
-	  * Alphanumeric identifier of the entity
+	/** Set Locator.
+	  * Warehouse Locator
 	  */
-	public void setName (String Name);
+	public void setM_Locator_ID (int M_Locator_ID);
 
-	/** Get Name.
-	  * Alphanumeric identifier of the entity
+	/** Get Locator.
+	  * Warehouse Locator
 	  */
-	public String getName();
+	public int getM_Locator_ID();
+
+	public I_M_Locator getM_Locator() throws RuntimeException;
+
+    /** Column name MOLI_PeopleCount_ID */
+    public static final String COLUMNNAME_MOLI_PeopleCount_ID = "MOLI_PeopleCount_ID";
+
+	/** Set People Counting.
+	  * People Counting data
+	  */
+	public void setMOLI_PeopleCount_ID (int MOLI_PeopleCount_ID);
+
+	/** Get People Counting.
+	  * People Counting data
+	  */
+	public int getMOLI_PeopleCount_ID();
+
+    /** Column name MOLI_PeopleCount_UU */
+    public static final String COLUMNNAME_MOLI_PeopleCount_UU = "MOLI_PeopleCount_UU";
+
+	/** Set MOLI_PeopleCount_UU	  */
+	public void setMOLI_PeopleCount_UU (String MOLI_PeopleCount_UU);
+
+	/** Get MOLI_PeopleCount_UU	  */
+	public String getMOLI_PeopleCount_UU();
+
+    /** Column name MOLI_QtyVistiors */
+    public static final String COLUMNNAME_MOLI_QtyVistiors = "MOLI_QtyVistiors";
+
+	/** Set Qty Visitors.
+	  * Qty Visitors
+	  */
+	public void setMOLI_QtyVistiors (BigDecimal MOLI_QtyVistiors);
+
+	/** Get Qty Visitors.
+	  * Qty Visitors
+	  */
+	public BigDecimal getMOLI_QtyVistiors();
+
+    /** Column name MOLI_TimeEnd */
+    public static final String COLUMNNAME_MOLI_TimeEnd = "MOLI_TimeEnd";
+
+	/** Set Time End.
+	  * Time End
+	  */
+	public void setMOLI_TimeEnd (Timestamp MOLI_TimeEnd);
+
+	/** Get Time End.
+	  * Time End
+	  */
+	public Timestamp getMOLI_TimeEnd();
+
+    /** Column name MOLI_TimeStart */
+    public static final String COLUMNNAME_MOLI_TimeStart = "MOLI_TimeStart";
+
+	/** Set Time Start.
+	  * Time Starting
+	  */
+	public void setMOLI_TimeStart (Timestamp MOLI_TimeStart);
+
+	/** Get Time Start.
+	  * Time Starting
+	  */
+	public Timestamp getMOLI_TimeStart();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -175,17 +184,4 @@ public interface I_MOLI_GeoRefCode
 	  * User who updated this records
 	  */
 	public int getUpdatedBy();
-
-    /** Column name Value */
-    public static final String COLUMNNAME_Value = "Value";
-
-	/** Set Search Key.
-	  * Search key for the record in the format required - must be unique
-	  */
-	public void setValue (String Value);
-
-	/** Get Search Key.
-	  * Search key for the record in the format required - must be unique
-	  */
-	public String getValue();
 }

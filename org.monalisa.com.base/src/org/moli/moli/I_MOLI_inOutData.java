@@ -21,25 +21,25 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for MOLI_GeoRefCode
+/** Generated Interface for MOLI_inOutData
  *  @author iDempiere (generated) 
  *  @version Release 11
  */
 @SuppressWarnings("all")
-public interface I_MOLI_GeoRefCode 
+public interface I_MOLI_inOutData 
 {
 
-    /** TableName=MOLI_GeoRefCode */
-    public static final String Table_Name = "MOLI_GeoRefCode";
+    /** TableName=MOLI_inOutData */
+    public static final String Table_Name = "MOLI_inOutData";
 
-    /** AD_Table_ID=1000068 */
+    /** AD_Table_ID=1000069 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
 
-    /** AccessLevel = 3 - Client - Org 
+    /** AccessLevel = 4 - System 
      */
-    BigDecimal accessLevel = BigDecimal.valueOf(3);
+    BigDecimal accessLevel = BigDecimal.valueOf(4);
 
     /** Load Meta Data */
 
@@ -93,72 +93,56 @@ public interface I_MOLI_GeoRefCode
 	  */
 	public boolean isActive();
 
-    /** Column name MOLI_GeoRefCode_DepartmentKey */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_DepartmentKey = "MOLI_GeoRefCode_DepartmentKey";
+    /** Column name M_InOut_ID */
+    public static final String COLUMNNAME_M_InOut_ID = "M_InOut_ID";
 
-	/** Set Geo Ref Code Department Key	  */
-	public void setMOLI_GeoRefCode_DepartmentKey (String MOLI_GeoRefCode_DepartmentKey);
-
-	/** Get Geo Ref Code Department Key	  */
-	public String getMOLI_GeoRefCode_DepartmentKey();
-
-    /** Column name MOLI_GeoRefCode_DepartmentName */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_DepartmentName = "MOLI_GeoRefCode_DepartmentName";
-
-	/** Set Geo Ref Code Department Name	  */
-	public void setMOLI_GeoRefCode_DepartmentName (String MOLI_GeoRefCode_DepartmentName);
-
-	/** Get Geo Ref Code Department Name	  */
-	public String getMOLI_GeoRefCode_DepartmentName();
-
-    /** Column name MOLI_GeoRefCode_ID */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_ID = "MOLI_GeoRefCode_ID";
-
-	/** Set Geo Ref Code ID	  */
-	public void setMOLI_GeoRefCode_ID (int MOLI_GeoRefCode_ID);
-
-	/** Get Geo Ref Code ID	  */
-	public int getMOLI_GeoRefCode_ID();
-
-    /** Column name MOLI_GeoRefCode_SectionKey */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_SectionKey = "MOLI_GeoRefCode_SectionKey";
-
-	/** Set Geo Ref Code Section Key	  */
-	public void setMOLI_GeoRefCode_SectionKey (String MOLI_GeoRefCode_SectionKey);
-
-	/** Get Geo Ref Code Section Key	  */
-	public String getMOLI_GeoRefCode_SectionKey();
-
-    /** Column name MOLI_GeoRefCode_SectionName */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_SectionName = "MOLI_GeoRefCode_SectionName";
-
-	/** Set Geo Ref Code Section Name	  */
-	public void setMOLI_GeoRefCode_SectionName (String MOLI_GeoRefCode_SectionName);
-
-	/** Get Geo Ref Code Section Name	  */
-	public String getMOLI_GeoRefCode_SectionName();
-
-    /** Column name MOLI_GeoRefCode_UU */
-    public static final String COLUMNNAME_MOLI_GeoRefCode_UU = "MOLI_GeoRefCode_UU";
-
-	/** Set Geo Ref Code UUID	  */
-	public void setMOLI_GeoRefCode_UU (String MOLI_GeoRefCode_UU);
-
-	/** Get Geo Ref Code UUID	  */
-	public String getMOLI_GeoRefCode_UU();
-
-    /** Column name Name */
-    public static final String COLUMNNAME_Name = "Name";
-
-	/** Set Name.
-	  * Alphanumeric identifier of the entity
+	/** Set Shipment/Receipt.
+	  * Material Shipment Document
 	  */
-	public void setName (String Name);
+	public void setM_InOut_ID (int M_InOut_ID);
 
-	/** Get Name.
-	  * Alphanumeric identifier of the entity
+	/** Get Shipment/Receipt.
+	  * Material Shipment Document
 	  */
-	public String getName();
+	public int getM_InOut_ID();
+
+	public org.compiere.model.I_M_InOut getM_InOut() throws RuntimeException;
+
+    /** Column name MOLI_inOutData_ID */
+    public static final String COLUMNNAME_MOLI_inOutData_ID = "MOLI_inOutData_ID";
+
+	/** Set MOLI_inOutData	  */
+	public void setMOLI_inOutData_ID (int MOLI_inOutData_ID);
+
+	/** Get MOLI_inOutData	  */
+	public int getMOLI_inOutData_ID();
+
+    /** Column name MOLI_inOutData_UU */
+    public static final String COLUMNNAME_MOLI_inOutData_UU = "MOLI_inOutData_UU";
+
+	/** Set MOLI_inOutData_UU	  */
+	public void setMOLI_inOutData_UU (String MOLI_inOutData_UU);
+
+	/** Get MOLI_inOutData_UU	  */
+	public String getMOLI_inOutData_UU();
+
+    /** Column name MOLI_Name */
+    public static final String COLUMNNAME_MOLI_Name = "MOLI_Name";
+
+	/** Set Name	  */
+	public void setMOLI_Name (String MOLI_Name);
+
+	/** Get Name	  */
+	public String getMOLI_Name();
+
+    /** Column name MOLI_Value */
+    public static final String COLUMNNAME_MOLI_Value = "MOLI_Value";
+
+	/** Set Value	  */
+	public void setMOLI_Value (String MOLI_Value);
+
+	/** Get Value	  */
+	public String getMOLI_Value();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -175,17 +159,4 @@ public interface I_MOLI_GeoRefCode
 	  * User who updated this records
 	  */
 	public int getUpdatedBy();
-
-    /** Column name Value */
-    public static final String COLUMNNAME_Value = "Value";
-
-	/** Set Search Key.
-	  * Search key for the record in the format required - must be unique
-	  */
-	public void setValue (String Value);
-
-	/** Get Search Key.
-	  * Search key for the record in the format required - must be unique
-	  */
-	public String getValue();
 }
