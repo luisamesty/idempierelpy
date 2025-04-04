@@ -38,7 +38,8 @@ public class MOCommissionCalc extends SvrProcess {
 	protected Timestamp		m_EndDate;
 	protected MO_Commission		m_com;
 	//
-
+	protected Timestamp		m_StartDateOvr;  // Overrrided Start Date
+	
 	/**
 	 *  Prepare - e.g., get Parameters.
 	 */
@@ -165,6 +166,15 @@ public class MOCommissionCalc extends SvrProcess {
 			sql.append(getInvoiceCommissionSQL());
 		}
 		sql.append(getCommissionLineWhereClause(commissionLine));
+		// LPY 36 Nuevos campos agregados
+		// ValidFrom: Overrides Header  ValidFrom
+		// ValidTo: Overrides Header ValidTo 
+		if (commissionLine.getValidFrom()!= null && commissionLine.getValidTo()!= null) {
+			setStartEndDateCommissionLine(commissionLine);
+		} else {
+			m_StartDateOvr = p_StartDate;
+		}
+		// LPY 36 Nuevos campos agregados
 		//	Grouping
 		if (!m_com.isListDetails())
 			sql.append(" GROUP BY h.C_Currency_ID");
@@ -336,7 +346,17 @@ public class MOCommissionCalc extends SvrProcess {
 		//	Payment Rule
 		if (commissionLine.getPaymentRule() != null)
 			sql.append(" AND h.PaymentRule='").append(commissionLine.getPaymentRule()).append("'");
-
+		
+		// LPY 36 Nuevos campos agregados
+		// C_Bpartner_Location: Business Partner Location. Condicionado a que se incluya C_Bpartner_ID.
+		if (commissionLine.getC_BPartner_Location_ID() != 0)
+			sql.append(" AND h.C_BPartner_Location_ID IN ")
+			.append("(SELECT C_BPartner_Location_ID FROM C_BPartner_Location WHERE C_BPartner_Location_ID=").append(commissionLine.getC_BPartner_Location_ID()).append(")");
+		// MOLI_C_BP_Group_ID: Vendor Group
+		if (commissionLine.getMOLI_C_BP_Group_ID() != 0)
+			sql.append(" AND h.C_BPartner_ID IN ")
+			.append("(SELECT C_BPartner_ID FROM C_BPartner WHERE C_BP_Group_ID=").append(commissionLine.getMOLI_C_BP_Group_ID()).append(")");
+		// LPY 36 Nuevos campos agregados
 		return sql.toString();
 	}
 
@@ -391,7 +411,7 @@ public class MOCommissionCalc extends SvrProcess {
 			m_EndDate = new Timestamp (cal.getTimeInMillis());
 		}
 		//	Monthly
-		else
+		else if (MCommission.FREQUENCYTYPE_Monthly.equals(m_com.getFrequencyType()))
 		{
 			cal.set(Calendar.DAY_OF_MONTH, 1);
 			p_StartDate = new Timestamp (cal.getTimeInMillis());
@@ -400,10 +420,41 @@ public class MOCommissionCalc extends SvrProcess {
 			cal.add(Calendar.DAY_OF_YEAR, -1); 
 			m_EndDate = new Timestamp (cal.getTimeInMillis());
 		}
+		//	Daily LPY-29 Daily Option included
+		else if (MCommission.FREQUENCYTYPE_Daily.equals(m_com.getFrequencyType()))
+		{
+			p_StartDate = new Timestamp(cal.getTimeInMillis());
+			m_EndDate = new Timestamp(cal.getTimeInMillis());
+		}
 		if (log.isLoggable(Level.FINE)) log.fine("setStartEndDate = " + p_StartDate + " - " + m_EndDate);
 		
 	}	//	setStartEndDate
 
+	/**
+	 * 	Set Start and End Date Overrides if Commission Line 
+	 *  ValidFrom: Overrides Header  ValidFrom
+	 *  ValidTo: Overrides Header ValidTo 
+	 */
+	protected void setStartEndDateCommissionLine(MO_CommissionLine commissionLine)
+	{
+		GregorianCalendar cal = new GregorianCalendar(Language.getLoginLanguage().getLocale());
+		// Get ValidFrom from Commission Line
+		cal.setTimeInMillis(commissionLine.getValidFrom().getTime());
+		cal.set(Calendar.HOUR_OF_DAY, 0);
+		cal.set(Calendar.MINUTE, 0);
+		cal.set(Calendar.SECOND, 0);
+		cal.set(Calendar.MILLISECOND, 0);
+		// Set p_StartDate
+		m_StartDateOvr = new Timestamp(cal.getTimeInMillis());
+		// Get ValidTo from Commission Line
+		cal.setTimeInMillis(commissionLine.getValidTo().getTime());
+		cal.set(Calendar.HOUR_OF_DAY, 0);
+		cal.set(Calendar.MINUTE, 0);
+		cal.set(Calendar.SECOND, 0);
+		cal.set(Calendar.MILLISECOND, 0);
+		// Set m_EndDate
+		m_EndDate = new Timestamp(cal.getTimeInMillis());
+	}
 	/**
 	 * 	Create Commission Detail
 	 *	@param sql sql statement
@@ -415,7 +466,12 @@ public class MOCommissionCalc extends SvrProcess {
 		try (PreparedStatement pstmt = DB.prepareStatement(sql, get_TrxName());)
 		{
 			pstmt.setInt(1, m_com.getAD_Client_ID());
-			pstmt.setTimestamp(2, p_StartDate);
+			// Verify if ValidFrom Overrides p_StartDate
+			if (m_StartDateOvr!=p_StartDate)
+				pstmt.setTimestamp(2, m_StartDateOvr);
+			else 
+				pstmt.setTimestamp(2, p_StartDate);
+			// Set EndDate
 			pstmt.setTimestamp(3, m_EndDate);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next())
