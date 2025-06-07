@@ -26,7 +26,7 @@ public interface ILPYTaxLookup {
 	 * @param trxName
 	 * @return C_Tax_ID
 	 */
-	public int get (Properties ctx, int M_Product_ID, int C_Charge_ID, String IstaxExempt,
+	public int getLPY (Properties ctx, int M_Product_ID, int C_Charge_ID, String IstaxExempt,
 			Timestamp billDate, Timestamp shipDate,
 			int AD_Org_ID, int M_Warehouse_ID,
 			int billC_BPartner_Location_ID, int shipC_BPartner_Location_ID,
@@ -47,7 +47,7 @@ public interface ILPYTaxLookup {
 	 * @param trxName
 	 * @return C_Tax_ID
 	 */
-	public int get (Properties ctx,
+	public int getLPY (Properties ctx,
 			int C_TaxCategory_ID, boolean IsSOTrx,  String IstaxExempt,
 			Timestamp shipDate, int shipFromC_Location_ID, int shipToC_Location_ID,
 			Timestamp billDate, int billFromC_Location_ID, int billToC_Location_ID, String trxName);

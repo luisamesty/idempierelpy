@@ -1,6 +1,5 @@
 package org.moli.lpytaxlookup;
 
-import java.lang.reflect.Method;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,7 +17,6 @@ import org.compiere.model.MCountryGroup;
 import org.compiere.model.MLocation;
 import org.compiere.model.MTax;
 import org.compiere.model.MTaxPostal;
-import org.compiere.model.Tax;
 import org.compiere.model.X_C_Order;
 import org.compiere.util.CLogMgt;
 import org.compiere.util.CLogger;
@@ -229,6 +227,7 @@ public class MO_Tax{
 				)
 			{
 				if (!tax.isPostal()) {
+log.warning("From Country Group (1) = "+tax.getC_Tax_ID());
 					return tax.getC_Tax_ID();
 				}
 				//
@@ -243,6 +242,7 @@ public class MO_Tax{
 						&& (postal.getPostal_To() == null 
 							|| postal.getPostal_To().startsWith(lTo.getPostal()))
 						)
+log.warning("!tax.isPostal()) (2) = "+tax.getC_Tax_ID());
 						return tax.getC_Tax_ID();
 				}	//	for all postals
 			}
@@ -252,14 +252,22 @@ public class MO_Tax{
 		for (int i = 0; i < taxes.length; i++)
 		{
 			MTax tax = taxes[i];
-			if (!tax.isDefault() || !tax.isActive()
+			if (!tax.isDefault() 
+				|| tax.getC_TaxCategory_ID() != C_TaxCategory_ID 
+				|| !tax.isActive()
 				|| tax.getParent_Tax_ID() != 0)	//	user parent tax
+				continue;
+			// Exempt Tax Select
+			if ("Y".equals (IsBPTaxExempt) && !tax.isTaxExempt())
+				continue;
+			if ("N".equals (IsBPTaxExempt) && tax.isTaxExempt())
 				continue;
 			if (IsSOTrx && MTax.SOPOTYPE_PurchaseTax.equals(tax.getSOPOType()))
 				continue;
 			if (!IsSOTrx && MTax.SOPOTYPE_SalesTax.equals(tax.getSOPOType()))
 				continue;
 			if (log.isLoggable(Level.FINE)) log.fine("get (default) - " + tax);
+log.warning("Default (3) = "+tax.getC_Tax_ID());
 			return tax.getC_Tax_ID();
 		}	//	for all taxes
 		
@@ -557,7 +565,7 @@ public class MO_Tax{
 		String IsTaxExempt = null;
 		String IsSOTaxExempt = null;
 		String IsPOTaxExempt = null;
-
+		
 		String sql = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -615,9 +623,14 @@ public class MO_Tax{
 					+ ", billToC_Location_ID=" + billToC_Location_ID
 					+ ", shipFromC_Location_ID=" + shipFromC_Location_ID
 					+ ", shipToC_Location_ID=" + shipToC_Location_ID);
-				return Core.getTaxLookup().get(ctx, C_TaxCategory_ID, IsSOTrx,
-							shipDate, shipFromC_Location_ID, shipToC_Location_ID,
-							billDate, billFromC_Location_ID, billToC_Location_ID, trxName);
+				ILPYTaxLookup lpy = (ILPYTaxLookup) Core.getTaxLookup();
+				int taxID = lpy.getLPY(ctx, C_TaxCategory_ID, IsSOTrx, IsBPTaxExempt,
+						shipDate, shipFromC_Location_ID, shipToC_Location_ID,
+						billDate, billFromC_Location_ID, billToC_Location_ID, trxName);
+				return taxID;
+//				return Core.getTaxLookup().getLPY(ctx, C_TaxCategory_ID, IsSOTrx, IsBPTaxExempt,
+//							shipDate, shipFromC_Location_ID, shipToC_Location_ID,
+//							billDate, billFromC_Location_ID, billToC_Location_ID, trxName);
 			}
 
 			// ----------------------------------------------------------------

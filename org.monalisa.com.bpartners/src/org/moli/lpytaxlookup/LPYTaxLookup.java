@@ -3,11 +3,9 @@ package org.moli.lpytaxlookup;
 import java.sql.Timestamp;
 import java.util.Properties;
 
-import org.adempiere.base.DefaultTaxLookup;
 import org.adempiere.base.ITaxLookup;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MBPartnerLocation;
-import org.compiere.model.Tax;
 import org.osgi.service.component.annotations.Component;
 
 @Component(
