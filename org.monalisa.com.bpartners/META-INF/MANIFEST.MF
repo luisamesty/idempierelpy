@@ -22,10 +22,10 @@ Require-Bundle: org.adempiere.base;bundle-version="0.0.0",
  zul;bundle-version="0.0.0",
  zweb;bundle-version="0.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Service-Component: OSGI-INF/BPMOLIModelFactory.xml,OSGI-INF/BPMOLIProcessFactory.xml
+Service-Component: OSGI-INF/BPMOLIModelFactory.xml,OSGI-INF/BPMOLIProcessFactory.xml, OSGI-INF/LPYTaxLookup.xml
+Export-Package: org.moli.lpytaxlookup
 Import-Package: 
- org.compiere.apps
+ org.compiere.apps, org.adempiere.base, org.osgi.service.component.annotations
 Bundle-Vendor: Monalisa
 Automatic-Module-Name: org.monalisa.com.bpartners
 Bundle-ActivationPolicy: lazy
-
