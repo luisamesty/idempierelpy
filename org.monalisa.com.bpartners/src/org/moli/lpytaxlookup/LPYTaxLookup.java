@@ -14,7 +14,7 @@ import org.osgi.service.component.annotations.Component;
 	        "component.name=org.moli.compiere.LPYTaxLookup"
 	    }
 	)
-public class LPYTaxLookup implements ITaxLookup {
+public class LPYTaxLookup implements ITaxLookup, ILPYTaxLookup {
 	
 	/**
 	 * default constructor
@@ -39,12 +39,30 @@ public class LPYTaxLookup implements ITaxLookup {
 	public int get(Properties ctx, int C_TaxCategory_ID, boolean IsSOTrx, Timestamp shipDate, int shipFromC_Location_ID,
 			int shipToC_Location_ID, Timestamp billDate, int billFromC_Location_ID, int billToC_Location_ID,
 			String trxName) {
-		MBPartnerLocation bpl = new MBPartnerLocation(ctx, billToC_Location_ID, trxName);
-		MBPartner bp = new MBPartner(ctx, bpl.getC_BPartner_ID(), trxName);
+		
+		MBPartner bp = BPartnerUtil.getBPartnerByLocation(ctx,billToC_Location_ID, trxName);
+//		MBPartnerLocation bpl = new MBPartnerLocation(ctx, billToC_Location_ID, trxName);
+//		MBPartner bp = new MBPartner(ctx, bpl.getC_BPartner_ID(), trxName);
 		String IsBPTaxExempt = "N";
-		if ((IsSOTrx && bp.isTaxExempt() ) || (!IsSOTrx && bp.isPOTaxExempt()))
-				IsBPTaxExempt = "Y";
+		if (bp!=null && ( (IsSOTrx && bp.isTaxExempt() ) || (!IsSOTrx && bp.isPOTaxExempt())));
+			IsBPTaxExempt = "Y";
 		return MO_Tax.get(ctx, C_TaxCategory_ID, IsSOTrx, IsBPTaxExempt, shipDate, shipFromC_Location_ID, shipToC_Location_ID, billDate, billFromC_Location_ID, billToC_Location_ID, trxName);
 	}
 
+	@Override
+	public int getLPY(Properties ctx, int M_Product_ID, int C_Charge_ID, String IsBPTaxExempt, Timestamp billDate,
+			Timestamp shipDate, int AD_Org_ID, int M_Warehouse_ID, int billC_BPartner_Location_ID,
+			int shipC_BPartner_Location_ID, boolean IsSOTrx, String deliveryViaRule, String trxName) {
+		return MO_Tax.get(ctx, M_Product_ID, C_Charge_ID, IsBPTaxExempt, billDate, shipDate, AD_Org_ID, M_Warehouse_ID, billC_BPartner_Location_ID, shipC_BPartner_Location_ID, 
+				IsSOTrx, deliveryViaRule, trxName);
+	}
+
+	@Override
+	public int getLPY(Properties ctx, int C_TaxCategory_ID, boolean IsSOTrx, String IsBPTaxExempt, Timestamp shipDate,
+			int shipFromC_Location_ID, int shipToC_Location_ID, Timestamp billDate, int billFromC_Location_ID,
+			int billToC_Location_ID, String trxName) {
+		return MO_Tax.get(ctx, C_TaxCategory_ID, IsSOTrx, IsBPTaxExempt, shipDate, shipFromC_Location_ID, shipToC_Location_ID, billDate, billFromC_Location_ID, billToC_Location_ID, trxName);
+
+	}
+	
 }
