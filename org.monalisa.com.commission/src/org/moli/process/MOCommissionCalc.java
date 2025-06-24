@@ -372,7 +372,7 @@ public class MOCommissionCalc extends SvrProcess {
 		cal.set(Calendar.SECOND, 0);
 		cal.set(Calendar.MILLISECOND, 0);
 		//	Yearly
-		if (MCommission.FREQUENCYTYPE_Yearly.equals(m_com.getFrequencyType()))
+		if (MO_Commission.FREQUENCYTYPE_Yearly.equals(m_com.getFrequencyType()))
 		{
 			cal.set(Calendar.DAY_OF_YEAR, 1);
 			p_StartDate = new Timestamp (cal.getTimeInMillis());
@@ -383,7 +383,7 @@ public class MOCommissionCalc extends SvrProcess {
 			
 		}
 		//	Quarterly
-		else if (MCommission.FREQUENCYTYPE_Quarterly.equals(m_com.getFrequencyType()))
+		else if (MO_Commission.FREQUENCYTYPE_Quarterly.equals(m_com.getFrequencyType()))
 		{
 			cal.set(Calendar.DAY_OF_MONTH, 1);
 			int month = cal.get(Calendar.MONTH);
@@ -402,7 +402,7 @@ public class MOCommissionCalc extends SvrProcess {
 			m_EndDate = new Timestamp (cal.getTimeInMillis());
 		}
 		//	Weekly
-		else if (MCommission.FREQUENCYTYPE_Weekly.equals(m_com.getFrequencyType()))
+		else if (MO_Commission.FREQUENCYTYPE_Weekly.equals(m_com.getFrequencyType()))
 		{
 			cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
 			p_StartDate = new Timestamp (cal.getTimeInMillis());
@@ -411,7 +411,7 @@ public class MOCommissionCalc extends SvrProcess {
 			m_EndDate = new Timestamp (cal.getTimeInMillis());
 		}
 		//	Monthly
-		else if (MCommission.FREQUENCYTYPE_Monthly.equals(m_com.getFrequencyType()))
+		else if (MO_Commission.FREQUENCYTYPE_Monthly.equals(m_com.getFrequencyType()))
 		{
 			cal.set(Calendar.DAY_OF_MONTH, 1);
 			p_StartDate = new Timestamp (cal.getTimeInMillis());
@@ -421,7 +421,7 @@ public class MOCommissionCalc extends SvrProcess {
 			m_EndDate = new Timestamp (cal.getTimeInMillis());
 		}
 		//	Daily LPY-29 Daily Option included
-		else if (MCommission.FREQUENCYTYPE_Daily.equals(m_com.getFrequencyType()))
+		else if (MO_Commission.FREQUENCYTYPE_Daily.equals(m_com.getFrequencyType()))
 		{
 			p_StartDate = new Timestamp(cal.getTimeInMillis());
 			m_EndDate = new Timestamp(cal.getTimeInMillis());
