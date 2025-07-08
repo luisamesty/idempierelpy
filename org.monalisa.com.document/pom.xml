@@ -6,7 +6,7 @@
 	  	<groupId>org.idempiere</groupId>
 	  	<artifactId>org.idempiere.parent</artifactId>
 	  	<relativePath>../../idempiere/org.idempiere.parent/pom.xml</relativePath>
-	  	<version>11.0.0-SNAPSHOT</version>
+	  	<version>12.0.0-SNAPSHOT</version>
   </parent>
   <groupId>org.monalisa.com</groupId>
   <artifactId>org.monalisa.com.document</artifactId>
@@ -27,7 +27,7 @@
       	<dependency>
       		<groupId>org.monalisa.com</groupId>
       		<artifactId>org.monalisa.com.base</artifactId>
-      		<version>11.0.0-SNAPSHOT</version>
+      		<version>12.0.0-SNAPSHOT</version>
       	</dependency>
       </dependencies>
 </project>
