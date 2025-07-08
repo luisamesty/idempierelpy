@@ -2,7 +2,7 @@
 <feature
       id="org.monalisa.com.feature"
       label="Monalisa_Features"
-      version="11.0.0.qualifier">
+      version="12.0.0.qualifier">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -15,42 +15,29 @@
    <license url="http://www.example.com/license">
       [Enter License Description here.]
    </license>
-   
+
    <plugin
          id="org.monalisa.com.base"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>   
+         version="0.0.0"/>
+
    <plugin
          id="org.monalisa.com.bpartners"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
+
    <plugin
          id="org.monalisa.com.commission"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
+
    <plugin
          id="org.monalisa.com.document"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
+
    <plugin
          id="org.monalisa.com.material"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.monalisa.com.personnel"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
+
 </feature>
