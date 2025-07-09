@@ -4,10 +4,10 @@
   <name>org.monalisa.com.base</name>
   <description>MOLI Models </description>
   <parent>
-  	<groupId>org.idempiere</groupId>
-  	<artifactId>org.idempiere.parent</artifactId>
-  	<relativePath>../../idempiere/org.idempiere.parent/pom.xml</relativePath>
-  	<version>12.0.0-SNAPSHOT</version>
+  		<groupId>org.monalisa.com</groupId>
+        <artifactId>org.monalisa.com.parent</artifactId>
+ 		<version>12.0.0-SNAPSHOT</version>
+        <relativePath>../org.monalisa.com.parent/pom.xml</relativePath>
   </parent>
   <packaging>eclipse-plugin</packaging>
   <build>
