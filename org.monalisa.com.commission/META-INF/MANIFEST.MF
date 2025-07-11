@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Commission
 Bundle-SymbolicName: org.monalisa.com.commission
 Bundle-Version: 11.0.0.qualifier
-Bundle-Activator: org.adempiere.plugin.utils.AdempiereActivator
+Bundle-Activator: org.moli.commission.Activator
 Require-Bundle: org.adempiere.base;bundle-version="0.0.0",
  org.monalisa.com.base;bundle-version="11.0.0",
  org.adempiere.plugin.utils;bundle-version="0.0.0",
@@ -25,7 +25,9 @@ Bundle-RequiredExecutionEnvironment: JavaSE-17
 Service-Component: OSGI-INFO/COModelFactory.xml,
  OSGI-INFO/COProcessFactory.xml
 Import-Package: 
- org.compiere.apps
+ net.sf.jasperreports.engine,
+ org.compiere.apps,
+ org.osgi.framework;version="[1.10.0,2.0.0)"
 Bundle-Vendor: Monalisa
 Automatic-Module-Name: org.monalisa.com.document
 Bundle-ActivationPolicy: lazy

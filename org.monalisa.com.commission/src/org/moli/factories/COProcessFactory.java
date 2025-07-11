@@ -12,8 +12,25 @@ public class COProcessFactory implements IProcessFactory {
     @Override
     public ProcessCall newProcessInstance(String className) {
         ProcessCall process = null;
-        log.warning("......COProcessFactory..." + className);
+        // Processes
         if (className.equals("org.compiere.process.CommissionCalc")) {
+            try {
+                process = MOCommissionCalc.class.getDeclaredConstructor().newInstance();
+            } catch (Exception e) {
+                log.severe("Error al instanciar la clase: " + e.getMessage());
+            }
+        }
+        // Reports
+        // Commission Profile Report
+        if (className.equals("org.moli.reports.CommissionProfile")) {
+            try {
+                process = MOCommissionCalc.class.getDeclaredConstructor().newInstance();
+            } catch (Exception e) {
+                log.severe("Error al instanciar la clase: " + e.getMessage());
+            }
+        }
+        // Commission Run Report
+        if (className.equals("org.moli.reports.CommissionRpt")) {
             try {
                 process = MOCommissionCalc.class.getDeclaredConstructor().newInstance();
             } catch (Exception e) {

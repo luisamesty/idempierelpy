@@ -1,0 +1,139 @@
+package org.moli.reports.CommissionProfile;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.ResourceBundle;
+
+import org.adempiere.base.Service;
+import org.adempiere.report.jasper.JRViewerProvider;
+import org.moli.reports.JasperUtils;
+import org.compiere.model.PrintInfo;
+import org.compiere.print.MPrintFormat;
+import org.compiere.print.ServerReportCtl;
+import org.compiere.process.ClientProcess;
+import org.compiere.process.ProcessCall;
+import org.compiere.process.ProcessInfo;
+import org.compiere.process.ProcessInfoParameter;
+import org.compiere.process.SvrProcess;
+import org.compiere.util.DB;
+
+import net.sf.jasperreports.engine.JRParameter;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+
+public class CommissionProfile extends SvrProcess implements ProcessCall, ClientProcess{
+
+    private int p_AD_Client_ID = 0;
+    private int p_AD_Org_ID = 0;
+    private int p_C_Period_ID = 0;
+    private int p_C_BPartner_ID = 0;
+    // ATRIBUTO para guardar el JasperPrint
+    private JasperPrint jasperPrint;
+    ProcessInfoParameter[] pip = null;
+	String printerName = null;
+	MPrintFormat printFormat = null;   
+	private PrintInfo    printInfo;
+	ProcessInfo processInfo;
+	public static final String IDEMPIERE_REPORT_TYPE = "IDEMPIERE_REPORT_TYPE";
+	
+	@Override
+	protected void prepare() {
+	   	// Parametros delreporte
+    	pip = getParameter();
+        for (ProcessInfoParameter param : pip) {
+            String name = param.getParameterName();
+            if (param.getParameter() == null)
+                ;
+            else if ("AD_Client_ID".equalsIgnoreCase(name))
+                p_AD_Client_ID = param.getParameterAsInt();
+            else if ("AD_Org_ID".equalsIgnoreCase(name))
+            	p_AD_Org_ID = param.getParameterAsInt();
+            else if ("C_Period_ID".equalsIgnoreCase(name))
+            	p_C_Period_ID = param.getParameterAsInt();
+            else if ("C_BPartner_ID".equalsIgnoreCase(name))
+            	p_C_BPartner_ID = param.getParameterAsInt();            else
+                log.severe("Unknown Parameter: " + name);
+        }
+        // Additional Parameters
+    	if (pip!=null) {
+    		for (int i=0; i<pip.length; i++) {
+    			if (ServerReportCtl.PARAM_PRINT_FORMAT.equalsIgnoreCase(pip[i].getParameterName())) {
+    				printFormat = (MPrintFormat)pip[i].getParameter();
+    			}
+    			if (ServerReportCtl.PARAM_PRINT_INFO.equalsIgnoreCase(pip[i].getParameterName())) {
+    				printInfo = (PrintInfo)pip[i].getParameter();
+    			}
+    			if (ServerReportCtl.PARAM_PRINTER_NAME.equalsIgnoreCase(pip[i].getParameterName())) {
+    				printerName = (String)pip[i].getParameter();
+    			}
+    		}
+    	}
+        processInfo = getProcessInfo();
+        log.info("Process Commission prepared with AD_Client_ID=" + p_AD_Client_ID + "  and AD_Org_ID=" + p_AD_Org_ID);
+		
+	}
+
+	@Override
+	protected String doIt() throws Exception {
+        // Carpeta temporal
+        JasperUtils jasperUtils = new JasperUtils();
+        String tmpFolder = jasperUtils.getTempFolder();
+        // Lista de recursos a copiar
+        String[] resourcesToCopy = new String[]{
+            "org/amerp/reports/CommissionProfile/CommissionProfile.jrxml",
+            "org/amerp/reports/CommissionProfile/CommissionProfile.properties",
+            "org/amerp/reports/CommissionProfile/CommissionProfile_es.properties",
+            "org/amerp/reports/CommissionProfile/CommissionProfile_fr.properties"
+            // Si hay imágenes o subreports, añádelos aquí
+        };
+
+        // Copiar físicamente cada recurso al tmpFolder
+        for (String resource : resourcesToCopy) {
+        	jasperUtils.copyResourceToTmp(resource, tmpFolder);
+        }
+        
+        // Prueba que el archivo ahora existe físicamente
+        File jrxmlFile = new File(tmpFolder + "org_amerp_reports_CommissionProfile" + File.separator + "CommissionProfile.jrxml");
+        if (!jrxmlFile.exists()) {
+            throw new Exception("No existe el archivo jrxml en tmp: " + jrxmlFile.getAbsolutePath());
+        }
+
+        // Ahora puedes usar la ruta física para compilar el reporte
+        String jrxmlPath = tmpFolder + "org_amerp_reports_CommissionProfile" + File.separator + "CommissionProfile.jrxml";
+        
+        
+        try (InputStream reportStream = new FileInputStream(jrxmlPath)) {
+            JasperReport jasperReport = JasperCompileManager.compileReport(reportStream);
+
+            // Parámetros, conexión, etc.
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("AD_Client_ID", p_AD_Client_ID);
+            parameters.put("AD_Org_ID",p_AD_Org_ID);
+            parameters.put("C_Period_ID",p_C_Period_ID);
+            parameters.put("C_BPartner_ID",p_C_BPartner_ID);
+            parameters.put(JRParameter.REPORT_RESOURCE_BUNDLE, ResourceBundle.getBundle(
+            	    "org.amerp.reports.CommissionProfile.CommissionProfile",
+            	    Locale.getDefault()
+            	));
+
+            try (Connection conn = DB.getConnectionRO()) {
+                    jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, conn);
+                    // export to viewer
+                    processInfo = getProcessInfo();
+                    printInfo = new PrintInfo(processInfo);
+    				// view the report
+    				JRViewerProvider viewerLauncher = Service.locator().locate(JRViewerProvider.class).getService();
+    				viewerLauncher.openViewer(jasperPrint, processInfo.getTitle(), printInfo);
+           }
+        }
+        return "@ReportGenerated@";
+	}
+
+}
