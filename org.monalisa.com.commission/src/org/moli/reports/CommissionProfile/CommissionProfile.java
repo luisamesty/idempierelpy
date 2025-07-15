@@ -87,10 +87,10 @@ public class CommissionProfile extends SvrProcess implements ProcessCall, Client
         String tmpFolder = jasperUtils.getTempFolder();
         // Lista de recursos a copiar
         String[] resourcesToCopy = new String[]{
-            "org/amerp/reports/CommissionProfile/CommissionProfile.jrxml",
-            "org/amerp/reports/CommissionProfile/CommissionProfile.properties",
-            "org/amerp/reports/CommissionProfile/CommissionProfile_es.properties",
-            "org/amerp/reports/CommissionProfile/CommissionProfile_fr.properties"
+            "org/moli/reports/CommissionProfile/CommissionProfile.jrxml",
+            "org/moli/reports/CommissionProfile/CommissionProfile.properties",
+            "org/moli/reports/CommissionProfile/CommissionProfile_es.properties",
+            "org/moli/reports/CommissionProfile/CommissionProfile_fr.properties"
             // Si hay imágenes o subreports, añádelos aquí
         };
 
@@ -100,13 +100,13 @@ public class CommissionProfile extends SvrProcess implements ProcessCall, Client
         }
         
         // Prueba que el archivo ahora existe físicamente
-        File jrxmlFile = new File(tmpFolder + "org_amerp_reports_CommissionProfile" + File.separator + "CommissionProfile.jrxml");
+        File jrxmlFile = new File(tmpFolder + "org_moli_reports_CommissionProfile" + File.separator + "CommissionProfile.jrxml");
         if (!jrxmlFile.exists()) {
             throw new Exception("No existe el archivo jrxml en tmp: " + jrxmlFile.getAbsolutePath());
         }
 
         // Ahora puedes usar la ruta física para compilar el reporte
-        String jrxmlPath = tmpFolder + "org_amerp_reports_CommissionProfile" + File.separator + "CommissionProfile.jrxml";
+        String jrxmlPath = tmpFolder + "org_moli_reports_CommissionProfile" + File.separator + "CommissionProfile.jrxml";
         
         
         try (InputStream reportStream = new FileInputStream(jrxmlPath)) {
@@ -119,7 +119,7 @@ public class CommissionProfile extends SvrProcess implements ProcessCall, Client
             parameters.put("C_Period_ID",p_C_Period_ID);
             parameters.put("C_BPartner_ID",p_C_BPartner_ID);
             parameters.put(JRParameter.REPORT_RESOURCE_BUNDLE, ResourceBundle.getBundle(
-            	    "org.amerp.reports.CommissionProfile.CommissionProfile",
+            	    "org.moli.reports.CommissionProfile.CommissionProfile",
             	    Locale.getDefault()
             	));
 

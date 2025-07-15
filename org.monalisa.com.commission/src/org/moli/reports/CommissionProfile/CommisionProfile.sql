@@ -67,6 +67,8 @@ FULL JOIN (
             WHEN 'W' THEN 'Weekly'
             WHEN 'Y' THEN 'Yearly'
             ELSE 'Unknown' END AS "frequencytypename",
+        cl.QtySubtract AS "qtysubtract",
+        cl.QtyMultiplier AS "qtymultiplier",
         cl.AmtSubtract AS "amtsubtract",
         cl.AmtMultiplier AS "amtmultiplier",
         cl.MOLI_CommGoal AS "moli_commgoal",
@@ -79,10 +81,9 @@ FULL JOIN (
       SELECT ad_client_id, c_period_id, periodno, name, startdate , enddate
       FROM C_Period
       WHERE AD_Client_ID = $P{AD_Client_ID} AND c_period_ID = $P{C_Period_ID}
-    ) comper
-      ON comper.ad_client_id = c.ad_client_id
-     AND c.ValidFrom >= comper.startdate
-     AND c.ValidTo <= comper.enddate
+    ) comper  ON comper.ad_client_id = c.ad_client_id
+		     AND c.ValidFrom >= comper.startdate
+		     AND c.ValidTo <= comper.enddate
     LEFT JOIN AD_Org orgh ON orgh.ad_org_id = c.ad_org_id
     LEFT JOIN AD_Org orgl ON orgl.ad_org_id = cl.org_id
     LEFT JOIN M_Product p ON cl.M_Product_ID = p.M_Product_ID
@@ -93,7 +94,8 @@ FULL JOIN (
     LEFT JOIN c_currency_trl currt1 ON curr1.c_currency_id = currt1.c_currency_id
         AND currt1.ad_language = (SELECT AD_Language FROM AD_Client WHERE AD_Client_ID=$P{AD_Client_ID})
     WHERE c.AD_Client_ID = $P{AD_Client_ID}
-      AND ($P{AD_Org_ID} IS NULL OR c.AD_Org_ID = $P{AD_Org_ID})
-      AND ($P{C_BPartner_ID} IS NULL OR c.C_BPartner_ID = $P{C_BPartner_ID})
+      AND ($P{AD_Org_ID} IS NULL OR $P{AD_Org_ID} = 0 OR c.AD_Org_ID = $P{AD_Org_ID})
+      AND ($P{C_Commission_ID} IS NULL OR $P{C_Commission_ID} = 0 OR c.C_Commission_ID = $P{C_Commission_ID})
+      AND ($P{C_BPartner_ID} IS NULL OR $P{C_BPartner_ID} = 0 OR c.C_BPartner_ID = $P{C_BPartner_ID})
 ) comm ON 1=0
 ORDER BY comm."ad_org_id", comm."salesrep_id", comm."line";
