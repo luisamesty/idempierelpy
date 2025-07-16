@@ -4,6 +4,8 @@ import org.adempiere.base.IProcessFactory;
 import org.compiere.process.ProcessCall;
 import org.compiere.util.CLogger;
 import org.moli.process.MOCommissionCalc;
+import org.moli.reports.CommissionProfile.CommissionProfile;
+import org.moli.reports.CommissionRunRpt.CommissionRunRpt;
 
 public class COProcessFactory implements IProcessFactory {
 
@@ -24,15 +26,15 @@ public class COProcessFactory implements IProcessFactory {
         // Commission Profile Report
         if (className.equals("org.moli.reports.CommissionProfile")) {
             try {
-                process = MOCommissionCalc.class.getDeclaredConstructor().newInstance();
+                process = CommissionProfile.class.getDeclaredConstructor().newInstance();
             } catch (Exception e) {
                 log.severe("Error al instanciar la clase: " + e.getMessage());
             }
         }
         // Commission Run Report
-        if (className.equals("org.moli.reports.CommissionRpt")) {
+        if (className.equals("org.moli.reports.CommissionRunRpt")) {
             try {
-                process = MOCommissionCalc.class.getDeclaredConstructor().newInstance();
+                process = CommissionRunRpt.class.getDeclaredConstructor().newInstance();
             } catch (Exception e) {
                 log.severe("Error al instanciar la clase: " + e.getMessage());
             }

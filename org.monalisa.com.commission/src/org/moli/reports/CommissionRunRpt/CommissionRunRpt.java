@@ -1,4 +1,4 @@
-package org.moli.reports.CommissionProfile;
+package org.moli.reports.CommissionRunRpt;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,13 +28,14 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 
-public class CommissionProfile extends SvrProcess implements ProcessCall, ClientProcess{
+public class CommissionRunRpt extends SvrProcess implements ProcessCall, ClientProcess{
 
     private int p_AD_Client_ID = 0;
     private int p_AD_Org_ID = 0;
     private int p_C_Period_ID = 0;
     private int p_C_BPartner_ID = 0;
     private int p_C_Commission_ID = 0;
+    private String p_isSummary = "N";
     // ATRIBUTO para guardar el JasperPrint
     private JasperPrint jasperPrint;
     ProcessInfoParameter[] pip = null;
@@ -62,6 +63,8 @@ public class CommissionProfile extends SvrProcess implements ProcessCall, Client
             	p_C_BPartner_ID = param.getParameterAsInt();
             else if ("C_Commission_ID".equalsIgnoreCase(name))
             	p_C_Commission_ID = param.getParameterAsInt();  
+			else if ("isSummary".equalsIgnoreCase(name))
+				p_isSummary = param.getParameterAsString();
             else
                 log.severe("Unknown Parameter: " + name);
         }
@@ -91,10 +94,10 @@ public class CommissionProfile extends SvrProcess implements ProcessCall, Client
         String tmpFolder = jasperUtils.getTempFolder();
         // Lista de recursos a copiar
         String[] resourcesToCopy = new String[]{
-            "org/moli/reports/CommissionProfile/CommissionProfile.jrxml",
-            "org/moli/reports/CommissionProfile/CommissionProfile.properties",
-            "org/moli/reports/CommissionProfile/CommissionProfile_es.properties",
-            "org/moli/reports/CommissionProfile/CommissionProfile_fr.properties"
+            "org/moli/reports/CommissionRunRpt/CommissionRunRpt.jrxml",
+            "org/moli/reports/CommissionRunRpt/CommissionRunRpt.properties",
+            "org/moli/reports/CommissionRunRpt/CommissionRunRpt_es.properties",
+            "org/moli/reports/CommissionRunRpt/CommissionRunRpt_fr.properties"
             // Si hay imágenes o subreports, añádelos aquí
         };
 
@@ -104,13 +107,13 @@ public class CommissionProfile extends SvrProcess implements ProcessCall, Client
         }
         
         // Prueba que el archivo ahora existe físicamente
-        File jrxmlFile = new File(tmpFolder + "org_moli_reports_CommissionProfile" + File.separator + "CommissionProfile.jrxml");
+        File jrxmlFile = new File(tmpFolder + "org_moli_reports_CommissionRunRpt" + File.separator + "CommissionRunRpt.jrxml");
         if (!jrxmlFile.exists()) {
             throw new Exception("No existe el archivo jrxml en tmp: " + jrxmlFile.getAbsolutePath());
         }
 
         // Ahora puedes usar la ruta física para compilar el reporte
-        String jrxmlPath = tmpFolder + "org_moli_reports_CommissionProfile" + File.separator + "CommissionProfile.jrxml";
+        String jrxmlPath = tmpFolder + "org_moli_reports_CommissionRunRpt" + File.separator + "CommissionRunRpt.jrxml";
         
         
         try (InputStream reportStream = new FileInputStream(jrxmlPath)) {
@@ -123,9 +126,10 @@ public class CommissionProfile extends SvrProcess implements ProcessCall, Client
             parameters.put("C_Period_ID",p_C_Period_ID);
             parameters.put("C_BPartner_ID",p_C_BPartner_ID);
             parameters.put("C_Commission_ID",p_C_Commission_ID);
+            parameters.put("isSummary",p_isSummary);
             //
             parameters.put(JRParameter.REPORT_RESOURCE_BUNDLE, ResourceBundle.getBundle(
-            	    "org.moli.reports.CommissionProfile.CommissionProfile",
+            	    "org.moli.reports.CommissionRunRpt.CommissionRunRpt",
             	    Locale.getDefault()
             	));
 
