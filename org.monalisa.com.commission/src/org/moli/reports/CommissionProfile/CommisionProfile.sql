@@ -1,4 +1,4 @@
--- CommissionProfile
+-- CommissionProfile V2
 -- Commission Profile Report
 -- Report for Commission profile
 SELECT *
@@ -77,13 +77,6 @@ FULL JOIN (
         cl.MOLI_CommGoalBaseMultiplier AS "moli_commgoalbasemultiplier"
     FROM C_Commission c
     INNER JOIN C_CommissionLine cl ON c.C_Commission_ID = cl.C_Commission_ID
-    INNER JOIN (
-      SELECT ad_client_id, c_period_id, periodno, name, startdate , enddate
-      FROM C_Period
-      WHERE AD_Client_ID = $P{AD_Client_ID} AND c_period_ID = $P{C_Period_ID}
-    ) comper  ON comper.ad_client_id = c.ad_client_id
-		     AND c.ValidFrom >= comper.startdate
-		     AND c.ValidTo <= comper.enddate
     LEFT JOIN AD_Org orgh ON orgh.ad_org_id = c.ad_org_id
     LEFT JOIN AD_Org orgl ON orgl.ad_org_id = cl.org_id
     LEFT JOIN M_Product p ON cl.M_Product_ID = p.M_Product_ID
@@ -97,5 +90,7 @@ FULL JOIN (
       AND ($P{AD_Org_ID} IS NULL OR $P{AD_Org_ID} = 0 OR c.AD_Org_ID = $P{AD_Org_ID})
       AND ($P{C_Commission_ID} IS NULL OR $P{C_Commission_ID} = 0 OR c.C_Commission_ID = $P{C_Commission_ID})
       AND ($P{C_BPartner_ID} IS NULL OR $P{C_BPartner_ID} = 0 OR c.C_BPartner_ID = $P{C_BPartner_ID})
+      AND c.ValidFrom >= CAST($P{DateFrom} AS Timestamp)
+      AND c.ValidTo <= CAST($P{DateTo} AS Timestamp)
 ) comm ON 1=0
 ORDER BY comm."ad_org_id", comm."salesrep_id", comm."line";

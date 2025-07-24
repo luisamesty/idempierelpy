@@ -1,8 +1,8 @@
--- CommissionRunRpt
--- Commission Run Report
--- Report for Commission Run
+-- CommissionRunRpt V2 (Date-based)
+-- Commission Run Report (using DateFrom and DateTo)
 SELECT *
 FROM (
+    -- Header
     SELECT
         cli.ad_client_id AS "rep_client_id",
         CASE WHEN ($P{AD_Org_ID} IS NULL OR $P{AD_Org_ID} = 0) THEN 0 ELSE $P{AD_Org_ID} END AS "rep_org_id",
@@ -27,6 +27,7 @@ FROM (
       AND ($P{AD_Org_ID} IS NULL OR $P{AD_Org_ID} = 0 OR orgh.ad_org_id = $P{AD_Org_ID})
 ) header_info
 FULL JOIN (
+    -- Detail
 	SELECT
 	    cr.AD_Client_ID AS "ad_client_id",
 	    cr.AD_Org_ID AS "ad_org_id",
@@ -110,17 +111,10 @@ FULL JOIN (
 	    GROUP BY C_Commission_ID
 	) last_runs ON cr.C_CommissionRun_ID = last_runs.last_commissionrun_id
 	INNER JOIN C_Commission c ON c.c_commission_id = cr.c_commission_id
-	INNER JOIN C_CommissionAmt ca ON cr.C_CommissionRun_ID = ca.C_CommissionRun_ID
+	INNER JOIN C_CommissionAmt ca ON cr.C_CommissionRun_ID = ca.c_commissionrun_id
 	INNER JOIN C_CommissionLine cl ON cl.c_commissionline_id = ca.c_commissionline_id
 	LEFT JOIN  C_CommissionDetail cd ON ca.C_CommissionAmt_ID = cd.C_CommissionAmt_ID
-    INNER JOIN (
-      SELECT ad_client_id, c_period_id, periodno, name, startdate , enddate
-      FROM C_Period
-      WHERE AD_Client_ID = $P{AD_Client_ID} AND c_period_ID = $P{C_Period_ID}
-    ) comper  ON comper.ad_client_id = c.ad_client_id
-		     AND c.ValidFrom >= comper.startdate
-		     AND c.ValidTo <= comper.enddate
-    LEFT JOIN AD_Org orgh ON orgh.ad_org_id = c.ad_org_id
+	LEFT JOIN AD_Org orgh ON orgh.ad_org_id = c.ad_org_id
     LEFT JOIN AD_Org orgl ON orgl.ad_org_id = cl.org_id
     LEFT JOIN M_Product p ON cl.M_Product_ID = p.M_Product_ID
     LEFT JOIN M_Product_Category pc ON cl.M_Product_Category_ID = pc.M_Product_Category_ID
@@ -134,9 +128,10 @@ FULL JOIN (
     LEFT JOIN c_currency_trl currt1 ON curr1.c_currency_id = currt1.c_currency_id
         AND currt1.ad_language = (SELECT AD_Language FROM AD_Client WHERE AD_Client_ID=$P{AD_Client_ID})
 	WHERE cr.AD_Client_ID = $P{AD_Client_ID}
-		AND ($P{AD_Org_ID} IS NULL OR $P{AD_Org_ID} = 0 OR cr.AD_Org_ID = $P{AD_Org_ID})
-      	AND ($P{C_Commission_ID} IS NULL OR $P{C_Commission_ID} = 0 OR cr.C_Commission_ID = $P{C_Commission_ID})
+	AND ($P{AD_Org_ID} IS NULL OR $P{AD_Org_ID} = 0 OR cr.AD_Org_ID = $P{AD_Org_ID})
+   	AND ($P{C_Commission_ID} IS NULL OR $P{C_Commission_ID} = 0 OR cr.C_Commission_ID = $P{C_Commission_ID})
+   	AND ($P{C_BPartner_ID} IS NULL OR $P{C_BPartner_ID} = 0 OR c.C_BPartner_ID = $P{C_BPartner_ID})
+    AND c.ValidFrom >= CAST($P{DateFrom} AS Timestamp)
+    AND c.ValidTo <= CAST($P{DateTo} AS Timestamp)
 ) commr ON 1=0
 ORDER BY commr.commissionrun_documentno, commr.line, commr.reference
-
-

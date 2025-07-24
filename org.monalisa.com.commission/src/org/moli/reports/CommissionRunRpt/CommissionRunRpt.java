@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.sql.Connection;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -32,7 +33,8 @@ public class CommissionRunRpt extends SvrProcess implements ProcessCall, ClientP
 
     private int p_AD_Client_ID = 0;
     private int p_AD_Org_ID = 0;
-    private int p_C_Period_ID = 0;
+    private Timestamp p_DateFrom = null;
+    private Timestamp p_DateTo = null;
     private int p_C_BPartner_ID = 0;
     private int p_C_Commission_ID = 0;
     private String p_isSummary = "N";
@@ -57,8 +59,10 @@ public class CommissionRunRpt extends SvrProcess implements ProcessCall, ClientP
                 p_AD_Client_ID = param.getParameterAsInt();
             else if ("AD_Org_ID".equalsIgnoreCase(name))
             	p_AD_Org_ID = param.getParameterAsInt();
-            else if ("C_Period_ID".equalsIgnoreCase(name))
-            	p_C_Period_ID = param.getParameterAsInt();
+            else if ("DateFrom".equalsIgnoreCase(name))
+                p_DateFrom = param.getParameterAsTimestamp();
+            else if ("DateTo".equalsIgnoreCase(name))
+                p_DateTo = param.getParameterAsTimestamp();
             else if ("C_BPartner_ID".equalsIgnoreCase(name))
             	p_C_BPartner_ID = param.getParameterAsInt();
             else if ("C_Commission_ID".equalsIgnoreCase(name))
@@ -123,7 +127,8 @@ public class CommissionRunRpt extends SvrProcess implements ProcessCall, ClientP
             Map<String, Object> parameters = new HashMap<>();
             parameters.put("AD_Client_ID", p_AD_Client_ID);
             parameters.put("AD_Org_ID",p_AD_Org_ID);
-            parameters.put("C_Period_ID",p_C_Period_ID);
+            parameters.put("DateFrom", p_DateFrom);
+            parameters.put("DateTo", p_DateTo);
             parameters.put("C_BPartner_ID",p_C_BPartner_ID);
             parameters.put("C_Commission_ID",p_C_Commission_ID);
             parameters.put("isSummary",p_isSummary);
