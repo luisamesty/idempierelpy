@@ -131,7 +131,7 @@ FULL JOIN (
 	AND ($P{AD_Org_ID} IS NULL OR $P{AD_Org_ID} = 0 OR cr.AD_Org_ID = $P{AD_Org_ID})
    	AND ($P{C_Commission_ID} IS NULL OR $P{C_Commission_ID} = 0 OR cr.C_Commission_ID = $P{C_Commission_ID})
    	AND ($P{C_BPartner_ID} IS NULL OR $P{C_BPartner_ID} = 0 OR c.C_BPartner_ID = $P{C_BPartner_ID})
-    AND c.ValidFrom >= CAST($P{DateFrom} AS Timestamp)
-    AND c.ValidTo <= CAST($P{DateTo} AS Timestamp)
+   	AND TRUNC(c.ValidTo) <= TRUNC(CAST($P{DateTo} AS Timestamp))
+    AND TRUNC(c.ValidFrom) >= TRUNC(CAST($P{DateFrom} AS Timestamp))
 ) commr ON 1=0
 ORDER BY commr.commissionrun_documentno, commr.line, commr.reference
