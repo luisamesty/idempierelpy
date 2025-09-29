@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Pricelist
 Bundle-SymbolicName: org.monalisa.com.pricelist;singleton:=true
-Bundle-Version: 11.0.1.qualifier
+Bundle-Version: 11.0.0.qualifier
 Require-Bundle: org.adempiere.plugin.utils;bundle-version="11.0.0",
  org.adempiere.base;bundle-version="11.0.0",
  org.adempiere.base.process,
