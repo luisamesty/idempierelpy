@@ -14,6 +14,7 @@
   	<module>org.monalisa.com.personnel</module>
   	<module>org.monalisa.com.p2.site</module>
   	<module>org.monalisa.com.p2.targetplatform</module>
+  	<module>org.monalisa.com.pricelist</module>
   </modules>
   <groupId>org.monalisa.com</groupId>
   <properties>

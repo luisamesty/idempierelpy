@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Pricelist
+Bundle-SymbolicName: org.monalisa.com.pricelist;singleton:=true
+Bundle-Version: 11.0.1.qualifier
+Require-Bundle: org.adempiere.plugin.utils;bundle-version="11.0.0",
+ org.adempiere.base;bundle-version="11.0.0",
+ org.adempiere.base.process,
+ org.monalisa.com.base,
+ org.adempiere.ui.zk
+Service-Component: OSGI-INF/*.xml
+Automatic-Module-Name: org.monalisa.com.pricelist
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: org.adempiere.plugin.utils.Incremental2PackActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-17
