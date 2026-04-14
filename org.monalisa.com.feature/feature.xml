@@ -40,4 +40,10 @@
          id="org.monalisa.com.personnel"
          version="0.0.0"/>
 
+         version="0.0.0"/>
+
+   <plugin
+         id="org.monalisa.com.pricelist"
+         version="0.0.0"/>
+
 </feature>
