@@ -1,0 +1,16 @@
+"tablename","name","description","help","ad_table_id","entitytype","accesslevel","isactive","isview","ischangelog","iscentrallymaintained","isshowindrilloptions","ishighvolume","created","createdby","updated","updatedby","ad_table_uu"
+MOLI_BrandUSP,Brand USP,Brand USP,Brand USP,1000124,U,"6",Y,N,Y,Y,N,N,2025-09-09 19:10:35.331,100,2025-09-09 19:20:00.052,100,c50e9c75-5065-4239-a552-f6892277af18
+MOLI_C_InvoicePayment,Invoice Payment,,,1000121,U,"3",Y,Y,N,Y,Y,N,2025-04-05 12:22:53.824,100,2025-04-05 12:33:04.371,100,"5abf9885-33ea-4f3d-b6a4-675d2bdb7d01"
+MOLI_GeoRefCode,Geo Ref Code ID,,,1000068,U,"3",Y,N,Y,Y,N,N,2024-08-01 20:35:09.515,100,2024-11-11 16:27:08.504,100,ca677d9a-f26c-454f-b6cf-2a1eefc13e36
+MOLI_HS,Harmonized System,Harmonized Commodity Description and Coding System (HS Convention) ,Harmonized Commodity Description and Coding System (HS Convention) ,1000074,U,"3",Y,N,Y,Y,N,N,2024-08-17 16:31:18.303,100,2024-11-11 16:27:07.278,100,"7fcab178-4598-43b4-984c-c210c60a4e3f"
+MOLI_inOutData,MOLI_inOutData,,,1000069,U,"4",Y,N,Y,Y,N,N,2024-08-01 20:40:43.310,100,2024-08-01 20:40:43.310,100,"4fdc1ba2-c70f-496f-aed4-ff290afd3b88"
+MOLI_invoiceData,MOLI_invoiceData_ID,,,1000067,U,"4",Y,N,Y,Y,N,N,2024-08-01 18:53:28.425,100,2024-08-01 18:53:28.425,100,"16fedd97-1f0b-42ba-9524-0af9ce6ffb2a"
+MOLI_movementData,MOLI_movementData,,,1000070,U,"4",Y,N,Y,Y,N,N,2024-08-01 20:43:07.193,100,2024-08-01 20:43:07.193,100,"0f95c311-8c37-47d8-9371-9ebd22cccdb3"
+MOLI_PeopleCount,People Counting,People Counting data,People Counting data,1000077,U,"3",Y,N,Y,Y,N,N,2024-10-29 19:17:31.288,100,2024-11-11 16:27:14.572,100,"80d0f1a3-a325-4b0f-9188-19393c683bba"
+MOLI_posTransactions,MOLI_posTransactions_ID,,,1000071,U,"4",Y,N,Y,Y,N,N,2024-08-02 13:12:18.128,100,2024-08-02 13:12:18.128,100,"0dbb1936-6d5e-416f-a61d-85d30c3f6ba0"
+MOLI_ProductBrand,Product Brand,Product Brand,Product Brand,1000072,U,"3",Y,N,Y,Y,Y,N,2024-08-17 16:11:17.330,100,2024-11-11 16:27:13.228,100,"804e921a-97ae-4293-a4a0-8a9a6a41fef3"
+MOLI_ProductLine,Product Line,Product Line,,1000073,U,"3",Y,N,Y,Y,Y,N,2024-08-17 16:18:08.394,100,2024-11-11 16:27:13.884,100,"5b1abcdc-3f1a-4478-8baa-7e4835d1583c"
+MOLI_RegForm,Regulation Form ID,,Regulation Form,1000084,U,"3",Y,N,Y,Y,N,N,2024-11-19 17:40:31.653,100,2024-11-19 17:45:08.934,100,"415e09e7-db49-4186-a1bf-ee2b01e90f8b"
+MOLI_RegFormLine,Regulation Form Line,Regulation Form Line,Regulations Form Lines,1000086,U,"6",Y,N,Y,Y,N,N,2024-11-19 18:25:46.586,100,2024-12-17 13:26:38.608,100,c0ddfbbb-4405-4646-9ed7-a4aeded1f68d
+MOLI_RegFormProduct,Regulation Form Product,,Regulations Form Products,1000085,U,"3",Y,N,Y,Y,N,N,2024-11-19 18:22:24.393,100,2025-03-18 14:30:03.233,100,d957dd66-5345-4c7e-b9df-1a50982d67c3
+MOLI_SKULabel,SKULabel,,,1000122,U,"3",Y,Y,N,Y,Y,Y,2025-04-08 19:57:54.728,100,2025-04-08 20:43:44.918,100,"57eb07c8-e775-49a1-be78-a35de6b82cab"

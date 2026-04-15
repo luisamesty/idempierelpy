@@ -3,9 +3,10 @@ package org.moli.compiere;
 import java.sql.ResultSet;
 import java.util.Properties;
 
+import org.compiere.model.MProduct;
 import org.compiere.util.CLogger;
 
-public class MO_Product extends X_M_Product{
+public class MO_Product extends MProduct{
 	
 	private static final long serialVersionUID = -336740627086150455L;
 
@@ -31,9 +32,15 @@ public class MO_Product extends X_M_Product{
 		// TODO Auto-generated constructor stub
 	}
 
-	public MO_Product(Properties ctx, String M_Product_UU, String trxName, String[] virtualColumns) {
-		super(ctx, M_Product_UU, trxName, virtualColumns);
-		// TODO Auto-generated constructor stub
+	@Override
+	protected boolean beforeSave(boolean newRecord)
+	{
+	    return super.beforeSave(newRecord);
 	}
 
+	@Override
+	protected boolean afterSave(boolean newRecord, boolean success)
+	{
+	    return super.afterSave(newRecord, success);
+	}
 }

@@ -1,0 +1,183 @@
+tablas,ad_table_ids,ad_element_id,columnname,ad_element_uu,name,printname,description,help,entitytype
+MOLI_SKULabel,1000122,202241,Address,41ec56bc-68f2-461a-b723-d2889e0a982d,Address,Address,,,D
+MOLI_C_InvoicePayment,1000121,2677,AllocatedAmt,1f94fd28-094e-402e-a2e5-c701aa3efcb3,Allocated Amount,Allocated Amt,Amount allocated to this document,,D
+MOLI_SKULabel,1000122,1000971,BrandName,2d8f460a-cccb-4272-b024-0181e2e60d73,BrandName,BrandName,,,U
+"MOLI_RegFormProduct, MOLI_SKULabel","1000085, 1000122",2095,CategoryName,c22d7de6-b6ea-4610-8298-55a6a1532822,Category Name,Category Name,Name of the Category,,D
+MOLI_RegForm,1000084,2373,C_BPartnerRelation_ID,226dea83-e3a1-4bdb-ba1d-1e8eb1e2fe20,Related Partner,Related Partner,Related Business Partner,The related Business Partner Acts on behalf of the Business Partner - example the Related Partner pays invoices of the Business Partner - or we pay to the Related Partner for invoices received from the Business Partner,D
+MOLI_RegForm,1000084,2374,C_BPartnerRelation_Location_ID,8bf27228-fc70-4650-9129-a63b24812e03,Related Partner Location,Related Partner Location,Location of the related Business Partner,,D
+MOLI_RegForm,1000084,2585,CountryName,db4a2edb-cebc-4049-9765-149145c36f84,Country,Country,Country Name,,D
+"MOLI_RegForm, MOLI_RegFormLine","1000084, 1000086",262,Date1,36e9677c-d027-41f4-a96b-7179f615d309,Date,Date,Date when business is not conducted,The Date field identifies a calendar date on which business will not be conducted.,D
+MOLI_RegForm,1000084,265,DateDoc,7bce363a-524d-427e-8ea1-6cf54fe2524c,Document Date,Doc date,Date of the Document,The Document Date indicates the date the document was generated.  It may or may not be the same as the accounting date.,D
+MOLI_SKULabel,1000122,1000972,LineName,1974d5f8-992d-45a6-a7f4-79028ef05996,LineName,LineName,,,U
+MOLI_RegForm,1000084,1512,MailText,fbb2f87d-f1f5-4feb-abbb-64a5a3bf3144,Mail Text,Mail Text,Text used for Mail message,The Mail Text indicates the text used for mail messages.,D
+MOLI_inOutData,1000069,1025,M_InOut_ID,7820fe85-9166-4525-b01f-b952cee48589,Shipment/Receipt,Shipment/Receipt,Material Shipment Document,The Material Shipment / Receipt ,D
+MOLI_movementData,1000070,1030,M_Movement_ID,b25691ea-4c7f-4d01-8141-0ac9c2953f22,Inventory Move,Move,Movement of Inventory,The Inventory Movement uniquely identifies a group of movement lines.,D
+MOLI_C_InvoicePayment,1000121,1000946,MOLI_Accum_OpenAmt,a6a51436-4f86-41ce-b4af-3c522204eb64,Accumulate OpenAmt,Accumulate OpenAmt,,,U
+MOLI_RegFormLine,1000086,1000736,MOLI_ActionRequired,e8611aa7-3cee-4451-ad54-344d4c320bf7,Accion Requerida,Accion Requerida,,,U
+MOLI_RegForm,1000084,1000751,MOLI_Activity,de768326-e0a8-410a-9758-a197231beb84,Actividad,Actividad,,,U
+MOLI_RegForm,1000084,1000752,MOLI_AltMaker,8a9f25e9-7292-4818-86b8-c3b0bac3b622,Proveedor Alternativo,Proveedor Alternativo,,,U
+MOLI_posTransactions,1000071,1000567,MOLI_Amount,fd0a3c7a-2d1c-4121-bc17-2154876d49df,Amount,Amount,,,U
+MOLI_ProductBrand,1000072,1000622,MOLI_BrandSymbol,4047c0be-836f-484e-a7cf-85b985a3ff1f,Brand Symbol,Brand Symbol,Brand Symbol,,U
+MOLI_BrandUSP,1000124,1001012,MOLI_BrandUSP,0aadeec0-b439-41f6-84c6-b8aee9cdb828,BrandUSP,BrandUSP,,,U
+MOLI_BrandUSP,1000124,1001010,MOLI_BrandUSP_ID,c0441062-a904-4798-95c8-2fbb603eaf7f,Brand USP,Brand USP,Brand USP,,U
+MOLI_BrandUSP,1000124,1001011,MOLI_BrandUSP_UU,b8fe7911-0a93-47d3-817d-22790098b651,MOLI_BrandUSP_UU,MOLI_BrandUSP_UU,,,U
+MOLI_posTransactions,1000071,1000568,MOLI_CardAid,bb021fde-18d4-4135-9e9c-951c61fd5755,Card Aid,Card Aid,,,U
+MOLI_posTransactions,1000071,1000569,MOLI_CardArqc,877ec03c-07d0-42c7-a9eb-e8f1c0264ae0,Card Arqc,Card Arqc,,,U
+MOLI_posTransactions,1000071,1000570,MOLI_CardAuthCode,78b37823-488a-45f6-a208-a8f56b2fb68f,Card Auth Code,Card Auth Code,,,U
+MOLI_posTransactions,1000071,1000571,MOLI_CardBalanceAmount,8f7a9924-e890-4c2e-81c5-ba58b6286f1b,Card Balance Amount,Card Balance Amount,,,U
+MOLI_posTransactions,1000071,1000572,MOLI_CardBin,fb1f834a-aed1-49ee-8cb0-b5b9c186b70e,Card Bin,Card Bin,,,U
+MOLI_posTransactions,1000071,1000573,MOLI_CardCashBackAmount,2579b76a-a28f-4ed4-961e-8ca983b4be2b,Card Cash Back Amount,Card Cash Back Amount,,,U
+MOLI_posTransactions,1000071,1000574,MOLI_CardExtData,26532153-5007-471e-883b-285dc5eb7959,Card Ext Data,Card Ext Data,,,U
+MOLI_posTransactions,1000071,1000575,MOLI_CardHolderName,5f05c003-62b9-4105-8e98-96bbe58c6613,Card Holder Name,Card Holder Name,,,U
+MOLI_posTransactions,1000071,1000576,MOLI_CardMerchantGateway,6557aed3-c1df-4e08-8e5d-6fe32505e30b,Card Merchant Gateway,Card Merchant Gateway,,,U
+MOLI_posTransactions,1000071,1000577,MOLI_CardName,701220e2-abcf-4885-8615-278b002ce5a5,Card Name,Card Name,,,U
+MOLI_posTransactions,1000071,1000578,MOLI_CardNsu,620d4641-2fdf-4137-a938-6ff85c503902,Card NSU,Card NSU,,,U
+MOLI_posTransactions,1000071,1000579,MOLI_CardNumber,4358d349-96c5-491e-a969-2444dd102dec,Card Number,Card Number,,,U
+MOLI_posTransactions,1000071,1000580,MOLI_CardReader,fbb47674-f621-46e3-b4a6-fddaa584ceeb,Card Reader,Card Reader,,,U
+MOLI_posTransactions,1000071,1000581,MOLI_CardTradeCode,8a6d072c-30b4-45e7-8822-e43bbdd337e5,Card Trade Code,Card Trade Code,,,U
+MOLI_posTransactions,1000071,1000582,MOLI_CardTransactionId,98799db2-72e5-41b4-9281-44e265665079,Card Transaction ID,Card Transaction ID,,,U
+MOLI_posTransactions,1000071,1000583,MOLI_CardType,725e2b72-9249-490b-8330-6414d38f1a1d,Card Type,Card Type,,,U
+MOLI_movementData,1000070,1000536,MOLI_Cdc,c395f9c3-16ce-4824-85fd-38e2795c5c62,CDC,CDC,,,U
+MOLI_RegForm,1000084,1000753,MOLI_CertNum,fc7e1010-8ec0-405d-b322-4a4c902cf702,Certificado No,Certificado No,,,U
+MOLI_RegForm,1000084,1000754,MOLI_ConcessionDate,62b5fcb0-ac0c-4b21-a9f3-ffd6290f5609,Concession Date,Concession Date,,,U
+MOLI_posTransactions,1000071,1000584,MOLI_CustomPaymentCashPayment,9ae49312-f8f1-4fa3-8f6b-e3071d095cf8,Custom Payment Cash Payment,Custom Payment Cash Payment,,,U
+MOLI_posTransactions,1000071,1000585,MOLI_CustomPaymentFieldName,76df4e74-3afc-436f-8e69-e27d4159ed77,Custom Payment Field Name,Custom Payment Field Name,,,U
+MOLI_posTransactions,1000071,1000586,MOLI_CustomPaymentName,7701f89d-a134-4768-896a-e0bb7d949c36,Custom Payment Name,Custom Payment Name,,,U
+MOLI_posTransactions,1000071,1000587,MOLI_CustomPaymentRef,6dcb7180-9f8d-4c33-b83f-fc1c23023c1e,Custom Payment Ref,Custom Payment Ref,,,U
+MOLI_posTransactions,1000071,1000588,MOLI_CustomPaymRefItemId,26e7d76e-290e-4a8b-9049-aca92d13abe6,Custom Paym Ref Item ID,Custom Paym Ref Item ID,,,U
+MOLI_posTransactions,1000071,1000589,MOLI_CustomPaymRefPrintFormat,52375cc4-26bc-4ffd-b784-7fa946185548,Custom Paym Ref Print Format,Custom Paym Ref Print Format,,,U
+MOLI_posTransactions,1000071,1000590,MOLI_CustomPaymRefTicketId,53d8fcc5-26f6-4adf-85be-51275b15c2ea,Custom Paym Ref Ticket ID,Custom Paym Ref Ticket ID,,,U
+MOLI_RegFormLine,1000086,1000737,MOLI_DateCDAR,c7dc26e1-a369-459e-81e9-8ebe7ab5f9fa,Fecah CDAR,Fecha CDAR,,,U
+MOLI_RegFormLine,1000086,1000738,MOLI_DateCLV,7bd11d1b-8cfb-4c8d-b0f1-99c0781584fa,Fecha CLV,Fecha CLV,,,U
+MOLI_RegFormLine,1000086,1000739,MOLI_DateCP,87e96a61-5b46-43bd-b4a0-7258248ea6b5,Fecha CP,Fecha CP,,,U
+MOLI_RegFormLine,1000086,1000740,MOLI_DateFormula,a751fd98-02a7-49f7-bd29-d12ea6734aaf,Fecha Formula,Fecha Formula,,,U
+MOLI_RegFormLine,1000086,1000741,MOLI_DateGMP,8a3c17bd-503a-481c-bc7d-0799408e91c9,Fecha GMP,Fecha GMP,,,U
+MOLI_RegFormLine,1000086,1000742,MOLI_DateKBIS,1f60b992-2568-4b8d-82eb-8d45c435b96d,Fecha KBISS,Fecha KBISS,,,U
+MOLI_SKULabel,1000122,1000986,MOLI_DescriptionURL,cecaa6be-1bc3-4652-864f-e90a423210dc,DescriptionURL,DescriptionURL,,,U
+MOLI_RegForm,1000084,1000755,MOLI_Dias_Concesion,c9c7f31d-cbc1-4877-8aa9-833be891ded6,Dias Concesion,Dias Concesion,,,U
+MOLI_C_InvoicePayment,1000121,1000943,MOLI_DocType,c0d59403-d8f6-4a47-93ee-4e444768a773,DocumentType,DocumentType,,,U
+MOLI_posTransactions,1000071,1000591,MOLI_DocumentType,e06b063a-f86d-4392-bf0e-fbd95e02d9a5,Document Type,Document Type,,,U
+MOLI_RegForm,1000084,1000756,MOLI_ExpirationDate,7386b24e-f28f-40c2-91cb-a2d0bae427a4,Fecha de Vencimiento,Fecha de Vencimiento,,,U
+MOLI_movementData,1000070,1000540,MOLI_FsError,4a2f4555-1052-4139-aa5b-57dfba1228aa,Fs Error,Fs Error,,,U
+MOLI_movementData,1000070,1000554,MOLI_FsMessage,9570e9f9-6376-4c78-8f7b-c00d95b9b1f5,Fs Message,Fs Message,,,U
+MOLI_movementData,1000070,1000541,MOLI_FsPaused,092aef53-52ac-4600-a1e4-77c29d92ac85,Fs Paused,Fs Paused,,,U
+MOLI_movementData,1000070,1000539,MOLI_FsStatus,56fbf5ea-822b-4351-89b4-cf0db1f6d6dd,Fs Status,Fs Status,,,U
+MOLI_GeoRefCode,1000068,1000549,MOLI_GeoRefCode_DepartmentKey,97623c65-d79c-4ab1-9cef-84170ebbacbd,Geo Ref Code Department Key,Geo Ref Code Department Key,,,U
+MOLI_GeoRefCode,1000068,1000551,MOLI_GeoRefCode_DepartmentName,0ec1ce0a-c46d-45c7-8764-b8dec9afbdec,Geo Ref Code Department Name,Geo Ref Code Department Name,,,U
+MOLI_GeoRefCode,1000068,1000550,MOLI_GeoRefCode_ID,d8136ebb-f9a0-41ec-8f2e-5f7cfd136541,Geo Ref Code ID,Geo Ref Code ID,,,U
+MOLI_GeoRefCode,1000068,1000552,MOLI_GeoRefCode_SectionKey,68d29dfa-24c4-4a86-a43c-349a52227ab6,Geo Ref Code Section Key,Geo Ref Code Section Key,,,U
+MOLI_GeoRefCode,1000068,1000553,MOLI_GeoRefCode_SectionName,18213719-5424-4ffa-8914-2bc027b07554,Geo Ref Code Section Name,Geo Ref Code Section Name,,,U
+MOLI_GeoRefCode,1000068,1000683,MOLI_GeoRefCode_UU,86fe001c-a668-4453-8453-afab3dff3a68,Geo Ref Code UUID,Geo Ref Code UUID,,,U
+MOLI_posTransactions,1000071,1000592,MOLI_GiftCertCashBackAmount,73eaea56-4283-40bc-8b66-43825c95bf7a,Gift Cert Cash Back Amount,Gift Cert Cash Back Amount,,,U
+MOLI_posTransactions,1000071,1000593,MOLI_GiftCertFaceValue,1cbfcf2b-d1eb-48f8-bb64-38e17007a3e5,Gift Cert Face Value,Gift Cert Face Value,,,U
+MOLI_posTransactions,1000071,1000594,MOLI_GiftCertNumber,43350236-58af-415e-aec3-78d36d005dab,Gift Cert Number,Gift Cert Number,,,U
+MOLI_posTransactions,1000071,1000595,MOLI_GiftCertPaidAmount,bb7f5f24-f2d5-4b31-b777-5397930809c2,Gift Cert Paid Amount,Gift Cert Paid Amount,,,U
+MOLI_posTransactions,1000071,1000596,MOLI_GiftCertRefundItemId,11e7d250-4b8e-40e6-9f30-f7f08c2b2c1e,Gift Cert Refund Item ID,Gift Cert Refund Item ID,,,U
+MOLI_posTransactions,1000071,1000597,MOLI_GiftCertRefundTicketID,4371ea4f-a551-42ad-9c88-567779628a41,Gift Cert Refund Ticket ID,Gift Cert Refund Ticket ID,,,U
+MOLI_posTransactions,1000071,1000598,MOLI_GlobalID,3f26d262-0e6e-4ee2-8325-413432843b78,Global ID,Global ID,,,U
+MOLI_HS,1000074,1000627,MOLI_HSChapter,a9f6e569-24ee-41ff-a801-b4260806594b,HS Chapter,HS Chapter,HS Chapter,,U
+MOLI_HS,1000074,1000628,MOLI_HSHeading,8e76b783-bfec-44bb-8a89-642ab2708e8b,HS Heading,HS Heading,HS Heading,,U
+MOLI_HS,1000074,1000644,MOLI_HS_ID,2f829382-6795-4b55-8ebf-e438e3e2eb7f,Harmonized System,Harmonized System,Harmonized Commodity Description and Coding System (HS Convention) ,,U
+MOLI_HS,1000074,1000636,MOLI_HSIncomeCharge,e974c313-68d5-4e07-ab0b-1b447f51bdeb,HS Income Charge,HS Income Charge,HS Income Charge,,U
+MOLI_HS,1000074,1000635,MOLI_HSIncomeTax,2ac9899b-e963-4d65-be99-c90d41d3935a,HS IncomeTax,HS IncomeTax,HS IncomeTax,,U
+MOLI_HS,1000074,1000639,MOLI_HSOtherTax,68145d36-c58f-431c-96ae-4d4c0d171daf,HS OtherTax,HS OtherTax,HS OtherTax,,U
+MOLI_HS,1000074,1000634,MOLI_HSSalesTax,6800686e-2685-446b-a6ed-7a0298f6693d,HS SalesTax,HS SalesTax,HS SalesTax,,U
+MOLI_HS,1000074,1000637,MOLI_HSSelectiveTax,1b493c17-595b-45b2-812c-9cd00111807e,HS Selective Tax,HS Selective Tax,HS Selective Tax,,U
+MOLI_HS,1000074,1000638,MOLI_HSSelectiveTaxSND,605c66f0-f0b2-47f9-9100-796a7adfa88c,HS Selective Tax SND,HS Selective Tax SND,HS Selective Tax SND,,U
+MOLI_HS,1000074,1000629,MOLI_HSSubHeading,23e26c83-105b-4058-aba5-5d391332bdbb,HS SubHeading,HS SubHeading,HS SubHeading,,U
+MOLI_HS,1000074,1000630,MOLI_HSSubHeadingExt,fe2e614a-5508-41b7-9d78-d59648c4fced,HS SubHeading Ext,HS SubHeading Ext,HS SubHeading Ext,,U
+MOLI_HS,1000074,1000631,MOLI_HSTariff,eca80a7c-c717-4726-b1b3-979b81b975cf,HS Tariff,HS Tariff,HS Tariff,,U
+MOLI_HS,1000074,1000632,MOLI_HSTariffN,5bed70bd-ddb0-477a-88b3-19b1ed030a12,HS Tariff N,HS Tariff N,HS Tariff N,,U
+MOLI_HS,1000074,1000645,MOLI_HS_UU,5dc79467-973f-4bea-96d9-e7007d46b5c5,HS UU,HS UU,,,U
+MOLI_HS,1000074,1000633,MOLI_HSVat,8a06b197-1b5e-4949-8a95-34abfdeaeea0,HS Vat,HS Vat,HS Vat,,U
+MOLI_SKULabel,1000122,1000987,MOLI_ImageURL,ce654895-e531-4cb4-acb4-d23f952d7e0f,ImageURL,ImageURL,,,U
+MOLI_inOutData,1000069,1000692,MOLI_inOutData_ID,5fa0834f-0118-4ef7-a131-e57a9f683fdd,MOLI_inOutData,MOLI_inOutData,,,U
+MOLI_inOutData,1000069,1000693,MOLI_inOutData_UU,dd6ccd79-9f6a-4672-ae2d-44203223597e,MOLI_inOutData_UU,MOLI_inOutData_UU,,,U
+MOLI_invoiceData,1000067,1000546,MOLI_InvoiceData_ID,c23c0de3-6f88-4d8c-9b09-844796a425b2,Invoice Data ID,Invoice Data ID,,,U
+MOLI_invoiceData,1000067,1000694,MOLI_invoiceData_UU,b821cac1-b037-44c3-9e9b-dba54f626869,MOLI_invoiceData_UU,MOLI_invoiceData_UU,,,U
+"MOLI_ProductBrand, MOLI_ProductLine","1000072, 1000073",1000624,MOLI_isApproval,067e1726-fa94-4256-811e-db985eb1c3d1,Requiere Approval,Requiere Approval,Requiere Approval,,U
+MOLI_RegFormLine,1000086,1000743,MOLI_IsCartaPoder,fea3ca5a-e3bb-45b6-a1d7-7d5695c0b9e3,Es carta Poder,Es carta Poder,,,U
+MOLI_RegFormLine,1000086,1000744,MOLI_IsCDAR,7b58bf35-26b7-4ee7-b06d-d4dcaa0e9f57,Es CDAR,Es CDAR,,,U
+MOLI_RegFormLine,1000086,1000745,MOLI_IsCLV,181df03e-d18d-4f3c-8751-e7143fb443bc,Es CLV,Es CLV,,,U
+MOLI_RegFormLine,1000086,1000746,MOLI_IsFormula,97ee3f2b-2697-42b3-ab04-52f829767d2d,Es Formula,Es Formula,,,U
+MOLI_RegFormLine,1000086,1000747,MOLI_IsGMP,eab1b53c-4f66-4ded-889f-a1f215566fdb,Es GMP,Es GMP,,,U
+MOLI_RegFormLine,1000086,1000748,MOLI_IsKBIS,0cc8be53-b1b2-4eff-b0ec-06bc92bfb662,Es KBISS,Es KBISS,,,U
+MOLI_ProductLine,1000073,1000884,MOLI_IsLocalVendor,481b4699-d40b-47fb-b0da-ed7b247e455d,Local Vendor,Local Vendor,,,U
+"MOLI_ProductBrand, MOLI_ProductLine","1000072, 1000073",1000623,MOLI_isWHS,07fafd33-6506-453c-a1b0-64f816c6dc3e,Whole Sale,Whole Sale,Whole Sale,,U
+MOLI_ProductLine,1000073,1000643,MOLI_LineSymbol,b4403821-57d2-4ea5-bbc2-5c25828ab660,MOLI_LineSymbol,MOLI_LineSymbol,,,U
+MOLI_ProductLine,1000073,1000885,MOLI_LocalVendorRate,5dce1623-57a1-4914-bc7c-779e72c9b259,Local Vendor Rate,LocalVendorRate,,,U
+MOLI_RegForm,1000084,1000757,MOLI_MadeIn,73bc7874-f20d-401d-93e3-53cdabdb3bf6,Hecho En,Hecho En,,,U
+MOLI_RegForm,1000084,1000758,MOLI_MainMaker,dd957467-f3fb-4e88-9fd4-bc78723e6aa3,Proveedor Principal,Proveedor Principal,,,U
+MOLI_movementData,1000070,1000695,MOLI_movementData_ID,0395fc59-ccb6-41dd-9629-4cc389d5b690,MOLI_movementData,MOLI_movementData,,,U
+MOLI_movementData,1000070,1000696,MOLI_movementData_UU,971bc8c0-3d60-435e-8c04-1020cfa11604,MOLI_movementData_UU,MOLI_movementData_UU,,,U
+"MOLI_inOutData, MOLI_invoiceData, MOLI_movementData","1000067, 1000069, 1000070",1000547,MOLI_Name,0f20ed01-1b48-4c11-9406-6df01a053308,Name,Name,,,U
+MOLI_RegForm,1000084,1000759,MOLI_NumMesaEntrada,faaa62a1-634d-4b82-998d-c00e14447cb2,Numero Mesa de Entrada,Numero Mesa de Entrada,,,U
+MOLI_RegForm,1000084,1000760,MOLI_NumRE,d092eaff-9607-4f2f-bd09-80cf40c1b175,Numero RE,Numero RE,,,U
+MOLI_RegForm,1000084,1000761,MOLI_NumRE1,840102cd-0999-4d04-9e81-0d307469dd0f,Numero RE1,Numero RE1,,,U
+MOLI_RegForm,1000084,1000762,MOLI_Num_RSPA,424440d1-5968-4728-b60f-07c28b355ab7,Numero RSPA,Numero RSPA,,,U
+MOLI_posTransactions,1000071,1000599,MOLI_PaymentSubType,6e1e30d0-093d-4d2e-bbd4-6f52707e7923,Payment Sub Type,Payment Sub Type,,,U
+MOLI_posTransactions,1000071,1000600,MOLI_Payment_Type,0aa97049-e01c-48fc-a34d-68a612ef2a07,Payment Type,Payment Type,,,U
+MOLI_posTransactions,1000071,1000601,MOLI_PaymentType,26fa012f-032a-4415-b55b-be6d6827ca19,Payment Type,Payment Type,,,U
+MOLI_posTransactions,1000071,1000602,MOLI_PayoutReasonID,38afa40d-fe6c-4c6d-9cb8-0218e5f9b557,Payout Reason ID,Payout Reason ID,,,U
+MOLI_posTransactions,1000071,1000603,MOLI_PayoutRecepientID,194f546f-a973-4d89-a221-f30b86960d15,Payout Recepient ID,Payout Recepient ID,,,U
+MOLI_C_InvoicePayment,1000121,1000944,MOLI_PayRuleText,24628b38-956a-4ee1-ae94-34a1fc442821,PayRuleText,PayRuleText,,,U
+MOLI_PeopleCount,1000077,1000699,MOLI_PeopleCount_ID,fee2d3f0-9c2f-4b69-8e3b-898e3c170f0f,People Counting,People Counting,People Counting data,,U
+MOLI_PeopleCount,1000077,1000700,MOLI_PeopleCount_UU,b00a7cdb-8401-4764-b962-5b1688b6a00e,MOLI_PeopleCount_UU,MOLI_PeopleCount_UU,,,U
+MOLI_posTransactions,1000071,1000604,MOLI_PosTransactions_ID,09458852-5a82-423b-a8b5-6d3097f173ba,Pos Transactions ID,Pos Transactions ID,,,U
+MOLI_posTransactions,1000071,1000697,MOLI_posTransactions_UU,d3963536-192e-436a-a85c-baed0d876522,MOLI_posTransactions_UU,MOLI_posTransactions_UU,,,U
+"MOLI_BrandUSP, MOLI_ProductBrand, MOLI_ProductLine","1000072, 1000073, 1000124",1000620,MOLI_ProductBrand_ID,12f240f3-af8e-46be-a924-c3529a438a02,Product Brand,Product Brand,Product Brand,,U
+MOLI_ProductBrand,1000072,1000641,MOLI_ProductBrand_UU,a0a0ec0f-44fb-4549-a23c-bf6ab016ca90,Product Brand UU,Product Brand UU,,,U
+MOLI_RegForm,1000084,1000763,MOLI_ProductData,79bc3982-8f75-4f7e-9939-8539eaed2898,Data Producto,Data Producto,,,U
+MOLI_ProductLine,1000073,1000621,MOLI_ProductLine_ID,721bda85-c1cb-45de-92ef-72b991b628f5,Product Line,Product Line,Product Line,,U
+MOLI_ProductLine,1000073,1000642,MOLI_ProductLine_UU,abb42748-95e2-47a6-a57f-6d5784f7bc12,Product Line UU,Product Line UU,,,U
+MOLI_posTransactions,1000071,1000605,MOLI_Properties,597c1d38-9361-449f-af05-89d1316f5c03,Properties,Properties,,,U
+MOLI_PeopleCount,1000077,1000703,MOLI_QtyVistiors,fa60f00e-0780-496d-a652-ba6c736f7d7c,Qty Visitors,Qty Visitors,Qty Visitors,Qty Visitors,U
+MOLI_RegForm,1000084,1000764,MOLI_RegCommName,d4e03f9d-c582-4e10-a43a-903f16e0c3cf,Reg Comm Name,Reg Comm Name,,,U
+"MOLI_RegForm, MOLI_RegFormLine, MOLI_RegFormProduct, MOLI_SKULabel","1000084, 1000085, 1000086, 1000122",1000734,MOLI_RegForm_ID,3dca4644-ea7a-42a7-ad8c-b48a4312b07c,Regulation Form ID,Regulation Form ID,,,U
+MOLI_RegFormLine,1000086,1000730,MOLI_RegFormLine_ID,c6a0b3c3-3bd0-489e-97b2-52985e353d19,Regulation Form Line,Regulation Form Line,Regulation Form Line,,U
+MOLI_RegFormLine,1000086,1000731,MOLI_RegFormLine_UU,abe6abc4-d943-4037-8357-2c0fa1aadd78,Regulation_Form_Line_UU,Regulation_Form_Line_UU,,,U
+MOLI_RegFormProduct,1000085,1000732,MOLI_RegFormProduct_ID,80e17b21-dd93-4cf7-b4ea-1abdf778a79c,Regulation Form Product,Regulation Form Product,,,U
+MOLI_RegFormProduct,1000085,1000771,MOLI_RegFormProduct_UU,234d08d9-6db6-4d86-a6d0-3a909078da7c,MOLI_RegFormProduct_UU,MOLI_RegFormProduct_UU,,,U
+MOLI_RegForm,1000084,1000765,MOLI_RegFormType,d9c03c2c-4f39-41cb-b6c4-9d846b97856a,Reg Form Type,Reg Form Type,,,U
+MOLI_RegForm,1000084,1000729,MOLI_RegForm_UU,62ae072d-c55f-491c-a202-61386a15e23d,Regulation Form_UU,Regulation Form UU,,,U
+MOLI_RegForm,1000084,1000766,MOLI_RegGenName,9b1aeec5-ae42-4761-b8e3-d6d9acc86aac,Reg Gen Name,Reg Gen Name,,,U
+MOLI_RegForm,1000084,1000938,MOLI_RegGrade,6111a619-9d89-4021-9a6f-bee31a2a39ad,Product Grade,Product Grade,,,U
+MOLI_RegForm,1000084,1000767,MOLI_RegPresentationForm,5e2b7a2f-9910-4819-892e-e02d5454c1fb,Reg Presentation Form,Reg Presentation Form,,,U
+MOLI_RegForm,1000084,1000939,MOLI_RegVariety,4f5be1df-1973-4df2-9729-18f4093181e3,Product Variety,Product Variety,,,U
+MOLI_RegFormLine,1000086,1000749,MOLI_RgmStatus,44400f92-1c8e-4aea-9d6e-a620f0fd95f2,Rgm Status,Rgm Status,,,U
+MOLI_ProductLine,1000073,1000882,MOLI_RTLCommissionRate,eaabd40a-86ab-47e8-84e1-31a7172fd120,RTL Commission Rate,RTL CommRate,RTL Commission Rate,,U
+MOLI_RegForm,1000084,1000768,MOLI_RUC,024caa88-2962-4aee-a2c4-2825043eda25,RUC,RUC,,,U
+MOLI_RegForm,1000084,1000769,MOLI_SellPerm,2f5119d0-9502-4d97-9a15-2092621398c7,Sell Perm,Sell Perm,,,U
+MOLI_RegForm,1000084,1000770,MOLI_SIMESE,7b25f715-324e-4023-bdc7-1c6ef2db1012,SIMESE,SIMESE,,,U
+MOLI_ProductLine,1000073,1000625,MOLI_SKUGroup,5f7a6f69-dbae-400f-b0e5-108e0f570a2b,SKU Group,SKU Group,SKU Group,,U
+MOLI_SKULabel,1000122,1000983,moli_skulabel_expiere,9a74c482-d017-4a5d-bad7-df94caa51b14,moli_skulabel_expiere,moli_skulabel_expiere,,,U
+MOLI_SKULabel,1000122,1000978,MOLI_SKULabel_ExpireDate,44239547-f93f-43ff-935e-263ef3d8ca37,ExpireDate,ExpireDate,,,U
+MOLI_SKULabel,1000122,1000979,MOLI_SKULabel_FormType,27b4ff63-636b-41d1-8986-e58c2ac1f8b5,FormType,FormType,,,U
+MOLI_SKULabel,1000122,1000985,MOLI_SKULabel_LabelQuantity,3c79f415-2f01-4cfa-8c33-6f72a2cbe8d8,LabelQuantity,LabelQuantity,,,U
+MOLI_SKULabel,1000122,1000982,MOLI_SKULabel_MatchRegFormRule,a29ce790-5dd5-43b7-8af2-a95bf3c7e70a,MatchRegFormRule,MatchRegFormRule,,,U
+MOLI_SKULabel,1000122,1000981,MOLI_SKULabel_PriceListRT,70415061-d47c-46f2-8577-77a499c07de3,PriceListRT,PriceListRT,,,U
+MOLI_SKULabel,1000122,1000980,MOLI_SKULabel_ProductionType,292876c0-9651-4eb6-87e1-9fe91f4f4c21,ProductionType,ProductionType,,,U
+MOLI_SKULabel,1000122,1000975,MOLI_SKULabel_RE,e0ea38f2-12d0-4cad-a705-5f82600fe5b8,RE,RE,,,U
+MOLI_SKULabel,1000122,1000976,MOLI_SKULabel_Reg,96bf29b9-ffd5-40c8-8261-a0e32ddb3eb5,Reg,Reg,,,U
+MOLI_SKULabel,1000122,1000977,MOLI_SKULabel_RegAgent,f0bd2dda-12ff-42c2-a3b2-54d3eaaeab29,RegAgent,RegAgent,,,U
+MOLI_SKULabel,1000122,1000973,MOLI_SKULabel_Registrant,bbc67435-ad7a-492d-bdc0-a097cf9f9916,Registrant,Registrant,,,U
+MOLI_SKULabel,1000122,1000984,MOLI_SKULabel_RP,41a36147-c191-43fb-8766-7dcaba196df6,RP,RP,,,U
+MOLI_RegFormLine,1000086,1000750,MOLI_StatusType,50d99850-e76b-4412-8979-c2f2184eb04a,Tipo de Estado,Tipo de Estado,,,U
+MOLI_SKULabel,1000122,1000942,MOLI_TagLabelExt,e89636da-7baf-4432-b055-8fe22180bf57,TagLabel Extended,TagLabel Extended,,,U
+MOLI_posTransactions,1000071,1000606,MOLI_TenderAmount,c1f6d116-e3f9-4297-b2b2-4331b7ea28d2,Tender Amount,Tender Amount,,,U
+MOLI_posTransactions,1000071,1000607,MOLI_TicketId,7e4a0252-a362-41c9-89f5-06827c7a8974,Ticket ID,Ticket ID,,,U
+MOLI_PeopleCount,1000077,1000702,MOLI_TimeEnd,c730222a-be05-470d-bae7-f090d144d697,Time End,Time End,Time End,Time End,U
+MOLI_PeopleCount,1000077,1000701,MOLI_TimeStart,9ff42eb8-abc5-4bfc-aaf7-f1ffe42aa065,Time Start,Time Start,Time Starting,Time Starting,U
+MOLI_posTransactions,1000071,1000608,MOLI_TransactionTime,5a49ee45-df94-4947-9444-028701e8d0cc,Transaction Time,Transaction Time,,,U
+MOLI_posTransactions,1000071,1000609,MOLI_TransactionType,94131e8c-886e-40d2-bb82-f1106114f84e,Transaction Type,Transaction Type,,,U
+"MOLI_inOutData, MOLI_invoiceData, MOLI_movementData","1000067, 1000069, 1000070",1000548,MOLI_Value,12ef61c4-9f07-44d8-ac6f-37e9738764e0,Value,Value,,,U
+MOLI_ProductLine,1000073,1000883,MOLI_WHSCommissionRate,4ed09b94-4651-47e8-93f4-44ab69ae07bd,WHS Commission Rate,WHS CommRate,WHS Commission Rate,,U
+MOLI_C_InvoicePayment,1000121,1525,Multiplier,6617647d-74b1-482f-9a30-759b1ba739c7,Multiplier,Multiplier,Type Multiplier (Credit = -1),,D
+MOLI_SKULabel,1000122,957,PriceStd,ae449a2c-a515-4356-8ec5-a3eed41d7b14,Standard Price,Std Price,Standard Price,The Standard Price indicates the standard or normal price for a product on this price list,D
+MOLI_RegFormProduct,1000085,1000719,ProductBrand_Value,58250e55-6290-4304-8a8f-54fd224fd50b,ProductBrand  Key,ProductBrand  Key,ProductBrand Value for search,,U
+MOLI_SKULabel,1000122,1000970,ProductCategoryBrand,ffd06766-8618-43d1-a871-d6c43c7f1342,ProductCategoryBrand,ProductCategoryBrand,,,U
+MOLI_SKULabel,1000122,1000969,ProductCategoryBrandLine,34b670f8-0776-44e0-808e-50c9afbef9b7,ProductCategoryBrandLine,ProductCategoryBrandLine,,,U
+"MOLI_RegForm, MOLI_SKULabel","1000084, 1000122",2659,ProductName,bc3ea2e0-d8d5-4895-874e-1d717ced27aa,Product Name,Product Name,Name of the Product,,D
+MOLI_SKULabel,1000122,1000948,ProductSKU,f348bb57-a6c8-47bb-9d21-ddcd8639abcd,ProductSKU,ProductSKU,,,U
+MOLI_SKULabel,1000122,1000949,ProductUPC,56000e45-934d-4676-bd9b-7794d4cb3531,ProductUPC,ProductUPC,,,U
+MOLI_SKULabel,1000122,1000965,TaxCategory,93be9ea4-c5c1-4780-a8df-19c0c3bd9123,TaxCategory,TaxCategory,,,U

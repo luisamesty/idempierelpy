@@ -1,0 +1,381 @@
+tablas,ad_table_ids,ad_element_id,columnname,ad_element_uu,name,printname,description,help,entitytype
+Fact_Acct,270,148,Account_ID,7edd6757-3fe1-4b03-bb2d-3733e949a4c8,Account,Account,Account used,The (natural) account used,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200447,AD_OrgInfo_AD_Org_ID,63d0373a-6530-425b-810e-f1560a17c3e1,ad_orginfo_ad_org_id,ad_orginfo_ad_org_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200448,ad_orginfo_created,7c0f6509-d4c2-403d-baf1-e9b03c3f5411,ad_orginfo_created,ad_orginfo_created,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200449,AD_OrgInfo_CreatedBy,d729ad19-07a8-4b7e-a5f7-f9d1165d411f,ad_orginfo_createdby,ad_orginfo_createdby,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200450,ad_orginfo_duns,41c111be-0d71-4bcb-92a3-68f38e4c7768,ad_orginfo_duns,ad_orginfo_duns,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200451,ad_orginfo_email,ff231a27-9e8e-4c75-8ce7-cf7fe4159fc0,ad_orginfo_email,ad_orginfo_email,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200452,ad_orginfo_fax,20ecd07e-b0a6-41b3-af29-98f2863c1261,ad_orginfo_fax,ad_orginfo_fax,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200453,ad_orginfo_isactive,aa976b9d-4e0f-49b3-8a80-3b82d7f8fd22,ad_orginfo_isactive,ad_orginfo_isactive,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200454,ad_orginfo_phone,2e4c97dc-b13e-4b70-93a0-87900577e47e,ad_orginfo_phone,ad_orginfo_phone,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200455,ad_orginfo_phone2,befe7fc3-6088-4a56-ab6a-c0e7056e28e8,ad_orginfo_phone2,ad_orginfo_phone2,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200456,ad_orginfo_updated,067d2f69-ddf6-4e01-8571-9d41fd8ee777,ad_orginfo_updated,ad_orginfo_updated,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200457,AD_OrgInfo_UpdatedBy,4f5307f0-5da5-4958-adc0-ade88a1a13b1,ad_orginfo_updatedby,ad_orginfo_updatedby,,,D
+"M_RMA, M_RMALine","660, 661",160,Amt,c5d00711-5e19-4f26-863f-b5257a7cff94,Amount,Amt,Amount,Amount,D
+Fact_Acct,270,161,AmtAcctCr,e8c85ee8-e00f-487f-81c2-90edf2b120fa,Accounted Credit,Acct Credit,Accounted Credit Amount,The Account Credit Amount indicates the transaction amount converted to this organization's accounting currency,D
+Fact_Acct,270,162,AmtAcctDr,79bb44db-8afa-484b-8183-e1f49076e9ce,Accounted Debit,Acct Debit,Accounted Debit Amount,The Account Debit Amount indicates the transaction amount converted to this organization's accounting currency,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",1836,AmtInWords,4cc5ad60-1f4b-4644-8fcc-0cf18cd7f591,Amt in Words,Amt in Words,Amount in words,Amount in words will be printed.,D
+Fact_Acct,270,164,AmtSourceCr,2689d41e-969c-47db-9cd6-7ac042f8976b,Source Credit,Source Credit,Source Credit Amount,The Source Credit Amount indicates the credit amount for this line in the source currency.,D
+Fact_Acct,270,165,AmtSourceDr,254cc7c1-1272-4619-8cd7-aa57e0b51cee,Source Debit,Source Debit,Source Debit Amount,The Source Debit Amount indicates the credit amount for this line in the source currency.,D
+M_Movement,323,2533,ApprovalAmt,4736784a-1118-4deb-bb10-128713ec8878,Approval Amount,Approval Amt,Document Approval Amount,Approval Amount for Workflow,D
+I_Product,532,1000718,AttributeSet_Value,eaa7b5e2-f661-4e34-ab1b-ea3ec36b5384,AttributeSet Key,AttributeSet_Value Key,AttributeSet Descriptor in JSON,,U
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",55256,BankAccountDescription,476e4f7c-adf5-430c-9f21-2bbee7d5004d,Bank Account Description,Bank Account Description,,,D
+M_PriceList,255,1259,BasePriceList_ID,3ebecbc2-ee06-46aa-a6bb-0487ddf00877,Base Price List,Base,"Pricelist to be used, if product not found on this pricelist",The Base Price List identifies the default price list to be used if a product is not found on the selected price list,D
+I_Product,532,1906,BPartner_Value,a06dd9b4-fa8c-4f05-b5ed-367c4d8ccf71,Business Partner Key,Partner Key,The Key of the Business Partner,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",1838,BPGreeting,bb7ca83d-6a68-44f3-860a-eb0adeae2eb9,BP Greeting,BP Greeting,Greeting for Business Partner,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",2266,BPTaxID,f43e01a3-40af-48bb-902b-338cfc38a9b3,Partner Tax ID,BP Tax TD,Tax ID of the Business Partner,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",1876,BPValue,ee60edbe-88c5-48fb-a86d-1b3b6c37d942,BP Search Key,Customer No,Business Partner Key Value,Search Key of Business Partner,D
+Regulation_Form_Product,1000083,2095,CategoryName,c22d7de6-b6ea-4610-8298-55a6a1532822,Category Name,Category Name,Name of the Category,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201899,c_bp_acqusitioncost,7866cf28-4de3-4aec-83e1-39520778fbb0,c_bp_acqusitioncost,c_bp_acqusitioncost,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201900,c_bp_actuallifetimevalue,961afb6c-c957-4167-ab87-2fc34cda2a14,c_bp_actuallifetimevalue,c_bp_actuallifetimevalue,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201901,c_bp_ad_language,7071e065-86e8-4029-aced-5670d849c662,c_bp_ad_language,c_bp_ad_language,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201902,C_BP_AD_OrgBP_ID,16a8ef27-c9ba-46b2-bee8-78ff846a4939,c_bp_ad_orgbp_id,c_bp_ad_orgbp_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201903,C_BP_AD_Org_ID,010e0612-8485-4eb1-bbdd-cdf4a714790e,c_bp_ad_org_id,c_bp_ad_org_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201904,C_BP_BPartner_Parent_ID,7366f34b-b6a7-4a47-8e0b-c76d30cf7cf0,c_bp_bpartner_parent_id,c_bp_bpartner_parent_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201905,C_BP_C_BP_Group_ID,d285d82e-03c0-4eb9-b639-bb1827d7272c,c_bp_c_bp_group_id,c_bp_c_bp_group_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201906,C_BP_C_Dunning_ID,beb6e892-e37c-4fe9-8970-8cff17213771,c_bp_c_dunning_id,c_bp_c_dunning_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201907,C_BP_C_Greeting_ID,0eb63774-c71e-4b20-9d84-b56fee17291a,c_bp_c_greeting_id,c_bp_c_greeting_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201908,C_BP_C_InvoiceSchedule_ID,0dbbe38d-dfcd-40db-af28-2e8639fc37fb,c_bp_c_invoiceschedule_id,c_bp_c_invoiceschedule_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201909,C_BP_C_PaymentTerm_ID,148c187d-ce82-42c6-858b-104329827df4,c_bp_c_paymentterm_id,c_bp_c_paymentterm_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201910,c_bp_created,081aa783-93bf-48f6-8c1c-5397f87a8501,c_bp_created,c_bp_created,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201911,C_BP_CreatedBy,edc8618e-8a6c-4beb-8043-b1f08f97e26e,c_bp_createdby,c_bp_createdby,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201912,C_BP_C_TaxGroup_ID,6ed0f933-d04c-4c50-9f98-9b0ffe4a5a0f,c_bp_c_taxgroup_id,c_bp_c_taxgroup_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201913,c_bp_deliveryrule,540dd1d0-69af-4bee-9cc2-cd570031c633,c_bp_deliveryrule,c_bp_deliveryrule,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201914,c_bp_deliveryviarule,a14b87b5-fefb-476a-a6f9-f00f2e56735f,c_bp_deliveryviarule,c_bp_deliveryviarule,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201915,c_bp_description,f9eff7e3-d119-4af3-ae5b-11c66f2083b8,c_bp_description,c_bp_description,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201916,c_bp_dunninggrace,4973cdc1-fc91-4757-ab90-9fb5281026df,c_bp_dunninggrace,c_bp_dunninggrace,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201917,c_bp_firstsale,60259323-0e5f-42d2-8785-537b191bf518,c_bp_firstsale,c_bp_firstsale,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201918,c_bp_flatdiscount,ac02a885-52ee-4225-8ef3-32efb4c74434,c_bp_flatdiscount,c_bp_flatdiscount,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201919,c_bp_freightcostrule,0e712ad9-7a86-4f6d-9ac9-9c9ae2823c0f,c_bp_freightcostrule,c_bp_freightcostrule,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201920,c_bp_invoicerule,9203e154-a86c-419a-9a49-35deaa8c3e0b,c_bp_invoicerule,c_bp_invoicerule,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201921,c_bp_isactive,5b5b4264-1446-4ae3-a46c-3578f254fb10,c_bp_isactive,c_bp_isactive,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201922,c_bp_iscustomer,caf02816-1a66-4a1c-9bba-bbe975b4c96e,c_bp_iscustomer,c_bp_iscustomer,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201923,c_bp_isdiscountprinted,6bb1a3d4-d449-442d-95a3-b72164d6a459,c_bp_isdiscountprinted,c_bp_isdiscountprinted,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201924,c_bp_isemployee,1e2c4fa1-5f16-4fde-8043-e8e180d16d89,c_bp_isemployee,c_bp_isemployee,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201925,c_bp_ismanufacturer,285f8238-29eb-4862-98bf-08f4ddd8da9a,c_bp_ismanufacturer,c_bp_ismanufacturer,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201926,c_bp_isonetime,bce27a82-9f56-4d8c-be48-8a8893fa319d,c_bp_isonetime,c_bp_isonetime,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201927,c_bp_ispotaxexempt,c3cff3fc-b9b0-4f23-bee1-8acd93414ba1,c_bp_ispotaxexempt,c_bp_ispotaxexempt,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201928,c_bp_isprospect,4260f117-bd61-4823-8a5e-d29c1b8d7030,c_bp_isprospect,c_bp_isprospect,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201929,c_bp_issalesrep,25eaab52-26d8-4abc-bbd1-8b32e37e7f1a,c_bp_issalesrep,c_bp_issalesrep,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201930,c_bp_issummary,c08a9c0c-357b-4566-b228-e7db1ea42fbc,c_bp_issummary,c_bp_issummary,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201931,c_bp_istaxexempt,35b1c557-280b-4152-bc5b-54dccafe9c01,c_bp_istaxexempt,c_bp_istaxexempt,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201932,c_bp_isvendor,43c476f3-0060-468b-bb73-55b3386b06bd,c_bp_isvendor,c_bp_isvendor,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201933,C_BP_Logo_ID,15089aad-072d-4a0f-b556-3fa429c02b81,c_bp_logo_id,c_bp_logo_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201934,C_BP_M_DiscountSchema_ID,8362eee5-e5c5-4ec2-95cb-13108e370589,c_bp_m_discountschema_id,c_bp_m_discountschema_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201935,C_BP_M_PriceList_ID,afcfda1b-2600-4139-a7a3-dc41c22a9d62,c_bp_m_pricelist_id,c_bp_m_pricelist_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201936,c_bp_numberemployees,ef5655f4-1351-4b5b-9044-1591b41e6830,c_bp_numberemployees,c_bp_numberemployees,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201937,c_bp_paymentrule,793f1aa4-8ae7-4172-b35e-21d2a588a69f,c_bp_paymentrule,c_bp_paymentrule,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201938,c_bp_paymentrulepo,b33b340d-7c6a-4e7f-b852-f9908b280c15,c_bp_paymentrulepo,c_bp_paymentrulepo,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201939,C_BP_PO_DiscountSchema_ID,ec8f1646-d1fc-44af-ad07-81ce48b01f78,c_bp_po_discountschema_id,c_bp_po_discountschema_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201940,C_BP_PO_PaymentTerm_ID,d033ada7-05dc-43be-93a0-2d05b5d61b29,c_bp_po_paymentterm_id,c_bp_po_paymentterm_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201941,C_BP_PO_PriceList_ID,7efc1af5-1a04-4268-af5f-dd788aaae7d1,c_bp_po_pricelist_id,c_bp_po_pricelist_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201942,c_bp_potentiallifetimevalue,45276926-0d05-4127-b5e3-079e9a7babfb,c_bp_potentiallifetimevalue,c_bp_potentiallifetimevalue,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201943,c_bp_rating,74899f3e-ea50-4796-b72c-b7508ca4733c,c_bp_rating,c_bp_rating,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201944,C_BP_SalesRep_ID,e38c5f9b-8ee0-4583-91d3-23dd0e64bdd5,c_bp_salesrep_id,c_bp_salesrep_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201945,c_bp_salesvolume,8e337e76-7ce3-42df-9545-1a751c70a2f8,c_bp_salesvolume,c_bp_salesvolume,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201946,c_bp_sendemail,6152dd8e-7b7d-4174-a757-92b5be9754c1,c_bp_sendemail,c_bp_sendemail,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201947,c_bp_shareofcustomer,82238907-646d-4ad7-80f6-4687dd60accc,c_bp_shareofcustomer,c_bp_shareofcustomer,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201948,c_bp_shelflifeminpct,78f46182-c60e-4cfc-ae3c-18fe75f02a3b,c_bp_shelflifeminpct,c_bp_shelflifeminpct,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201949,c_bp_so_creditlimit,bd2754ff-d69d-4258-98df-8711e493f230,c_bp_so_creditlimit,c_bp_so_creditlimit,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201950,c_bp_socreditstatus,63641a55-8211-47f0-bd9f-5722f6e0877c,c_bp_socreditstatus,c_bp_socreditstatus,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201951,c_bp_so_creditused,45669ae8-ab05-4a09-bd7b-7259b031c8ab,c_bp_so_creditused,c_bp_so_creditused,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201952,c_bp_so_description,c5025d2d-f698-4934-affa-67907d2a8eec,c_bp_so_description,c_bp_so_description,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201953,c_bp_totalopenbalance,7b44535b-01c1-4eef-aa49-ddbdfcb0873d,c_bp_totalopenbalance,c_bp_totalopenbalance,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201954,c_bp_updated,f6722c8d-67df-4982-a81e-b90e48dc929b,c_bp_updated,c_bp_updated,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201955,C_BP_UpdatedBy,7607d763-d6ef-406a-888b-0e579f9e47ed,c_bp_updatedby,c_bp_updatedby,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201956,c_bp_url,4ea8291d-285e-4afb-a28d-ce103235d49b,c_bp_url,c_bp_url,,,D
+C_Tax,261,202767,C_CountryGroupFrom_ID,0d390d89-829a-4672-8a67-b8454caee632,Country Group From,Country Group From,,,D
+C_Tax,261,202766,C_CountryGroupTo_ID,cbd9493a-d0ce-498d-b678-617a78d579bb,Country Group To,Country Group To,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201620,C_Greeting_AD_Org_ID,618eae1b-6568-41ad-9a48-5961083eb29d,c_greeting_ad_org_id,c_greeting_ad_org_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201031,c_greeting_isactive,5583516f-60c6-4d6b-9dd1-2fa5ff272d65,c_greeting_isactive,c_greeting_isactive,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201032,c_greeting_name,9bf1a742-b511-419f-b3ca-43f8a585cf6c,c_greeting_name,c_greeting_name,,,D
+Fact_Acct,270,200,C_LocFrom_ID,77050cdf-7ca9-45b8-b36c-cb00ac9ce124,Location From,Location From,Location that inventory was moved from,The Location From indicates the location that a product was moved from.,D
+Fact_Acct,270,201,C_LocTo_ID,f5e667e4-4057-4d45-833a-026ed479bf4a,Location To,Location To,Location that inventory was moved to,The Location To indicates the location that a product was moved to.,D
+C_BPartner,291,1000710,Commision,3e2f932e-f75f-4a30-af36-fec1ebcacaeb,Commision,Commision,Commision Percentage,,AMERP
+C_BPartner,291,1493,Commission,b15686cf-35d6-4216-a3ce-27241f630ef5,Commission %,Comm %,Commission stated as a percentage,The Commission indicates (as a percentage) the commission to be paid.,D
+C_BPartner,291,1000430,CommissionsGroup,eaf48cf9-055d-4af5-9af2-6d2e3ea05a38,COMMISSIONSGROUP,COMMISSIONSGROUP,,,MOLI
+C_TaxCategory,252,1011,CommodityCode,a9b2941a-443d-4023-830d-889c3ce1df5e,Commodity Code,Commodity Code,Commodity code used for tax calculation,The Commodity Code indicates a code that is used in tax calculations,D
+M_InOutLineConfirm,728,2560,ConfirmationNo,0fb91f02-79b3-4912-b67a-cd0c05755b93,Confirmation No,Confirmation No,Confirmation Number,,D
+"M_InOutLine, M_InOutLineConfirm, M_MovementLine","320, 324, 728",2386,ConfirmedQty,775392a3-f6c2-4efe-b620-8761856e1824,Confirmed Quantity,Confirmed Qty,Confirmation of a received quantity,Confirmation of a received quantity,D
+M_Product,208,240,CostStandard,3560057f-aaf0-4d11-a217-25777957fe6c,Standard Cost,Standard Cost,Standard Costs,Standard (plan) costs.,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200562,C_Payment_AD_Org_ID,87234cb5-cfe4-4d4f-ae70-9f099791d8c8,c_payment_ad_org_id,c_payment_ad_org_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200563,C_Payment_C_BPartner_ID,f6386aa3-62c5-4db3-b0ac-6a67f0fb3055,c_payment_c_bpartner_id,c_payment_c_bpartner_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200564,C_Payment_C_Charge_ID,236014c9-4ee1-43bc-a74d-67d927c297a6,C_Payment_C_Charge_ID,C_Payment_C_Charge_ID,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200565,c_payment_chargeamt,2a156d61-0f79-4a5b-855a-e8da01e2341c,c_payment_chargeamt,c_payment_chargeamt,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200566,C_Payment_C_Invoice_ID,096fc000-02af-4139-b8aa-0ef742f701dc,C_Payment_C_Invoice_ID,C_Payment_C_Invoice_ID,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200567,C_Payment_C_Order_ID,a29e218b-1592-472b-80d7-5aa0ce4ebea5,c_payment_c_order_id,c_payment_c_order_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200568,c_payment_created,64b3aa1b-a6fe-4e2d-b37c-6e5f7e7fd5f9,c_payment_created,c_payment_created,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200569,C_Payment_CreatedBy,609c7d22-cc0f-496f-9e30-a91e44a9bc29,c_payment_createdby,c_payment_createdby,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201896,c_payment_discountamt,1204f3d5-4bf4-4f58-8dd4-c63dbd473a22,c_payment_discountamt,c_payment_discountamt,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201897,c_payment_documentno,e7054117-de90-4c00-b849-2a97d103e4dd,c_payment_documentno,c_payment_documentno,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200570,c_payment_isactive,78e7d60c-0b1d-4f52-8272-158e6247bfe4,c_payment_isactive,c_payment_isactive,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200571,c_payment_isselfservice,6ac99787-ec9a-4767-9f09-2e20e91f0d01,c_payment_isselfservice,c_payment_isselfservice,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201898,c_payment_payamt,90819952-bd61-429c-9d72-14524c814074,c_payment_payamt,c_payment_payamt,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200572,c_payment_posted,b1932a7b-126e-4ef0-81a8-dd31994cb6d4,c_payment_posted,c_payment_posted,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200573,c_payment_processed,816fd5e6-a08d-415a-9dd6-32ee0985e016,c_payment_processed,c_payment_processed,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200574,c_payment_processedon,73023ed5-c1d7-4523-8703-a2efc50ff0f2,c_payment_processedon,c_payment_processedon,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200575,C_Payment_Reversal_ID,39ac1b10-7e66-4197-a35d-010412cffbd6,c_payment_reversal_id,c_payment_reversal_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200576,c_payment_updated,24ebc35d-657d-4a78-bddf-30bbea5473e8,c_payment_updated,c_payment_updated,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",200577,C_Payment_UpdatedBy,81336226-dcea-4849-ae3d-eb01c1b20e26,c_payment_updatedby,c_payment_updatedby,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201886,C_PaySel_C_BankAccount_ID,78ea036f-3e2d-4331-b9c2-04a8c1b32f16,c_paysel_c_bankaccount_id,c_paysel_c_bankaccount_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201885,C_PaySelection_AD_Org_ID,d4fee2a3-b73a-480e-a836-bd49dee6cc1a,c_payselection_ad_org_id,c_payselection_ad_org_id,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201879,c_payselectioncheck_created,ce9599ba-491a-4fff-933c-eceeacf8f921,c_payselectioncheck_created,c_payselectioncheck_created,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201880,C_PaySelectionCheck_CreatedBy,d4c81280-09e8-476a-a1df-a8b4ad55abc0,c_payselectioncheck_createdby,c_payselectioncheck_createdby,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201881,c_payselectioncheck_discamt,4a881659-81a4-4e88-a694-ea0cd6a76679,c_payselectioncheck_discamt,c_payselectioncheck_discamt,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",1882,C_PaySelectionCheck_ID,d92b6569-68f6-4487-912e-688bfe98ee66,Pay Selection Check,Pay Selection Check,Payment Selection Check,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201882,c_payselectioncheck_isactive,48ba6d78-3c67-45e8-8703-9fc98d1c9507,c_payselectioncheck_isactive,c_payselectioncheck_isactive,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201883,c_payselectioncheck_updated,584cd02c-99b6-4fed-884c-6c21a8626187,c_payselectioncheck_updated,c_payselectioncheck_updated,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201884,C_PaySelectionCheck_UpdatedBy,c9f73217-db96-42ca-be96-45b3f5eef39e,c_payselectioncheck_updatedby,c_payselectioncheck_updatedby,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201887,c_payselection_created,51d17d89-d4cb-4ea8-807a-70f5715a0b43,c_payselection_created,c_payselection_created,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201888,C_PaySelection_CreatedBy,2334b2f3-96f9-4ab3-901a-3a8124980a40,c_payselection_createdby,c_payselection_createdby,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201889,c_payselection_description,a5630685-b1af-496d-add0-587bebf655ca,c_payselection_description,c_payselection_description,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201890,c_payselection_isactive,aa20597b-1e90-48ef-82c9-f7d85dc43e3f,c_payselection_isactive,c_payselection_isactive,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201891,c_payselection_isapproved,c4dcb26a-de89-4446-9303-31e2a634df0b,c_payselection_isapproved,c_payselection_isapproved,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201892,c_payselection_name,262d7220-1b26-42b4-853c-80307c938e25,c_payselection_name,c_payselection_name,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201893,c_payselection_processed,c42c6616-9ba7-4331-95e6-acb65a026843,c_payselection_processed,c_payselection_processed,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201894,c_payselection_updated,14a9f1c1-374c-4654-b85c-98eb74bfba68,c_payselection_updated,c_payselection_updated,,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",201895,C_PaySelection_UpdatedBy,f0828849-ae31-40a3-aa94-2d7f733b20be,c_payselection_updatedby,c_payselection_updatedby,,,D
+Fact_Acct,270,206,C_Period_ID,b15f8d14-dc08-4d1d-a34f-dfdbb7921c0b,Period,Period,Period of the Calendar,The Period indicates an exclusive range of dates for a calendar.,D
+M_InOut,319,2520,CreateConfirm,d59ae21f-c5ff-47a1-8d4e-4cd08f6bac58,Create Confirm,Create Confirm,,,D
+M_InOut,319,2525,CreatePackage,409f6bae-1d76-4af8-ab8d-098ba4b2e8c9,Create Package,Create Package,,,D
+Fact_Acct,270,2876,C_SubAcct_ID,c8e5c149-332a-45d5-9a3f-d57710f46feb,Sub Account,Sub Acct,Sub account for Element Value,"The Element Value (e.g. Account) may have optional sub accounts for further detail. The sub account is dependent on the value of the account, so a further specification. If the sub-accounts are more or less the same, consider using another accounting dimension.",D
+C_TaxCategory,252,54866,C_TaxCategory_UU,d61e9f28-d111-4208-84de-bf32f585fca9,C_TaxCategory_UU,C_TaxCategory_UU,,,D
+C_Tax,261,202582,C_TaxProvider_ID,f96ee65a-3084-48e6-b379-336e0e2d70b3,Tax Provider,Tax Provider,,,D
+C_Tax,261,54863,C_Tax_UU,94376981-b9b0-4d8b-9db2-f85045f6dc14,C_Tax_UU,C_Tax_UU,,,D
+M_InventoryLine,322,1394,CurrentCostPrice,5755639c-287b-4c35-9b45-5161f0a68773,Current Cost Price,Current Cost Price,The currently used cost price,,D
+"I_Product, M_Product","208, 532",203451,CustomsTariffNumber,80499878-be76-441b-b271-927aae501777,Customs Tariff Number,Customs Tariff Number,"Customs Tariff Number, usually the HS-Code",,D
+Regulation_Form_Line,1000082,262,Date1,36e9677c-d027-41f4-a96b-7179f615d309,Date,Date,Date when business is not conducted,The Date field identifies a calendar date on which business will not be conducted.,D
+"M_InOut, M_Movement","319, 323",1324,DateReceived,40d7a363-eb40-4d4a-8f5a-61f375ccf1cf,Date Received,Date Received,Date a product was received,The Date Received indicates the date that product was received.,D
+M_Movement,323,53311,DD_Order_ID,87006e29-cd14-4416-b1f4-26d6a2aceefe,Distribution Order,Distribution Order,,,EE01
+M_MovementLine,324,53313,DD_OrderLine_ID,adce3582-500a-4067-9652-69a74a900ef5,Distribution Order Line,Distribution Order Line,,,EE01
+M_InOutLineConfirm,728,2526,DifferenceQty,17fa7973-15a2-417e-b042-d7961f5e7568,Difference,Difference,Difference Quantity,,D
+"I_Product, M_Product","208, 532",278,Discontinued,cd151548-cb3e-46d2-a742-a9479a4df7aa,Discontinued,Discontinued,This product is no longer available,The Discontinued check box indicates a product that has been discontinued.,D
+"I_Product, M_Product","208, 532",54086,DiscontinuedAt,6108bdd9-4b66-4eec-84d2-e440de4a6709,Discontinued At,Discontinued At,Discontinued At indicates Date when product was discontinued,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",1841,DocumentType,fcdbf05c-4314-411e-8867-2e6c3c77ed84,Document Type,Document Type,Document Type,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",1842,DocumentTypeNote,fc3cfe0a-43f8-4e14-b5d4-e6152c36b444,Document Type Note,Document Type Note,Optional note of a document type,,D
+"M_InOut, M_Movement","319, 323",1000559,DRIVERID,ac048d8c-144d-4ed8-986a-f9152d3317ee,DRIVERID,DRIVERID,,,U
+"M_InOut, M_Movement","319, 323",1000556,DRIVERNAME,d27d9ca4-63a4-41f6-890c-0e194207cf78,DRIVERNAME,DRIVERNAME,,,U
+M_PriceList,255,882,EnforcePriceLimit,6d745c80-8ab0-4d12-bf6b-ea458c1c6585,Enforce price limit,Enforce Price Limit,Do not allow prices below the limit price,"The Enforce Price Limit check box indicates that prices cannot be below the limit price in Orders and Invoices.  This can be overwritten, if the role allows this.",D
+Fact_Acct,270,885,Fact_Acct_ID,1fa822d8-d3b2-4e5c-9f52-ca032483841a,Accounting Fact,Accounting Fact,,,D
+Fact_Acct,270,54893,Fact_Acct_UU,b97ce743-b35b-45f8-a27e-4d5fded5b111,Fact_Acct_UU,Fact_Acct_UU,,,D
+C_BPartner,291,1000431,FIRSTHIREDATE,9f70b2a8-d01b-43de-98fc-977541760f11,FIRSTHIREDATE,FIRSTHIREDATE,,,MOLI
+M_InOut,319,200270,FOB,2118ed07-53c1-454f-b8c7-de790ad9246e,Freight Terms,Freight Terms,,,D
+M_InOut,319,200314,FreightCharges,4151dafa-a416-4500-bca7-4a80a5f3879c,Freight Charges,Freight Charges,,,D
+Fact_Acct,270,308,GL_Budget_ID,dacafbb4-302a-4109-8351-e3be43c6e862,Budget,Budget,General Ledger Budget,The General Ledger Budget identifies a user defined budget.  These can be used in reporting as a comparison against your actual amounts.,D
+C_BPartner,291,1000432,HIREDATE,358db801-0499-4e99-90e0-ace51ce1bd5c,HIREDATE,HIREDATE,,,MOLI
+C_BPartner,291,1000433,IDCardAux,46563872-28f5-48a1-b5f7-7703f2bcd2a9,IDCardAux,IDCardAux,,,MOLI
+C_BPartner,291,1000434,IDCardNo,fc9d13a6-23df-4ed9-97e4-b8d5073a0e77,IDCardNo,IDCardNo,,,MOLI
+C_BPartner,291,1000436,IDNumber,5490d963-428e-4b1c-8073-cf07c086ef4c,IDNumber,IDNumber,,,MOLI
+C_BPartner,291,1000437,IDType,877fd41a-0ca9-4d0d-bf1c-057c41afe79a,IDType,IDType,,,MOLI
+I_Product,532,912,I_ErrorMsg,72def0ed-378d-49dc-ad2d-4f50eb4941cd,Import Error Message,Import Error Message,Messages generated from import process,The Import Error Message displays any error messages generated during the import process.,D
+I_Product,532,913,I_IsImported,2e7439b2-05a0-4267-83f8-cf39de04f6b3,Imported,Imported,Has this import been processed,The Imported check box indicates if this import has been processed.,D
+M_RMA,661,52000,InOut_ID,37eeb5aa-0b9a-471a-acd3-38c2e497594d,Shipment/Receipt,Shipment/Receipt,MaterialShipment Document,The Material Shipment / Receipt ,D
+M_InOut,319,200315,Insurance,39c76a87-9fa6-46a6-98c6-e0b29bb30eb1,Insurance,Insurance,,,D
+M_InventoryLine,322,2202,InventoryType,b17dc6ff-63d0-467f-b939-7c7c23b77ef6,Inventory Type,Inventory Type,Type of inventory difference,"The type of inventory difference determines which account is used. The default is the Inventory Difference account defined for the warehouse.  Alternatively, you could select any charge.  This allows you to account for Internal Use or extraordinary inventory losses.",D
+I_Product,532,1913,I_Product_ID,c84e94c3-0006-40f9-9c70-20b655a6edb7,Import Product,Import Product,Import Item or Service,,D
+I_Product,532,54942,I_Product_UU,7edd66f8-7062-4f61-a063-02b1ce6b20d0,I_Product_UU,I_Product_UU,,,D
+M_InOut,319,200537,IsAlternateReturnAddress,e4e4693d-db93-43f4-b0f9-a90120d7699f,Alternate Return Address,Alternate Return Address,,,D
+"I_Product, M_InOutLine, M_Product","208, 320, 532",203548,IsAutoProduce,49d2748d-90c3-44d6-94e0-7cb5b9e98f29,Auto Produce,Auto Produce,Auto create production to fulfill shipment,,D
+M_Warehouse,190,54377,IsDisallowNegativeInv,f0dc1dcb-de42-4e33-b3a8-d56bab187b91,Disallow Negative Inventory,Disallow Negative Inventory,Negative Inventory is not allowed in this warehouse,"If checked, any transaction that results in the onhand inventory being driven negative will be prevented.",D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",1173,IsFirstNameOnly,126dec97-092c-4301-bc39-6a8d0595afa4,First name only,First name only,Print only the first name in greetings,The First Name Only checkbox indicates that only the first name of this contact should print in greetings.,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",53334,IsGeneratedDraft,182ebfbe-38b7-4ca6-9e2b-c6b6364acbde,Generated Draft,Generated Draft,,,D
+"I_Product, M_Product","208, 532",55244,IsKanban,288503f5-199b-4d4d-9b97-f961dd6f7a30,Kanban controlled,Kanban controlled,This part is Kanban controlled,,D
+"I_Product, M_Product","208, 532",55245,IsManufactured,99a103d1-6790-49b6-b75b-9b7a0aa7e6f9,Manufactured,Manufactured,This product is manufactured,,D
+I_Product,532,328,ISO_Code,05233c04-3a4f-446a-8346-98d526993f80,ISO Currency Code,ISO Currency,Three letter ISO 4217 Code of the Currency,For details - http://www.unece.org/trade/rec/rec09en.htm,D
+"I_Product, M_Product","208, 532",200323,IsOwnBox,342be771-1636-4975-9b63-2bf799d0a09d,Own Box,Own Box,,,D
+"I_Product, M_Product","208, 532",2788,IsPhantom,93aa37db-d7a4-4341-92c9-5279c24fa6d5,Phantom,Phantom,Phantom Component,Phantom Component are not stored and produced with the product. This is an option to avild maintaining an Engineering and Manufacturing Bill of Materials.,D
+M_PriceList,255,52027,isPresentForProduct,cefcc15e-55ab-4b89-a8da-1d2f0affa814,Is Present For Product,Present for Product,,,D
+C_BPartner,291,1000450,isSocialSecurity,966d790c-3878-4901-9912-886be0cd8389,isSocialSecurity,isSocialSecurity,,,MOLI
+M_PriceList,255,408,IsSOPriceList,dc86759a-638a-42f1-851c-e20b9fa1cb45,Sales Price list,Sales Price list,This is a Sales Price List,The Sales Price List check box indicates if this price list is used for sales transactions.,D
+C_BPartner,291,1000453,JobRemuneration,d1a74c18-4dfc-436c-aa65-bb30ded3ac2d,JobRemuneration,JobRemuneration,,,MOLI
+"AD_PInstance, AD_PInstance_Log","282, 578",203924,JsonData,c4ea7a81-96a9-4a5d-bb87-e913e1c8ed48,JSON Data,JSON Data,The json field stores json data.,,D
+AD_UserPreference,200174,1000505,KDB_KanbanBoard_ID,6c896ad7-61dc-4102-b9fa-c92f956c54ad,Kanban Board,Kanban Board,,,KDB
+Fact_Acct,270,1738,Line_ID,f0168da8-7b10-43db-aa0b-a7d781452a3d,Line ID,Line ID,Transaction line ID (internal),Internal link,D
+I_Product,532,1915,Manufacturer,870f6352-bf40-4b20-b45e-7c3fd875c397,Manufacturer,Manufacturer,Manufacturer of the Product,The manufacturer of the Product (used if different from the Business Partner / Vendor),D
+M_MovementLine,324,2799,M_AttributeSetInstanceTo_ID,0d129171-7710-46eb-8832-cf0479586e8d,Attribute Set Instance To,Attribute Set Instance To,Target Product Attribute Set Instance,,D
+M_InOutLineConfirm,728,2523,M_InOutConfirm_ID,2bfe3fea-d11d-4f2e-abe8-e239ba770800,Ship/Receipt Confirmation,Ship/Receipt Confirm,Material Shipment or Receipt Confirmation,Confirmation of Shipment or Receipt - Created from the Shipment/Receipt,D
+"M_InOut, M_InOutLine","319, 320",1025,M_InOut_ID,7820fe85-9166-4525-b01f-b952cee48589,Shipment/Receipt,Shipment/Receipt,Material Shipment Document,The Material Shipment / Receipt ,D
+M_InOutLineConfirm,728,2524,M_InOutLineConfirm_ID,cc46b220-ad0f-49b1-9d26-83edc140991e,Ship/Receipt Confirmation Line,Ship/Receipt Confirm Line,Material Shipment or Receipt Confirmation Line,Confirmation details,D
+M_InOutLineConfirm,728,54993,M_InOutLineConfirm_UU,4a5c9621-30cf-4e72-8d61-dd4200852272,M_InOutLineConfirm_UU,M_InOutLineConfirm_UU,,,D
+M_InOutLine,320,54992,M_InOutLine_UU,1b6e1bd3-6d92-4feb-9f68-dc0b13593863,M_InOutLine_UU,M_InOutLine_UU,,,D
+M_InOut,319,54990,M_InOut_UU,3ad88f92-d8fd-4bb9-92e8-d43d99206195,M_InOut_UU,M_InOut_UU,,,D
+M_InventoryLine,322,1027,M_Inventory_ID,dd01f22c-8c11-4491-973e-98a0f9c0aedf,Phys.Inventory,Phys.Inventory,Parameters for a Physical Inventory,The Physical Inventory indicates a unique parameters for a physical inventory.,D
+"M_InOutLineConfirm, M_InventoryLine","322, 728",1028,M_InventoryLine_ID,494d5fba-6b2e-4977-9a2a-6e84f84fd16c,Phys.Inventory Line,Phys.Inventory Line,Unique line in an Inventory document,The Physical Inventory Line indicates the inventory document line (if applicable) for this transaction,D
+M_InventoryLine,322,54996,M_InventoryLine_UU,e82b9928-0067-4e4b-9d30-9eb949a621d0,M_InventoryLine_UU,M_InventoryLine_UU,,,D
+M_MovementLine,324,1029,M_LocatorTo_ID,4c0ab2ae-5899-45f5-8460-d4788917f43e,Locator To,Locator To,Location inventory is moved to,The Locator To indicates the location where the inventory is being moved to.,D
+M_Locator,207,202889,M_LocatorType_ID,40daae66-c2e4-4700-9ea6-7ba10237fff8,Locator Type,Locator Type,,,D
+M_Locator,207,54998,M_Locator_UU,49dde9e8-132d-431d-9d18-84f5da2e15fa,M_Locator_UU,M_Locator_UU,,,D
+"M_Movement, M_MovementLine","323, 324",1030,M_Movement_ID,b25691ea-4c7f-4d01-8141-0ac9c2953f22,Inventory Move,Move,Movement of Inventory,The Inventory Movement uniquely identifies a group of movement lines.,D
+M_MovementLine,324,1031,M_MovementLine_ID,37fd17eb-c2c6-4cf3-93c6-fe1ff5c82dca,Move Line,Move Line,Inventory Move document Line,The Movement Line indicates the inventory movement document line (if applicable) for this transaction,D
+M_MovementLine,324,55006,M_MovementLine_UU,fa3d3a2d-a23d-45d0-a131-b5c68c3ee79a,M_MovementLine_UU,M_MovementLine_UU,,,D
+M_Movement,323,55004,M_Movement_UU,c43de13c-7f86-4f85-89fa-60cd5133b3d9,M_Movement_UU,M_Movement_UU,,,D
+Regulation_Form_Line,1000082,1000736,MOLI_ActionRequired,e8611aa7-3cee-4451-ad54-344d4c320bf7,Accion Requerida,Accion Requerida,,,U
+AD_Org,155,1000670,MOLI_AD_Org_ID,3151bec1-458c-4252-b336-134a2a140096,AD_Org(ID),AD_Org(ID),,,U
+C_Invoice,318,1000724,MOLI_AmtIVA0,17bf4b00-8c87-41ca-b2c2-8767c1b98f36,Amt IVA0,Exenta,,,U
+C_Invoice,318,1000722,MOLI_AmtIVA10,32c5a32b-a2c2-4913-a860-b50e60e41a33,Amt IVA10,IVA 10%,,,U
+C_Invoice,318,1000723,MOLI_AmtIVA5,2eb575cf-c918-4cba-bf22-cba8330fcf8b,Amt IVA5,IVA 5%,,,U
+C_Invoice,318,1000537,MOLI_AuthNo,444af1ab-a008-42d2-86be-1a97ff651404,Auth No,Auth No,,,U
+C_BPartner,291,1000455,MOLI_BPARTNERTYPE,1d818c77-858c-4354-a411-f8dde177a12c,MOLI_BPARTNERTYPE,MOLI_BPARTNERTYPE,,,MOLI
+C_BankAccount,297,1000682,MOLI_C_BankAccount_ID,f95dec7c-4302-4392-b81f-f8974d8a420d,C_BankAccount(ID),C_BankAccount(ID),,,U
+C_Bank,296,1000671,MOLI_C_Bank_ID,b78c24ec-6a68-4b04-9228-4e1741adf3e4,C_Bank(ID),C_Bank(ID),,,U
+C_BPartner,291,1000673,MOLI_C_BPartner_ID,e0cbe89d-6a58-465c-ad5b-c78461058dec,C_BPartner(ID),C_BPartner(ID),,,U
+"C_BPartner_Location, C_BP_Group","293, 394",1000672,MOLI_C_BPartner_Location_ID,55109c1d-e09b-4a14-8e44-df2eca916552,C_BPartner_Location(ID),C_BPartner_Location(ID),,,U
+C_CommissionLine,431,1000674,MOLI_C_BP_Group_ID,3b2f5d47-c6e7-4a0e-8eb4-360583d444c5,C_BP_Group(ID),C_BP_Group(ID),,,U
+C_Charge,313,1000675,MOLI_C_Charge_ID,4ff958b5-683d-4314-8c57-34906a7a41c1,C_Charge(ID),C_Charge(ID),,,U
+"C_Invoice, C_Order, M_InOut, M_Movement","259, 318, 319, 323",1000536,MOLI_Cdc,c395f9c3-16ce-4824-85fd-38e2795c5c62,CDC,CDC,,,U
+C_DocType,217,1000676,MOLI_C_DocType_ID,bf0b66fb-c6c8-4c6f-81a1-02d99c866973,C_DocType(ID),C_DocType(ID),,,U
+C_Invoice,318,1000921,MOLI_C_Invoice_ID,74372c92-6275-4de2-9956-4632de6ed7b6,MOLI_C_Invoice(ID),MOLI_C_Invoice(ID),MOLI_C_Invoice(ID),,U
+C_CommissionLine,431,1000918,MOLI_CommGoal,64c94466-1bbb-45a3-8ef9-b5a7f54207ba,Comm Goal,Comm Goal,Comm Goal,,U
+C_CommissionLine,431,1000917,MOLI_CommGoalBase,65b4b411-8148-4ab8-900e-b937e573298d,Comm Goal Base,Comm Goal Base,Comm Goal Base,,U
+C_CommissionLine,431,1000920,MOLI_CommGoalBaseMultiplier,db1aa0a1-cbeb-43e4-a867-b5ab06f0adf8,Comm Goal Base Multiplier,Comm Goal Base Multiplier,Comm Goal Base Multiplier,,U
+C_CommissionLine,431,1000919,MOLI_CommGoalMiltiplier,06c3841d-d0c3-4a65-b4dd-667e94d4fafe,Comm Goal Miltiplier,Comm Goal Miltiplier,Comm Goal Miltiplier,,U
+M_Product,208,1000998,MOLI_ConfigurableSKU,91b5aedd-1fad-493c-9976-0caa55d2af46,Configurable SKU,Configurable SKU,,,U
+C_Payment,335,1000922,MOLI_C_Payment_ID,2a62acf3-f542-44b8-9250-ef41812a4737,MOLI_C_Payment(ID),MOLI_C_Payment(ID),,,U
+C_PaymentTerm,113,1000677,MOLI_C_PaymentTerm_ID,09e90c0f-783c-4358-ad09-ac1e883d2a96,C_PaymentTerm(ID),C_PaymentTerm(ID),,,U
+C_Invoice,318,1000542,MOLI_CreditNoteReason,ce8ea7b6-7843-4ca6-92ec-396fb0e0f8ec,Credit Note Reason,Credit Note Reason,,,U
+C_TaxCategory,252,1000678,MOLI_C_TaxCategory_ID,87cce664-7b54-4f64-afa2-29ac89f4a054,C_TaxCategory(ID),C_TaxCategory(ID),,,U
+C_Tax,261,1000679,MOLI_C_Tax_ID,2547ca80-6c29-41fb-920c-9ac6ce388fc1,C_Tax(ID),C_Tax(ID),,,U
+C_Invoice,318,1000610,MOLI_CurrencyRate,0a8a938a-fd1d-4c7a-ba1d-749d165952ed,Currency Rate,Currency Rate,,,U
+Regulation_Form_Line,1000082,1000737,MOLI_DateCDAR,c7dc26e1-a369-459e-81e9-8ebe7ab5f9fa,Fecah CDAR,Fecha CDAR,,,U
+Regulation_Form_Line,1000082,1000738,MOLI_DateCLV,7bd11d1b-8cfb-4c8d-b0f1-99c0781584fa,Fecha CLV,Fecha CLV,,,U
+Regulation_Form_Line,1000082,1000739,MOLI_DateCP,87e96a61-5b46-43bd-b4a0-7258248ea6b5,Fecha CP,Fecha CP,,,U
+Regulation_Form_Line,1000082,1000740,MOLI_DateFormula,a751fd98-02a7-49f7-bd29-d12ea6734aaf,Fecha Formula,Fecha Formula,,,U
+Regulation_Form_Line,1000082,1000741,MOLI_DateGMP,8a3c17bd-503a-481c-bc7d-0799408e91c9,Fecha GMP,Fecha GMP,,,U
+Regulation_Form_Line,1000082,1000742,MOLI_DateKBIS,1f60b992-2568-4b8d-82eb-8d45c435b96d,Fecha KBISS,Fecha KBISS,,,U
+"M_InOut, M_Movement","319, 323",1000560,MOLI_Distancia,6fa82d29-17ea-4829-9107-e0386240dd36,Distancia,Distancia,,,U
+C_BPartner,291,1000591,MOLI_DocumentType,e06b063a-f86d-4392-bf0e-fbd95e02d9a5,Document Type,Document Type,,,U
+"M_InOut, M_Movement","319, 323",1000563,MOLI_EndTransfer,e8cadec7-f39d-4d66-93ca-beef0462d328,End Transfer,End Transfer,,,U
+"C_Invoice, C_Payment, M_InOut, M_Movement","318, 319, 323, 335",1000500,MOLI_FiscalDocumentNo,a605e132-e367-4b9a-a188-3ace584feaee,Fiscal Document NO,Fiscal Document NO,Fiscal Document NO,Fiscal Document NO,U
+"C_Order, C_OrderLine, C_Payment, M_InOut, M_InOutLine, M_RMA, M_RMALine","259, 260, 319, 320, 335, 660, 661",1000615,MOLI_Floreant_Data,b9b91692-e937-4c9a-a36c-c8591cd2179a,Floreant Data,Floreant Data,,,U
+"C_Invoice, M_InOut, M_Movement","318, 319, 323",1000540,MOLI_FsError,4a2f4555-1052-4139-aa5b-57dfba1228aa,Fs Error,Fs Error,,,U
+M_Movement,323,1000554,MOLI_FsMessage,9570e9f9-6376-4c78-8f7b-c00d95b9b1f5,Fs Message,Fs Message,,,U
+"C_Invoice, M_InOut, M_Movement","318, 319, 323",1000541,MOLI_FsPaused,092aef53-52ac-4600-a1e4-77c29d92ac85,Fs Paused,Fs Paused,,,U
+"C_Invoice, M_InOut, M_Movement","318, 319, 323",1000539,MOLI_FsStatus,56fbf5ea-822b-4351-89b4-cf0db1f6d6dd,Fs Status,Fs Status,,,U
+"C_Invoice, M_InOut, M_Movement","318, 319, 323",1000545,MOLI_FsVoidMessage,8f4da2aa-f139-44d9-a9c0-601e0d88d0fb,Fs Void Message,Fs Void Message,,,U
+"C_Invoice, M_InOut, M_Movement","318, 319, 323",1000544,MOLI_FsVoidStatus,c44cdd8e-a403-485a-898c-2cd019e847ba,Fs Void Status,Fs Void Status,,,U
+"C_BPartner_Location, M_Locator, M_Warehouse","190, 207, 293",1000550,MOLI_GeoRefCode_ID,d8136ebb-f9a0-41ec-8f2e-5f7cfd136541,Geo Ref Code ID,Geo Ref Code ID,,,U
+C_BPartner,291,1000773,MOLI_GMRKenzoBarcode,dd6faa2f-d5f1-409c-b399-84b5cbece858,GMR Kenzo Barcode,GMR Kenzo Barcode,GMR Kenzo Barcode,,U
+"C_BPartner, C_Order","259, 291",1000774,MOLI_GMRKenzo_ID,84adf105-d6d0-418b-bbf3-2386e4c78a2b,BP GMR Kenzo,BP GMR Kenzo,BP GMR Kenzo,,U
+"C_CommissionLine, C_InvoiceLine, M_Product","208, 333, 431",1000644,MOLI_HS_ID,2f829382-6795-4b55-8ebf-e438e3e2eb7f,Harmonized System,Harmonized System,Harmonized Commodity Description and Coding System (HS Convention) ,,U
+C_Invoice,318,1000613,MOLI_InvAuth,92440038-de4d-4063-bc9f-f77d3632edf3,Numero de Timbrado,Numero de Timbrado,,,U
+M_InventoryLine,322,1000947,Moli_InventoryLine_ID,a5031714-780f-4996-bf7c-c3169db6fa04,Phys.Inventory,Phys.Inventory,Parameters for a Physical Inventory,The Physical Inventory indicates a unique parameters for a physical inventory.,U
+C_Invoice,318,1000538,MOLI_InvoiceNo,4ca8cc22-2ff4-4427-a8e2-89cc53e036be,Invoice NO,Invoice NO,,,U
+"C_Invoice, M_InOut, M_Movement","318, 319, 323",1000772,MOLI_InvoiceReference,6f2ed698-3631-4d07-91a3-07c7c4f8570e,Invoice Reference,Invoice Reference,,,U
+Regulation_Form_Line,1000082,1000743,MOLI_IsCartaPoder,fea3ca5a-e3bb-45b6-a1d7-7d5695c0b9e3,Es carta Poder,Es carta Poder,,,U
+Regulation_Form_Line,1000082,1000744,MOLI_IsCDAR,7b58bf35-26b7-4ee7-b06d-d4dcaa0e9f57,Es CDAR,Es CDAR,,,U
+Regulation_Form_Line,1000082,1000745,MOLI_IsCLV,181df03e-d18d-4f3c-8751-e7143fb443bc,Es CLV,Es CLV,,,U
+M_Product,208,1001016,MOLI_IsConsignment,327c9ea3-9d1f-45a8-bf27-07f4157f7ef8,Is Consignment,Is Consignment,,,U
+C_BPartner,291,1000726,MOLI_IsEDI,01c146e4-93ae-4d8d-b156-b1750433eef5,EDI Enabled,EDI Enabled,,,MOLI
+C_Invoice,318,1000795,MOLI_IsExcluded,cf99cc77-ba4b-4e64-85cb-70af9f0ae185,Excluded,Excluded,,,U
+Regulation_Form_Line,1000082,1000746,MOLI_IsFormula,97ee3f2b-2697-42b3-ab04-52f829767d2d,Es Formula,Es Formula,,,U
+Regulation_Form_Line,1000082,1000747,MOLI_IsGMP,eab1b53c-4f66-4ded-889f-a1f215566fdb,Es GMP,Es GMP,,,U
+C_BPartner,291,1000775,MOLI_IsGMRKenzo,56ebe747-c048-4c54-99b9-0a8e692efc8f,Is GMR Kenzo,Is GMR Kenzo,Is GMR Kenzo,,U
+Regulation_Form_Line,1000082,1000748,MOLI_IsKBIS,0cc8be53-b1b2-4eff-b0ec-06bc92bfb662,Es KBISS,Es KBISS,,,U
+"C_CommissionLine, M_Product","208, 431",1000884,MOLI_IsLocalVendor,481b4699-d40b-47fb-b0da-ed7b247e455d,Local Vendor,Local Vendor,,,U
+C_BPartner,291,1000778,MOLI_IsPromoter,627a9d94-c323-47f7-983a-9de42f4a91e6,Promoter,Promoter,,,U
+"C_Invoice, M_Movement","318, 323",1000611,MOLI_LinkAuthId,ede1ae95-610f-4f6a-8cb6-6d233be7249d,Timbrado Asociado,Timbrado Asociado,,,U
+"C_Invoice, M_Movement","318, 323",1000612,MOLI_LinkInvNo,c28949af-8f45-4045-adab-cbd42e2a72b1,Factura Asociado,Factura Asociado,,,U
+M_InventoryLine,322,1000989,Moli_MovementQty,17b60f77-2dc4-4aa1-affa-a71f63b71397,Moli_MovementQty,Qty,Quantity of a product moved.,The Movement Quantity indicates the quantity of a product that has been moved.,U
+M_PriceList,255,1000680,MOLI_M_PriceList_ID,6b1d1e37-aae9-46ab-a655-16aef438fe55,M_PriceList(ID),M_PriceList(ID),,,U
+M_Product,208,1000681,MOLI_M_Product_ID,b07b37a7-4c33-4c34-939c-e00bffecef1a,M_Product(ID),M_Product(ID),,,U
+C_BPartner,291,1000698,MOLI_NroCedula,59b7c9c1-f9de-4980-84eb-fea82f3d306d,Nro Cedula,Nro Cedula,,,U
+C_BPartner,291,1000459,MOLI_PHOTOID,8f02b41d-1d1e-49c9-b8d7-051d25655782,MOLI_PHOTOID,MOLI_PHOTOID,,,MOLI
+"C_Payment, C_PaySelection, C_PaySelection_Check_v, C_PaySelection_Check_vt","335, 426, 498, 200300",1000646,MOLI_PostDatedCheck,9e081360-5cbe-4d94-b1fc-6bebf36b78c6,PostDated Check,PostDated Check,,,U
+"C_Invoice, M_Movement","318, 323",1000543,MOLI_PreImpNO,e1b9c103-d2ce-4084-8dca-9d2098541db5,Pre Imp NO,Pre Imp NO,,,U
+"C_CommissionLine, C_InvoiceLine, M_PriceList_Version, M_Product, M_ProductPrice","208, 251, 295, 333, 431",1000620,MOLI_ProductBrand_ID,12f240f3-af8e-46be-a924-c3529a438a02,Product Brand,Product Brand,Product Brand,,U
+"C_CommissionLine, C_InvoiceLine, M_Product","208, 333, 431",1000621,MOLI_ProductLine_ID,721bda85-c1cb-45de-92ef-72b991b628f5,Product Line,Product Line,Product Line,,U
+M_Product,208,1000796,MOLI_ProductSize,17fd84ed-0564-4604-a059-75f66f26cebb,Product Size,Product Size,Product Size,Product Size,U
+M_Product,208,1000797,MOLI_ProductSizeUOM,8f71010b-d7c7-487f-b7da-33a646979565,Product Size UOM,Product Size UOM,Product Size UOM,Product Size UOM,U
+"Regulation_Form_Line, Regulation_Form_Product","1000082, 1000083",1000734,MOLI_RegForm_ID,3dca4644-ea7a-42a7-ad8c-b48a4312b07c,Regulation Form ID,Regulation Form ID,,,U
+Regulation_Form_Line,1000082,1000730,MOLI_RegFormLine_ID,c6a0b3c3-3bd0-489e-97b2-52985e353d19,Regulation Form Line,Regulation Form Line,Regulation Form Line,,U
+Regulation_Form_Line,1000082,1000731,MOLI_RegFormLine_UU,abe6abc4-d943-4037-8357-2c0fa1aadd78,Regulation_Form_Line_UU,Regulation_Form_Line_UU,,,U
+Regulation_Form_Product,1000083,1000732,MOLI_RegFormProduct_ID,80e17b21-dd93-4cf7-b4ea-1abdf778a79c,Regulation Form Product,Regulation Form Product,,,U
+Regulation_Form_Product,1000083,1000733,MOLI_RegFormProduct_ID_UU,861b59c2-94c9-4b70-8125-d0cdcd8a2226,Regulation_Form_Product_UU,Regulation_Form_Product_UU,,,U
+Regulation_Form_Line,1000082,1000749,MOLI_RgmStatus,44400f92-1c8e-4aea-9d6e-a620f0fd95f2,Rgm Status,Rgm Status,,,U
+"M_InOut, M_Movement","319, 323",1000558,MOLI_RucTransportista,cbb718cd-0e3d-4964-a87b-62d5de812663,Ruc Transportista,Ruc Transportista,,,U
+C_Order_LineTax_v,497,1000984,MOLI_SKULabel_RP,41a36147-c191-43fb-8766-7dcaba196df6,RP,RP,,,U
+"M_InOut, M_Movement","319, 323",1000564,MOLI_StartTransfer,7956ca2c-e5f2-4407-a578-f38b32ad8f80,Start Transfer,Start Transfer,,,U
+Regulation_Form_Line,1000082,1000750,MOLI_StatusType,50d99850-e76b-4412-8979-c2f2184eb04a,Tipo de Estado,Tipo de Estado,,,U
+C_Invoice,318,1000704,MOL_IsVerified,1beb4ee3-1250-42f2-a836-e7a5bbf90e77,Invoice Verified,Invoice Verified,Invoice Verified,Invoice Verified,U
+"C_BPartner, M_Product","208, 291",1000614,MOLI_SyncPrefix,33f4e044-2708-4f94-880d-d4e54af25f7f,Sync Prefix,Sync Prefix,,,U
+M_Product,208,1000941,MOLI_TagLabel,b76a21a9-57d2-423d-8fde-5ef4c5895053,TagLabel,TagLabel,,,U
+M_Product,208,1000942,MOLI_TagLabelExt,e89636da-7baf-4432-b055-8fe22180bf57,TagLabel Extended,TagLabel Extended,,,U
+C_Invoice,318,1000721,MOLI_TaxCLBase,55f4357c-cc13-4619-8ee9-548837f49a5c,Tax Base,Tax Base,Custom Tax Base,Custom Tax Base,U
+"M_InOut, M_Movement","319, 323",1000557,MOLI_TransportDirection,bf729a57-e95c-4bce-9222-df81490ccd39,Transport Direction,Transport Direction,,,U
+"M_InOut, M_Movement","319, 323",1000619,MOLI_Transportista,01bcf05f-164b-40c5-91a9-2eaf0793a29b,Transportista,Transportista,,,U
+C_BPartner,291,1000461,MOLI_TYPEDOCUMENT,2e0070ff-51c2-4050-99e4-0e7eb28d58d7,MOLI_TYPEDOCUMENT,MOLI_TYPEDOCUMENT,,,MOLI
+"M_InOut, M_Movement","319, 323",1000555,MOLI_VehicleType,a74a5e72-b477-40d0-a9bc-8b34800b65b9,Vehicle Type,Vehicle Type,,,U
+"M_InOut, M_Movement","319, 323",1037,MovementDate,c2159fd3-b5b2-4111-9ecb-cb12e2e4f896,Movement Date,Movement Date,Date a product was moved in or out of inventory,"The Movement Date indicates the date that a product moved in or out of inventory.  This is the result of a shipment, receipt or inventory movement.",D
+"M_InOutLine, M_MovementLine","320, 324",1038,MovementQty,c6d39b80-0c85-4003-ae62-3f19d5a7904d,Movement Quantity,Qty,Quantity of a product moved.,The Movement Quantity indicates the quantity of a product that has been moved.,D
+M_InOut,319,1039,MovementType,0ecb90a6-2743-4818-994f-f7d86cb1a0b8,Movement Type,Movement Type,Method of moving the inventory,"The Movement Type indicates the type of movement (in, out, to production, etc)",D
+M_Product,208,55243,M_PartType_ID,f0d67a54-4f2a-43ff-8b42-3013caeda7fa,Part Type,Part Type,,,D
+M_PriceList,255,55013,M_PriceList_UU,6beeec0a-1992-42f6-a88f-dc2f43e6cb0c,M_PriceList_UU,M_PriceList_UU,,,D
+M_PriceList_Version,295,1228,M_Pricelist_Version_Base_ID,59a0a5a0-2c65-48e3-9c0d-f1b43d05266c,Base Price List,Base Price List,Source for Price list calculations,The Base Price List identifies the Base Pricelist used for calculating prices (the source),D
+"M_PriceList_Version, M_ProductPrice","251, 295",450,M_PriceList_Version_ID,0dcce986-f827-4453-b249-edb04737d4a3,Price List Version,Price List Version,Identifies a unique instance of a Price List,Each Price List can have multiple versions.  The most common use is to indicate the dates that a Price List is valid for.,D
+M_PriceList_Version,295,55014,M_PriceList_Version_UU,0487ec87-3090-4e07-8b73-b1155b99ddff,M_PriceList_Version_UU,M_PriceList_Version_UU,,,D
+M_InventoryLine,322,1033,M_ProductionLine_ID,8dd22925-e449-49f0-ad5a-a6248f43cd82,Production Line,Production Line,Document Line representing a production,The Production Line indicates the production document line (if applicable) for this transaction,D
+M_ProductPrice,251,202909,M_ProductPrice_ID,b731d80c-41bb-49c7-a7e7-607b0282f589,Product Price,Product Price,Intersection between a Product and a Price List Version,,D
+M_ProductPrice,251,55028,M_ProductPrice_UU,4094e804-ad90-401b-a448-27ab806fbd73,M_ProductPrice_UU,M_ProductPrice_UU,,,D
+M_Product,208,55015,M_Product_UU,4304d4de-b8d8-4a1e-8f14-2b00d4fbd5cc,M_Product_UU,M_Product_UU,,,D
+M_Warehouse,190,200188,M_ReserveLocator_ID,8b8c0e1b-b73b-44fc-b941-903aa5bc9e2b,Reservation Locator,Reserve Locator,Reservation Locator (just for reporting purposes),,D
+M_RMALine,660,55043,M_RMALine_UU,75e1b968-91fd-482e-91c4-2cf2ee5639b6,M_RMALine_UU,M_RMALine_UU,,,D
+M_RMA,661,2530,M_RMAType_ID,4aac93ee-a525-40c3-b087-8fe5cad0b2f0,RMA Type,RMA Type,Return Material Authorization Type,Types of RMA,D
+M_RMA,661,55042,M_RMA_UU,62a33611-dc93-4faf-bc7b-a8ff87191478,M_RMA_UU,M_RMA_UU,,,D
+M_Warehouse,190,2814,M_WarehouseSource_ID,4e0c6f4c-be01-4938-a6a4-78e8775a5ed3,Source Warehouse,Source Warehouse,Optional Warehouse to replenish from,"If defined, the warehouse selected is used to replenish the product(s)",D
+M_Movement,323,203528,M_WarehouseTo_ID,20ff85b3-c694-476f-b814-c37db421ca2d,Warehouse To,Warehouse To,To Storage Warehouse and Service Point,The Warehouse To indicates the Warehouse where the inventory is being moved to,D
+M_Warehouse,190,55052,M_Warehouse_UU,5597730a-2f7c-41f4-93fe-cebbb43f4b12,M_Warehouse_UU,M_Warehouse_UU,,,D
+M_InventoryLine,322,200008,NewCostPrice,f0219a4d-ea25-473c-896a-1fe5dc6c25b8,New Cost Price,New Cost Price,New current cost price after processing of M_CostDetail,,D
+M_InOut,319,2113,NoPackages,e3648a87-3486-4c2a-82bc-651d4768238b,No Packages,No Packages,Number of packages shipped,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt","498, 200300",1874,Org_Location_ID,b946f6bd-3056-466e-9467-ffe8e86a1c04,Org Address,Org Address,Organization Location/Address,,D
+C_BPartner,291,1000463,OrgSector,99f24199-f4c3-4d44-9a86-dc05ba93a5bc,OrgSector,OrgSector,,,MOLI
+C_BPartner,291,1000711,OrgSectorValue,427dfb52-541d-489b-9b2c-0be53ce93fcf,OrgSectorValue,OrgSectorValue,,,MOLI
+M_InOut,319,2117,PickDate,74bc6906-fe1b-4b5a-9ffc-e8b98b325149,Pick Date,Pick Date,Date/Time when picked for Shipment,,D
+M_InOutLine,320,2422,PickedQty,61f1a0ba-0ff7-4b2c-9bb6-85a1a4d17f86,Picked Quantity,Picked Quantity,,,D
+C_BPartner,291,2299,PIN,9246bb59-760b-42ab-bd9a-84c3529c17f1,PIN,PIN,Personal Identification Number,,D
+Fact_Acct,270,514,PostingType,01343a3d-a9ca-4f9c-98eb-1b2054362e98,Posting Type,Posting Type,The type of posted amount for the transaction,"The Posting Type indicates the type of amount (Actual, Budget, Reservation, Commitment, Statistical) the transaction.",D
+M_PriceList,255,2665,PricePrecision,e7d740f0-8ae2-4b0e-a82d-7dc4ab5df482,Price Precision,Price Precision,Precision (number of decimals) for the Price,"The prices of the price list are rounded to the precision entered.  This allows to have prices with below currency precision, e.g. $0.005. Enter the number of decimals or -1 for no rounding.",D
+"I_Product, M_ProductPrice","251, 532",957,PriceStd,ae449a2c-a515-4356-8ec5-a3eed41d7b14,Standard Price,Std Price,Standard Price,The Standard Price indicates the standard or normal price for a product on this price list,D
+M_Locator,207,1145,PriorityNo,7c22405c-f0fe-42a5-ab35-d86da6c37bb9,Relative Priority,Relative Priority,Where inventory should be picked from first,"The Relative Priority indicates the location to pick from first if an product is stored in more than one location.  (100 = highest priority, 0 = lowest).  For outgoing shipments, the location is picked with the highest priority where the entire quantity can be shipped from.  If there is no location, the location with the highest priority is used.
+The Priority is ignored for products with Guarantee Date (always the oldest first) or if a specific instance is selected.
+Incoming receipts are stored at the location with the highest priority, if not explicitly selected.",D
+M_PriceList_Version,295,1126,ProcCreate,0526f20a-1456-4664-a82e-d4b3145c1d11,Create,Create,,,D
+"I_Product, Regulation_Form_Product","532, 1000083",1000719,ProductBrand_Value,58250e55-6290-4304-8a8f-54fd224fd50b,ProductBrand  Key,ProductBrand  Key,ProductBrand Value for search,,U
+I_Product,532,1916,ProductCategory_Value,844b08e7-9add-48ea-bc39-af42ea539e01,Product Category Key,Product Category Key,,,D
+I_Product,532,1000720,ProductLine_Value,111eb80f-d6a0-40e3-a32c-cd780902ab00,ProductLine  Key,ProductLine  Key,ProductLine Value for search,,U
+"C_InvoiceLine, C_OrderLine, M_InOutLine, M_InventoryLine, M_MovementLine","260, 320, 322, 324, 333",2659,ProductName,bc3ea2e0-d8d5-4895-874e-1d717ced27aa,Product Name,Product Name,Name of the Product,,D
+"C_PaySelection_Check_v, C_PaySelection_Check_vt, Fact_Acct, M_RMALine","270, 498, 660, 200300",526,Qty,a0c304e9-df00-40f3-a9da-26da921e0db8,Quantity,Qty,Quantity,The Quantity indicates the number of a specific product or item for this document.,D
+M_InventoryLine,322,1048,QtyBook,45f9de21-7b67-466c-8dff-1bcf61fdbfc6,Quantity book,Qty book,Book Quantity,The Quantity Book indicates the line count stored in the system for a product in inventory,D
+M_InventoryLine,322,1049,QtyCount,be2403b0-badb-4981-b9ed-1b6ba0b052b7,Quantity count,Qty count,Counted Quantity,The Quantity Count indicates the actual inventory count taken for a product in inventory,D
+M_InventoryLine,322,52053,QtyCsv,a474d415-3c8c-4ab8-9dac-f7ba7f742a24,Qty Csv,Qty Csv,,,D
+M_InventoryLine,322,2654,QtyInternalUse,6cd37b59-b913-4a13-866c-1d54ed87ef8c,Internal Use Qty,Internal Use,Internal Use Quantity removed from Inventory,Quantity of product inventory used internally (positive if taken out - negative if returned),D
+M_InOutLine,320,202627,QtyOverReceipt,6872e34a-74bc-4590-b8e3-da15b6d365ba,Over Receipt,Over Receipt,Over Receipt Quantity,Calculated: Receipt - ordered quantity,D
+M_InOut,319,2428,Ref_InOut_ID,a28f69e5-8969-4a82-895e-b87264011a8a,Referenced Shipment,Ref Ship,,,D
+M_InOutLine,320,2445,Ref_InOutLine_ID,690206d9-8614-4a4a-aaee-21611963bd46,Referenced Shipment Line,Ref Ship Line,,,D
+M_RMA,661,53866,Ref_RMA_ID,51816a9e-4f7e-4ffa-b0bb-0cf69e3428b6,Referenced RMA,Ref RMA,,,D
+M_RMALine,660,53867,Ref_RMALine_ID,7c561edd-1851-4140-a41f-78286ba6fe59,Referenced RMA Line,Ref RMA Line,,,D
+M_Warehouse,190,2815,ReplenishmentClass,678eca2f-3041-44fd-ad47-e84dcf8a5b70,Replenishment Class,Replenishment Class,Custom class to calculate Quantity to Order,"If you select a custom replenishment type, you need to create a class implementing org.compiere.util.ReplenishInterface and set that on warehouse level.",D
+M_InOut,319,200538,ReturnBPartner_ID,90e42f86-e013-48c9-8eec-e3aedf09f64a,Return Partner,Return Partner,,,D
+M_InOut,319,200539,ReturnLocation_ID,6308a616-5837-4144-821e-9939d70871eb,Return Location,Return Location,,,D
+M_InOut,319,200540,ReturnUser_ID,cd7df731-c7a0-4335-820b-7bbd32795fda,Return User/Contact,Return User/Contact,,,D
+"M_InOutLine, M_InventoryLine, M_MovementLine","320, 322, 324",53689,ReversalLine_ID,4147ad80-004d-429b-99bc-33674abc6de2,Reversal Line,Reversal Line,Use to keep the reversal line ID for reversing costing purpose,,D
+"M_InOutLine, M_InOutLineConfirm, M_MovementLine","320, 324, 728",2435,ScrappedQty,137a719a-d8eb-4cba-b896-7e650937eb72,Scrapped Quantity,Scrapped Qty,The Quantity scrapped due to QA issues,,D
+M_Warehouse,190,565,Separator,c00238cf-89c1-4c24-a751-b072566ae5f3,Element Separator,Element Separator,Element Separator,The Element Separator defines the delimiter printed between elements of the structure,D
+M_InOut,319,2123,ShipDate,28ac1529-b205-4a7d-9c67-97543906814c,Ship Date,Ship Date,Shipment Date/Time,Actual Date/Time of Shipment (pick up),D
+M_InOut,319,200309,ShipperAccount,bc3b6c6b-0bcd-4ebb-855b-671fad62928e,Shipper Account Number,Shipper Account Number,,,D
+C_BPartner,291,1000465,SocialSecurityNO,7a00f011-2c7e-4267-96a7-99a43d9cb5c5,SocialSecurityNO,SocialSecurityNO,,,MOLI
+"M_InOutLine, M_InOutLineConfirm, M_MovementLine","320, 324, 728",2436,TargetQty,dcf9fe1a-188d-4151-bfa1-89c73e1ffe66,Target Quantity,Target Qty,Target Movement Quantity,The Quantity which should have been received,D
+I_Product,532,1000716,TaxCategory_Value,8ef2bd96-bb32-4a07-b491-cf0900b2d151,Tax Category Key,Tax Category Key,,,U
+C_Tax,261,203283,TaxPostingIndicator,6de750b3-2872-44ba-a78b-94fa6af96acf,Posting Indicator,Posting Indicator,Type of input tax (deductible and non deductible),"Separate Tax Posting: Tax is calculated on the full amount of the item and posted separately.
+Distribute Tax with Relevant Expense: Tax amount is added to the item amount during account posting time and for updating of Product Cost.",D
+C_Tax,261,595,To_Region_ID,36f689e7-3542-4611-9048-a973f29d98d7,To,To,Receiving Region,The To Region indicates the receiving region on a document,D
+M_InOut,319,2126,TrackingNo,faddadde-2ffa-4aa5-bd09-7c46345f38ac,Tracking No,Tracking No,Number to track the shipment,,D
+I_Product,532,1000717,UOM_Value,5fee694a-08c9-4b4a-b4c5-3c9c7e2cda1d,UOM Key,UOM Key,,,U
+Fact_Acct,270,2877,UserElement1_ID,1c93ee73-27f2-4edd-8e66-5b3d463e3a61,User Column 1,User Column 1,User defined accounting Element,A user defined accounting element referres to a iDempiere table. This allows to use any table content as an accounting dimension (e.g. Project Task).  Note that User Elements are optional and are populated from the context of the document (i.e. not requested),D
+Fact_Acct,270,2878,UserElement2_ID,f2a70b80-465a-4e46-93c3-4e87f71972ba,User Column 2,User Column 2,User defined accounting Element,A user defined accounting element referres to a iDempiere table. This allows to use any table content as an accounting dimension (e.g. Project Task).  Note that User Elements are optional and are populated from the context of the document (i.e. not requested) ,D
+"C_Commission, C_CommissionLine","429, 431",618,ValidTo,954cd3f9-a797-4629-840f-10eb6dcbdf17,Valid to,Valid to,Valid to including this date (last day),The Valid To date indicates the last day of a date range,D
+"M_InOut, M_Movement","319, 323",1000561,VEHICLE,df5a0b9c-fe59-4b13-a06b-720295ac8fda,VEHICLE,VEHICLE,,,U
+"M_InOut, M_Movement","319, 323",1000562,VEHICLEID,70f8bf92-732c-4a0f-a4bc-4c577040732e,VEHICLEID,VEHICLEID,,,U
+I_Product,532,622,VendorCategory,9dfb8945-ed97-41e0-bb0b-ed28fb8ebc1f,Partner Category,BPartner Category,Product Category of the Business Partner,The Business Partner Category identifies the category used by the Business Partner for this product.,D
+M_Locator,207,633,X,f683ae39-cace-4b80-9776-7b1851c7c8b4,Aisle (X),X,"X dimension, e.g., Aisle",The X dimension indicates the Aisle a product is located in.,D
+M_Locator,207,635,Y,4ec66e9b-6943-43e0-bbbc-71169fd23493,Bin (Y),Y,"Y dimension, e.g., Bin",The Y dimension indicates the Bin a product is located in,D
+M_Locator,207,637,Z,8434b9d8-5760-4fbd-8327-1965f1836501,Level (Z),Z,"Z dimension, e.g., Level",The Z dimension indicates the Level a product is located in.,D
