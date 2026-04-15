@@ -1,0 +1,23 @@
+tablename,ad_table_id,columnname,ad_column_id,ad_val_rule_id,ad_val_rule_uu,validationrulename,entitytype,type,code
+C_CommissionLine,431,MOLI_ProductLine_ID,1003146,1000065,f5209141-ea69-4dbe-87b4-6f9220b61d68,MOLI_ProductLine (Product),U,S,MOLI_ProductLine.IsActive='Y' AND MOLI_ProductLine.MOLI_ProductBrand_ID = @MOLI_ProductBrand_ID@
+C_CommissionRun,436,C_DocType_ID,1003156,52021,917f9c62-9581-4373-b9e5-b1cfe1f10cbb,C_DocType Payroll,EE02,S,C_DocType.DocBaseType='HRP'
+M_MovementLine,324,M_Locator_ID,3591,1000068,19220dec-696c-4434-9bc8-f9ecb3d3a158,M_Locator (OnHandOnly),U,S,"M_Locator.IsActive = 'Y' 
+AND 
+(
+    EXISTS (
+        SELECT 1 
+        FROM M_Storage 
+        WHERE M_Storage.M_Locator_ID = M_Locator.M_Locator_ID 
+        AND M_Storage.M_Product_ID = @M_Product_ID@ 
+        AND M_Storage.QtyOnHand != 0
+    )
+OR 
+    M_Locator.M_Locator_ID IN ('1000005', '1000003','1018641','1022392')
+)
+"
+MOLI_ProductLine,1000073,MOLI_ProductBrand_ID,1001681,1000064,8c33fbe5-ac46-439f-8364-5f8432e6da43,MOLI_ProductBrand (Product),U,S,MOLI_ProductBrand.IsActive='Y'
+MOLI_RegForm,1000084,C_BPartner_Location_ID,1002389,188,a4740a50-5262-4ee2-9d2a-3d4eb04091dd,C_BPartner_Loc - Relation,D,S,C_BPartner_Location.C_BPartner_ID=@C_BPartnerRelation_ID@
+MOLI_RegForm,1000084,C_BPartnerRelation_Location_ID,1002391,188,a4740a50-5262-4ee2-9d2a-3d4eb04091dd,C_BPartner_Loc - Relation,D,S,C_BPartner_Location.C_BPartner_ID=@C_BPartnerRelation_ID@
+M_Product,208,MOLI_HS_ID,1001714,1000066,467bc809-7f57-4340-aedd-baf49c7af8e0,MOLI_HS (Product),U,S,MOLI_HS.IsActive='Y'
+M_Product,208,MOLI_ProductBrand_ID,1001712,1000064,8c33fbe5-ac46-439f-8364-5f8432e6da43,MOLI_ProductBrand (Product),U,S,MOLI_ProductBrand.IsActive='Y'
+M_Product,208,MOLI_ProductLine_ID,1001713,1000065,f5209141-ea69-4dbe-87b4-6f9220b61d68,MOLI_ProductLine (Product),U,S,MOLI_ProductLine.IsActive='Y' AND MOLI_ProductLine.MOLI_ProductBrand_ID = @MOLI_ProductBrand_ID@

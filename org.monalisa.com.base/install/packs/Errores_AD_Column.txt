@@ -1,0 +1,56 @@
+203924  JsonData
+1000671 MOLI_C_Bank_ID
+1000682 MOLI_C_BankAccount_ID
+1001515 MOLI_TYPEDOCUMENT
+1000672 MOLI_C_BPartner_Location_ID
+1000675 MOLI_C_Charge_ID
+1000674 MOLI_C_BP_Group_ID
+100620 MOLI_ProductBrand_ID
+100621 MOLI_ProductLine_ID
+
+MOLI_IsLocalVendor','Local Vendor','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N',NULL,1000884,17,431),
+MOLI_CommGoalBase','Comm Goal Base','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000917,12,431),
+MOLI_CommGoal','Comm Goal','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000918,12,431),
+MOLI_CommGoalMiltiplier','Comm Goal Miltiplier','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000919,12,431),
+MOLI_CommGoalBaseMultiplier','Comm Goal Base Multiplier','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000920,12,431)
+Moli_InventoryLine_ID','Phys.Inventory','N','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000947,11,322),
+Moli_MovementQty','Moli_MovementQty','N','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000989,29,322)
+MOLI_M_PriceList_ID','M_PriceList(ID)','N','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000680,11,255)
+MOLI_TagLabel','TagLabel','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000941,10,208),
+MOLI_TagLabel','TagLabel','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000941,10,208),
+MOLI_TagLabelExt','TagLabel Extended','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000942,14,208),
+MOLI_ConfigurableSKU','Configurable SKU','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000998,10,208),
+MOLI_IsConsignment','Is Consignment','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1001016,20,208)
+MOLI_ProductBrand_ID','Product Brand','N','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000620,10,251)
+MOLI_Floreant_Data','Floreant Data','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000615,14,661)
+MOLI_Floreant Data','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000615,14,660)
+
+AD_Column_id 1001554
+(1001554,0,'N',0,'N','N','N',0,'N',44,'N','N','N','Y','554c4281-a00d-4353-a235-baa8213e043a',NOW(),'Y','MOLI_Cdc','CDC','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000536,10,323),
+--(1001554,0,'N',0,'N','N','N',0,'N',44,'N','N','N','Y','554c4281-a00d-4353-a235-baa8213e043a',NOW(),'Y','MOLI_Cdc','CDC','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000536,10,323),
+--(1001555,0,'N',0,'N','N','N',0,'N',2,'N','N','N','Y','e8602a75-3e1d-48d4-8558-5db599417b09',NOW(),'Y','MOLI_FsStatus','Fs Status','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000539,17,323),
+--(1001556,0,'N',0,'N','N','N',0,'N',4000,'N','N','N','Y','4e77b5ef-329a-450b-9fb7-36a524bedf66',NOW(),'Y','MOLI_FsError','Fs Error','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000540,10,323),
+--(1001557,0,'N',0,'N','N','N',0,'N',2,'N','N','N','Y','7704f43f-6f78-43dd-a0fe-729bea41a6d5',NOW(),'Y','MOLI_FsPaused','Fs Paused','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000541,17,323),
+--(1001558,0,'N',0,'N','N','N',0,'N',30,'N','N','N','Y','1e712697-6848-4699-8e09-8723b7a35035',NOW(),'Y','MOLI_VehicleType','Vehicle Type','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000555,10,323),
+--(1001559,0,'N',0,'N','N','N',0,'N',30,'N','N','N','Y','4dbc09a9-6798-4bdc-851d-064c43efb6be',NOW(),'Y','DRIVERID','DRIVERID','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000559,10,323),
+--(1001560,0,'N',0,'N','N','N',0,'N',60,'N','N','N','Y','6a49ff69-af6a-4f0b-a142-895b8640cb99',NOW(),'Y','DRIVERNAME','DRIVERNAME','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000556,10,323),
+--(1001561,0,'N',0,'N','N','N',0,'N',20,'N','N','N','Y','eacba16a-be09-4fd1-89f1-85b1df7458db',NOW(),'Y','MOLI_RucTransportista','Ruc Transportista','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000558,10,323),
+--(1001562,0,'N',0,'N','N','N',0,'N',60,'N','N','N','Y','c3af30f0-9ec1-4864-8fc0-cf575bcab01b',NOW(),'Y','MOLI_TransportDirection','Transport Direction','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000557,10,323),
+--(1001563,0,'N',0,'N','N','N',0,'N',22,'N','N','N','Y','15b0492a-f7d2-4afc-ad10-4ed8383b1931',NOW(),'Y','MOLI_Distancia','Distancia','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000560,10,323),
+--(1001564,0,'N',0,'N','N','N',0,'N',60,'N','N','N','Y','1f25bd0c-8f6b-4c96-8b1d-ba360e39ca8c',NOW(),'Y','VEHICLE','VEHICLE','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000561,10,323),
+--(1001565,0,'N',0,'N','N','N',0,'N',30,'N','N','N','Y','eb3bf65d-f236-4a8a-974a-f2c4ee915852',NOW(),'Y','VEHICLEID','VEHICLEID','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000562,10,323),
+--(1001566,0,'N',0,'N','N','N',0,'N',7,'N','N','N','Y','fc3ea739-6080-4409-b6bf-599d80f553fc',NOW(),'Y','MOLI_StartTransfer','Start Transfer','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000564,15,323),
+--(1001567,0,'N',0,'N','N','N',0,'N',7,'N','N','N','Y','e12d94e6-385f-47a5-8bd2-8e9f1025b19d',NOW(),'Y','MOLI_EndTransfer','End Transfer','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000563,15,323),
+--(1001568,0,'N',0,'N','N','N',0,'N',30,'N','N','N','Y','1e145af5-047d-4544-8864-e225e8ea8444',NOW(),'Y','MOLI_PreImpNO','Pre Imp NO','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000543,10,323),
+--(1001569,0,'N',0,'N','N','N',0,'N',2,'N','N','N','Y','80cd0199-186b-4b54-bd7e-9ad73a0ce597',NOW(),'Y','MOLI_FsVoidStatus','Fs Void Status','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000544,17,323),
+--(1001570,0,'N',0,'N','N','N',0,'N',4000,'N','N','N','Y','d42226cc-6093-4edd-ba16-5bcb0cd7e55d',NOW(),'Y','MOLI_FsVoidMessage','Fs Void Message','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000545,10,323),
+--(1001628,0,'N',0,'N','N','N',0,'N',4000,'N','N','N','Y','de7b647b-7ef6-4203-b788-c22ffa0f6ae9',NOW(),'Y','MOLI_FsMessage','Fs Message','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000554,10,323),
+--(1001655,0,'N',0,'N','N','N',0,'N',60,'N','N','N','Y','ee6e2875-76cb-4581-8aea-a3d881334686',NOW(),'Y','MOLI_Transportista','Transportista','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000619,10,323),
+--(1001771,0,'N',0,'N','N','N',0,'N',30,'N','N','N','Y','842c727d-1438-4200-9c40-f03163cf3f6b',NOW(),'Y','MOLI_FiscalDocumentNo','Fiscal Document NO','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000500,10,323),
+--(1001772,0,'N',0,'N','N','N',0,'N',30,'N','N','N','Y','5d6a4163-8771-4dfe-bd86-5599f311251f',NOW(),'Y','MOLI_LinkAuthId','Timbrado Asociado','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000611,10,323),
+--(1001773,0,'N',0,'N','N','N',0,'N',30,'N','N','N','Y','1ba2d46e-28c1-4183-9005-c4c494c8e0f3',NOW(),'Y','MOLI_LinkInvNo','Factura Asociado','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000612,10,323),
+--(1002962,0,'N',0,'N','N','N',0,'N',30,'N','N','N','Y','4348063f-a52b-4e8c-a815-c21f3fe7752e',NOW(),'Y','MOLI_InvoiceReference','Invoice Reference','Y','Y',100,100,'N','Y',0,0,NOW(),'U','N','N','N',1000772,10,323)
+(1001526,0,'N',0,'N','N','N',0,'N',22,'N','N','N','Y','73ed6558-23dc-4480-a675-f4405cb590fb',NOW(),'N','MOLI_GeoRefCode_ID','Geo Ref Code ID','Y','Y',100,100,'N','N',0,0,NOW(),'U','N','N','N',1000550,19,190)
+
+
+
