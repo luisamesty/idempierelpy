@@ -18,4 +18,5 @@ AD_Org_ID[Name],AD_Package_Exp_ID[Name],Line,Type,AD_EntityType_ID[EntityType],A
 *,MOLI_Tables # 2,1160,T,,,,,,,,Shipment/Receipt Line,ALL,,,,,,,,,,,,,,,,,,,
 *,MOLI_Tables # 2,1170,T,,,,,,,,Ship/Receipt Confirmation Line,ALL,,,,,,,,,,,,,,,,,,,
 *,MOLI_Tables # 2,1180,T,,,,,,,,Country,ALL,,,,,,,,,,,,,,,,,,,
+*,MOLI_Tables # 2,1210,T,,,,,,,,Price List Version,ALL,,,,,,,,,,,,,,,,,,,
 *,MOLI_Tables # 2,10000,D,,,,,,,,Package Exp.,ALL,SELECT * FROM AD_Package_Exp WHERE AD_Package_Exp_UU='51beb425-5a8d-4704-b24c-e6e88a47d472';AD_Package_Exp_Detail,,,,,,,,,,,,,,,,,,
