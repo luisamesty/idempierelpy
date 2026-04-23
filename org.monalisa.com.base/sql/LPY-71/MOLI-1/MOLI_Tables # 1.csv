@@ -14,4 +14,7 @@ AD_Org_ID[Name],AD_Package_Exp_ID[Name],Line,Type,AD_EntityType_ID[EntityType],A
 *,MOLI_Tables # 1,20130,T,,,,,,,,Regulation Form Line,ALL,,,,,,,,,,,,,,,,,,,
 *,MOLI_Tables # 1,20140,T,,,,,,,,Regulation Form Product,ALL,,,,,,,,,,,,,,,,,,,
 *,MOLI_Tables # 1,20150,T,,,,,,,,SKULabel,ALL,,,,,,,,,,,,,,,,,,,
-*,MOLI_Tables # 1,20160,D,,,,,,,,Package Exp.,ALL,SELECT * FROM AD_Package_Exp WHERE AD_Package_Exp_UU='5546cc62-4fc0-4a77-9cb0-238bccaf0b02';AD_Package_Exp_Detail,,,,,,,,,,,,,,,,,,
+*,MOLI_Tables # 1,20155,T,,,,,,,,Regulation Form,ALL,,,,,,,,,,,,,,,,,,,
+*,MOLI_Tables # 1,20160,T,,,,,,,,Regulation Form Line,ALL,,,,,,,,,,,,,,,,,,,
+*,MOLI_Tables # 1,20170,T,,,,,,,,Regulation Form Product,ALL,,,,,,,,,,,,,,,,,,,
+*,MOLI_Tables # 1,100000,D,,,,,,,,Package Exp.,ALL,SELECT * FROM AD_Package_Exp WHERE AD_Package_Exp_UU='5546cc62-4fc0-4a77-9cb0-238bccaf0b02';AD_Package_Exp_Detail,,,,,,,,,,,,,,,,,,
