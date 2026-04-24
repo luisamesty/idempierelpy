@@ -1,0 +1,7 @@
+AD_Org_ID[Name],AD_Package_Exp_ID[Name],Line,Type,AD_EntityType_ID[EntityType],AD_Menu_ID[Name],FileName,File_Directory,Target_Directory,Destination_FileName,Destination_Directory,AD_Table_ID[Name],DBType,SQLStatement,AD_Package_Code_Old,AD_Package_Code_New,AD_Form_ID[Name],AD_Process_ID[Value],AD_Workflow_ID[Value],AD_Window_ID[Name],AD_Role_ID[Name],AD_ReportView_ID[Name],AD_ImpFormat_ID[Name],AD_Val_Rule_ID[Name],AD_Message_ID[Value],AD_PrintFormat_ID[Name],ReleaseNo,Description,AD_Reference_ID[Name],AD_ModelValidator_ID[Name],AD_InfoWindow_ID[Name],ExecCode
+*,MOLI_Windows # 1,20010,W,,,,,,,,,ALL,,,,,,,Regulation Form Product,,,,,,,,,,,,
+*,MOLI_Windows # 1,20020,W,,,,,,,,,ALL,,,,,,,SKULabel,,,,,,,,,,,,
+*,MOLI_Windows # 1,20030,W,,,,,,,,,ALL,,,,,,,Brand USP,,,,,,,,,,,,
+*,MOLI_Windows # 1,20040,W,,,,,,,,,ALL,,,,,,,Regulation Form,,,,,,,,,,,,
+*,MOLI_Windows # 1,20050,W,,,,,,,,,ALL,,,,,,,Regulation Form Line,,,,,,,,,,,,
+*,MOLI_Windows # 1,60000,D,,,,,,,,Package Exp.,ALL,SELECT * FROM AD_Package_Exp WHERE AD_Package_Exp_UU='03a7ee6f-bb95-4f3d-b794-6a61449b14fe';AD_Package_Exp_Detail,,,,,,,,,,,,,,,,,,
