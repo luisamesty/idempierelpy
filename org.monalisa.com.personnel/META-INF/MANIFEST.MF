@@ -1,10 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Material Management
+Bundle-Name: Personnel Management
 Bundle-SymbolicName: org.monalisa.com.personnel
 Bundle-Version: 12.0.0.qualifier
 Bundle-Activator: org.adempiere.plugin.utils.AdempiereActivator
 Require-Bundle: org.adempiere.base;bundle-version="0.0.0",
+ org.amerpsoft.com.idempiere.personnelpayroll,
  org.monalisa.com.base;bundle-version="0.0.0",
  org.adempiere.plugin.utils;bundle-version="0.0.0",
  org.adempiere.report.jasper;bundle-version="0.0.0",
@@ -21,9 +22,13 @@ Require-Bundle: org.adempiere.base;bundle-version="0.0.0",
  zul;bundle-version="0.0.0",
  zweb;bundle-version="0.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Service-Component: OSGI-INF/PEMOLIModelFactory.xml,OSGI-INF/PEMOLIProcessFactory.xml
+Service-Component: OSGI-INF/PEMOLIModelFactory.xml,
+ OSGI-INF/PEMOLIProcessFactory.xml
 Import-Package: 
- org.compiere.apps
+ org.compiere.apps,
+ org.postgresql;version="42.0.0"
+Export-Package: org.moli.process,
+ org.monalisa.com.pe.factories
 Bundle-Vendor: Monalisa
 Automatic-Module-Name: org.monalisa.com.personnel
 Bundle-ActivationPolicy: lazy

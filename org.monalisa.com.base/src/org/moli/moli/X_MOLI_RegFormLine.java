@@ -32,7 +32,7 @@ public class X_MOLI_RegFormLine extends PO implements I_MOLI_RegFormLine, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250213L;
+	private static final long serialVersionUID = 20260908L;
 
     /** Standard Constructor */
     public X_MOLI_RegFormLine (Properties ctx, int MOLI_RegFormLine_ID, String trxName)
