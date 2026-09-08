@@ -38,7 +38,7 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241111L;
+	private static final long serialVersionUID = 20260908L;
 
     /** Standard Constructor */
     public X_M_Product (Properties ctx, int M_Product_ID, String trxName)
@@ -80,6 +80,10 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 			setLowLevel (0);
 // 0
 			setM_AttributeSetInstance_ID (0);
+			setMOLI_IsConsignment (false);
+// N
+			setMOLI_IsLocalVendor (false);
+// N
 			setM_Product_Category_ID (0);
 			setM_Product_ID (0);
 			setName (null);
@@ -129,6 +133,10 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 			setLowLevel (0);
 // 0
 			setM_AttributeSetInstance_ID (0);
+			setMOLI_IsConsignment (false);
+// N
+			setMOLI_IsLocalVendor (false);
+// N
 			setM_Product_Category_ID (0);
 			setM_Product_ID (0);
 			setName (null);
@@ -178,6 +186,10 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 			setLowLevel (0);
 // 0
 			setM_AttributeSetInstance_ID (0);
+			setMOLI_IsConsignment (false);
+// N
+			setMOLI_IsLocalVendor (false);
+// N
 			setM_Product_Category_ID (0);
 			setM_Product_ID (0);
 			setName (null);
@@ -227,6 +239,10 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 			setLowLevel (0);
 // 0
 			setM_AttributeSetInstance_ID (0);
+			setMOLI_IsConsignment (false);
+// N
+			setMOLI_IsLocalVendor (false);
+// N
 			setM_Product_Category_ID (0);
 			setM_Product_ID (0);
 			setName (null);
@@ -1132,11 +1148,26 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 		return ii.intValue();
 	}
 
-//	public I_MOLI_HS getMOLI_HS() throws RuntimeException
-//	{
-//		return (I_MOLI_HS)MTable.get(getCtx(), I_MOLI_HS.Table_ID)
-//			.getPO(getMOLI_HS_ID(), get_TrxName());
-//	}
+	/** Set Configurable SKU.
+		@param MOLI_ConfigurableSKU Configurable SKU
+	*/
+	public void setMOLI_ConfigurableSKU (String MOLI_ConfigurableSKU)
+	{
+		set_Value (COLUMNNAME_MOLI_ConfigurableSKU, MOLI_ConfigurableSKU);
+	}
+
+	/** Get Configurable SKU.
+		@return Configurable SKU	  */
+	public String getMOLI_ConfigurableSKU()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_ConfigurableSKU);
+	}
+
+	public I_MOLI_HS getMOLI_HS() throws RuntimeException
+	{
+		return (I_MOLI_HS)MTable.get(getCtx(), I_MOLI_HS.Table_ID)
+			.getPO(getMOLI_HS_ID(), get_TrxName());
+	}
 
 	/** Set Harmonized System.
 		@param MOLI_HS_ID Harmonized Commodity Description and Coding System (HS Convention) 
@@ -1160,6 +1191,50 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 		return ii.intValue();
 	}
 
+	/** Set Is Consignment.
+		@param MOLI_IsConsignment Is Consignment
+	*/
+	public void setMOLI_IsConsignment (boolean MOLI_IsConsignment)
+	{
+		set_Value (COLUMNNAME_MOLI_IsConsignment, Boolean.valueOf(MOLI_IsConsignment));
+	}
+
+	/** Get Is Consignment.
+		@return Is Consignment	  */
+	public boolean isMOLI_IsConsignment()
+	{
+		Object oo = get_Value(COLUMNNAME_MOLI_IsConsignment);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Local Vendor.
+		@param MOLI_IsLocalVendor Local Vendor
+	*/
+	public void setMOLI_IsLocalVendor (boolean MOLI_IsLocalVendor)
+	{
+		set_Value (COLUMNNAME_MOLI_IsLocalVendor, Boolean.valueOf(MOLI_IsLocalVendor));
+	}
+
+	/** Get Local Vendor.
+		@return Local Vendor	  */
+	public boolean isMOLI_IsLocalVendor()
+	{
+		Object oo = get_Value(COLUMNNAME_MOLI_IsLocalVendor);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
 	/** Set M_Product(ID).
 		@param MOLI_M_Product_ID M_Product(ID)
 	*/
@@ -1177,11 +1252,11 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 		return ii.intValue();
 	}
 
-//	public I_MOLI_ProductBrand getMOLI_ProductBrand() throws RuntimeException
-//	{
-//		return (I_MOLI_ProductBrand)MTable.get(getCtx(), I_MOLI_ProductBrand.Table_ID)
-//			.getPO(getMOLI_ProductBrand_ID(), get_TrxName());
-//	}
+	public I_MOLI_ProductBrand getMOLI_ProductBrand() throws RuntimeException
+	{
+		return (I_MOLI_ProductBrand)MTable.get(getCtx(), I_MOLI_ProductBrand.Table_ID)
+			.getPO(getMOLI_ProductBrand_ID(), get_TrxName());
+	}
 
 	/** Set Product Brand.
 		@param MOLI_ProductBrand_ID Product Brand
@@ -1205,11 +1280,11 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 		return ii.intValue();
 	}
 
-//	public I_MOLI_ProductLine getMOLI_ProductLine() throws RuntimeException
-//	{
-//		return (I_MOLI_ProductLine)MTable.get(getCtx(), I_MOLI_ProductLine.Table_ID)
-//			.getPO(getMOLI_ProductLine_ID(), get_TrxName());
-//	}
+	public I_MOLI_ProductLine getMOLI_ProductLine() throws RuntimeException
+	{
+		return (I_MOLI_ProductLine)MTable.get(getCtx(), I_MOLI_ProductLine.Table_ID)
+			.getPO(getMOLI_ProductLine_ID(), get_TrxName());
+	}
 
 	/** Set Product Line.
 		@param MOLI_ProductLine_ID Product Line
@@ -1233,6 +1308,56 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 		return ii.intValue();
 	}
 
+	/** Set Product Size.
+		@param MOLI_ProductSize Product Size
+	*/
+	public void setMOLI_ProductSize (BigDecimal MOLI_ProductSize)
+	{
+		set_Value (COLUMNNAME_MOLI_ProductSize, MOLI_ProductSize);
+	}
+
+	/** Get Product Size.
+		@return Product Size
+	  */
+	public BigDecimal getMOLI_ProductSize()
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_MOLI_ProductSize);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** cm = cm */
+	public static final String MOLI_PRODUCTSIZEUOM_Cm = "cm";
+	/** gr = gr */
+	public static final String MOLI_PRODUCTSIZEUOM_Gr = "gr";
+	/** kg = kg */
+	public static final String MOLI_PRODUCTSIZEUOM_Kg = "kg";
+	/** l = l */
+	public static final String MOLI_PRODUCTSIZEUOM_L = "l";
+	/** ml = ml */
+	public static final String MOLI_PRODUCTSIZEUOM_Ml = "ml";
+	/** oz = oz */
+	public static final String MOLI_PRODUCTSIZEUOM_Oz = "oz";
+	/** un = un */
+	public static final String MOLI_PRODUCTSIZEUOM_Un = "un";
+	/** Set Product Size UOM.
+		@param MOLI_ProductSizeUOM Product Size UOM
+	*/
+	public void setMOLI_ProductSizeUOM (String MOLI_ProductSizeUOM)
+	{
+
+		set_Value (COLUMNNAME_MOLI_ProductSizeUOM, MOLI_ProductSizeUOM);
+	}
+
+	/** Get Product Size UOM.
+		@return Product Size UOM
+	  */
+	public String getMOLI_ProductSizeUOM()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_ProductSizeUOM);
+	}
+
 	/** Set Sync Prefix.
 		@param MOLI_SyncPrefix Sync Prefix
 	*/
@@ -1246,6 +1371,36 @@ public class X_M_Product extends PO implements I_M_Product, I_Persistent
 	public String getMOLI_SyncPrefix()
 	{
 		return (String)get_Value(COLUMNNAME_MOLI_SyncPrefix);
+	}
+
+	/** Set TagLabel.
+		@param MOLI_TagLabel TagLabel
+	*/
+	public void setMOLI_TagLabel (String MOLI_TagLabel)
+	{
+		set_Value (COLUMNNAME_MOLI_TagLabel, MOLI_TagLabel);
+	}
+
+	/** Get TagLabel.
+		@return TagLabel	  */
+	public String getMOLI_TagLabel()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_TagLabel);
+	}
+
+	/** Set TagLabel Extended.
+		@param MOLI_TagLabelExt TagLabel Extended
+	*/
+	public void setMOLI_TagLabelExt (String MOLI_TagLabelExt)
+	{
+		set_Value (COLUMNNAME_MOLI_TagLabelExt, MOLI_TagLabelExt);
+	}
+
+	/** Get TagLabel Extended.
+		@return TagLabel Extended	  */
+	public String getMOLI_TagLabelExt()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_TagLabelExt);
 	}
 
 	public org.compiere.model.I_M_PartType getM_PartType() throws RuntimeException
