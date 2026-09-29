@@ -473,6 +473,15 @@ public interface I_MOLI_RegForm
 	/** Get Reg Gen Name	  */
 	public String getMOLI_RegGenName();
 
+    /** Column name MOLI_RegGrade */
+    public static final String COLUMNNAME_MOLI_RegGrade = "MOLI_RegGrade";
+
+	/** Set Product Grade	  */
+	public void setMOLI_RegGrade (String MOLI_RegGrade);
+
+	/** Get Product Grade	  */
+	public String getMOLI_RegGrade();
+
     /** Column name MOLI_RegPresentationForm */
     public static final String COLUMNNAME_MOLI_RegPresentationForm = "MOLI_RegPresentationForm";
 
@@ -481,6 +490,15 @@ public interface I_MOLI_RegForm
 
 	/** Get Reg Presentation Form	  */
 	public String getMOLI_RegPresentationForm();
+
+    /** Column name MOLI_RegVariety */
+    public static final String COLUMNNAME_MOLI_RegVariety = "MOLI_RegVariety";
+
+	/** Set Product Variety	  */
+	public void setMOLI_RegVariety (String MOLI_RegVariety);
+
+	/** Get Product Variety	  */
+	public String getMOLI_RegVariety();
 
     /** Column name MOLI_RUC */
     public static final String COLUMNNAME_MOLI_RUC = "MOLI_RUC";
