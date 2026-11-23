@@ -46,8 +46,8 @@ public interface I_C_Invoice
     /** Column name AD_Client_ID */
     public static final String COLUMNNAME_AD_Client_ID = "AD_Client_ID";
 
-	/** Get Client.
-	  * Client/Tenant for this installation.
+	/** Get Tenant.
+	  * Tenant for this installation.
 	  */
 	public int getAD_Client_ID();
 
@@ -55,12 +55,12 @@ public interface I_C_Invoice
     public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
 
 	/** Set Organization.
-	  * Organizational entity within client
+	  * Organizational entity within tenant
 	  */
 	public void setAD_Org_ID (int AD_Org_ID);
 
 	/** Get Organization.
-	  * Organizational entity within client
+	  * Organizational entity within tenant
 	  */
 	public int getAD_Org_ID();
 
@@ -757,6 +757,33 @@ public interface I_C_Invoice
 	  */
 	public boolean isTransferred();
 
+    /** Column name MOLI_AmtIVA0 */
+    public static final String COLUMNNAME_MOLI_AmtIVA0 = "MOLI_AmtIVA0";
+
+	/** Set Amt IVA0	  */
+	public void setMOLI_AmtIVA0 (BigDecimal MOLI_AmtIVA0);
+
+	/** Get Amt IVA0	  */
+	public BigDecimal getMOLI_AmtIVA0();
+
+    /** Column name MOLI_AmtIVA10 */
+    public static final String COLUMNNAME_MOLI_AmtIVA10 = "MOLI_AmtIVA10";
+
+	/** Set Amt IVA10	  */
+	public void setMOLI_AmtIVA10 (BigDecimal MOLI_AmtIVA10);
+
+	/** Get Amt IVA10	  */
+	public BigDecimal getMOLI_AmtIVA10();
+
+    /** Column name MOLI_AmtIVA5 */
+    public static final String COLUMNNAME_MOLI_AmtIVA5 = "MOLI_AmtIVA5";
+
+	/** Set Amt IVA5	  */
+	public void setMOLI_AmtIVA5 (BigDecimal MOLI_AmtIVA5);
+
+	/** Get Amt IVA5	  */
+	public BigDecimal getMOLI_AmtIVA5();
+
     /** Column name MOLI_AuthNo */
     public static final String COLUMNNAME_MOLI_AuthNo = "MOLI_AuthNo";
 
@@ -774,6 +801,19 @@ public interface I_C_Invoice
 
 	/** Get CDC	  */
 	public String getMOLI_Cdc();
+
+    /** Column name MOLI_C_Invoice_ID */
+    public static final String COLUMNNAME_MOLI_C_Invoice_ID = "MOLI_C_Invoice_ID";
+
+	/** Set MOLI_C_Invoice(ID).
+	  * MOLI_C_Invoice(ID)
+	  */
+	public void setMOLI_C_Invoice_ID (int MOLI_C_Invoice_ID);
+
+	/** Get MOLI_C_Invoice(ID).
+	  * MOLI_C_Invoice(ID)
+	  */
+	public int getMOLI_C_Invoice_ID();
 
     /** Column name MOLI_CreditNoteReason */
     public static final String COLUMNNAME_MOLI_CreditNoteReason = "MOLI_CreditNoteReason";
@@ -869,6 +909,24 @@ public interface I_C_Invoice
 	/** Get Invoice NO	  */
 	public String getMOLI_InvoiceNo();
 
+    /** Column name MOLI_InvoiceReference */
+    public static final String COLUMNNAME_MOLI_InvoiceReference = "MOLI_InvoiceReference";
+
+	/** Set Invoice Reference	  */
+	public void setMOLI_InvoiceReference (String MOLI_InvoiceReference);
+
+	/** Get Invoice Reference	  */
+	public String getMOLI_InvoiceReference();
+
+    /** Column name MOLI_IsExcluded */
+    public static final String COLUMNNAME_MOLI_IsExcluded = "MOLI_IsExcluded";
+
+	/** Set Excluded	  */
+	public void setMOLI_IsExcluded (boolean MOLI_IsExcluded);
+
+	/** Get Excluded	  */
+	public boolean isMOLI_IsExcluded();
+
     /** Column name MOLI_LinkAuthId */
     public static final String COLUMNNAME_MOLI_LinkAuthId = "MOLI_LinkAuthId";
 
@@ -895,6 +953,32 @@ public interface I_C_Invoice
 
 	/** Get Pre Imp NO	  */
 	public String getMOLI_PreImpNO();
+
+    /** Column name MOL_IsVerified */
+    public static final String COLUMNNAME_MOL_IsVerified = "MOL_IsVerified";
+
+	/** Set Invoice Verified.
+	  * Invoice Verified
+	  */
+	public void setMOL_IsVerified (boolean MOL_IsVerified);
+
+	/** Get Invoice Verified.
+	  * Invoice Verified
+	  */
+	public boolean isMOL_IsVerified();
+
+    /** Column name MOLI_TaxCLBase */
+    public static final String COLUMNNAME_MOLI_TaxCLBase = "MOLI_TaxCLBase";
+
+	/** Set Tax Base.
+	  * Custom Tax Base
+	  */
+	public void setMOLI_TaxCLBase (BigDecimal MOLI_TaxCLBase);
+
+	/** Get Tax Base.
+	  * Custom Tax Base
+	  */
+	public BigDecimal getMOLI_TaxCLBase();
 
     /** Column name M_PriceList_ID */
     public static final String COLUMNNAME_M_PriceList_ID = "M_PriceList_ID";

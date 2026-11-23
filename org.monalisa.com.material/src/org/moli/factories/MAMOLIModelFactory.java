@@ -17,9 +17,6 @@ public class MAMOLIModelFactory implements IModelFactory {
 
 	@Override
 	public Class<?> getClass(String tableName) {
-		// MOLI_I_Product
-		if(tableName.equalsIgnoreCase(MO_Product.Table_Name))
-			return MO_Product.class;
 		// MO_Warehouse
 		if(tableName.equalsIgnoreCase(MO_Warehouse.Table_Name))
 			return MO_Warehouse.class;
@@ -28,9 +25,6 @@ public class MAMOLIModelFactory implements IModelFactory {
 
 	@Override
 	public PO getPO(String tableName, int Record_ID, String trxName) {
-		// MOLI_I_Product
-		if(tableName.equalsIgnoreCase(MO_Product.Table_Name))
-			return new MO_Product(Env.getCtx(),Record_ID, trxName);
 		// MO_Warehouse
 		if(tableName.equalsIgnoreCase(MO_Warehouse.Table_Name))
 			return new MO_Warehouse(Env.getCtx(),Record_ID, trxName);
@@ -39,9 +33,6 @@ public class MAMOLIModelFactory implements IModelFactory {
 
 	@Override
 	public PO getPO(String tableName, ResultSet rs, String trxName) {
-		// MOLI_I_Product
-		if(tableName.equalsIgnoreCase(MO_Product.Table_Name))
-			return new MO_Product(Env.getCtx(),rs, trxName);
 		// MO_Warehouse
 		if(tableName.equalsIgnoreCase(MO_Warehouse.Table_Name))
 			return new MO_Warehouse(Env.getCtx(),rs, trxName);

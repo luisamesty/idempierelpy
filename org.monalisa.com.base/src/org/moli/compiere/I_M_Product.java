@@ -20,6 +20,9 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
+import org.moli.moli.I_MOLI_HS;
+import org.moli.moli.I_MOLI_ProductBrand;
+import org.moli.moli.I_MOLI_ProductLine;
 
 /** Generated Interface for M_Product
  *  @author iDempiere (generated) 
@@ -46,8 +49,8 @@ public interface I_M_Product
     /** Column name AD_Client_ID */
     public static final String COLUMNNAME_AD_Client_ID = "AD_Client_ID";
 
-	/** Get Client.
-	  * Client/Tenant for this installation.
+	/** Get Tenant.
+	  * Tenant for this installation.
 	  */
 	public int getAD_Client_ID();
 
@@ -55,12 +58,12 @@ public interface I_M_Product
     public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
 
 	/** Set Organization.
-	  * Organizational entity within client
+	  * Organizational entity within tenant
 	  */
 	public void setAD_Org_ID (int AD_Org_ID);
 
 	/** Get Organization.
-	  * Organizational entity within client
+	  * Organizational entity within tenant
 	  */
 	public int getAD_Org_ID();
 
@@ -617,6 +620,15 @@ public interface I_M_Product
 
 	public I_M_Locator getM_Locator() throws RuntimeException;
 
+    /** Column name MOLI_ConfigurableSKU */
+    public static final String COLUMNNAME_MOLI_ConfigurableSKU = "MOLI_ConfigurableSKU";
+
+	/** Set Configurable SKU	  */
+	public void setMOLI_ConfigurableSKU (String MOLI_ConfigurableSKU);
+
+	/** Get Configurable SKU	  */
+	public String getMOLI_ConfigurableSKU();
+
     /** Column name MOLI_HS_ID */
     public static final String COLUMNNAME_MOLI_HS_ID = "MOLI_HS_ID";
 
@@ -630,7 +642,25 @@ public interface I_M_Product
 	  */
 	public int getMOLI_HS_ID();
 
-//	public I_MOLI_HS getMOLI_HS() throws RuntimeException;
+	public I_MOLI_HS getMOLI_HS() throws RuntimeException;
+
+    /** Column name MOLI_IsConsignment */
+    public static final String COLUMNNAME_MOLI_IsConsignment = "MOLI_IsConsignment";
+
+	/** Set Is Consignment	  */
+	public void setMOLI_IsConsignment (boolean MOLI_IsConsignment);
+
+	/** Get Is Consignment	  */
+	public boolean isMOLI_IsConsignment();
+
+    /** Column name MOLI_IsLocalVendor */
+    public static final String COLUMNNAME_MOLI_IsLocalVendor = "MOLI_IsLocalVendor";
+
+	/** Set Local Vendor	  */
+	public void setMOLI_IsLocalVendor (boolean MOLI_IsLocalVendor);
+
+	/** Get Local Vendor	  */
+	public boolean isMOLI_IsLocalVendor();
 
     /** Column name MOLI_M_Product_ID */
     public static final String COLUMNNAME_MOLI_M_Product_ID = "MOLI_M_Product_ID";
@@ -654,7 +684,7 @@ public interface I_M_Product
 	  */
 	public int getMOLI_ProductBrand_ID();
 
-//	public I_MOLI_ProductBrand getMOLI_ProductBrand() throws RuntimeException;
+	public I_MOLI_ProductBrand getMOLI_ProductBrand() throws RuntimeException;
 
     /** Column name MOLI_ProductLine_ID */
     public static final String COLUMNNAME_MOLI_ProductLine_ID = "MOLI_ProductLine_ID";
@@ -669,7 +699,33 @@ public interface I_M_Product
 	  */
 	public int getMOLI_ProductLine_ID();
 
-//	public I_MOLI_ProductLine getMOLI_ProductLine() throws RuntimeException;
+	public I_MOLI_ProductLine getMOLI_ProductLine() throws RuntimeException;
+
+    /** Column name MOLI_ProductSize */
+    public static final String COLUMNNAME_MOLI_ProductSize = "MOLI_ProductSize";
+
+	/** Set Product Size.
+	  * Product Size
+	  */
+	public void setMOLI_ProductSize (BigDecimal MOLI_ProductSize);
+
+	/** Get Product Size.
+	  * Product Size
+	  */
+	public BigDecimal getMOLI_ProductSize();
+
+    /** Column name MOLI_ProductSizeUOM */
+    public static final String COLUMNNAME_MOLI_ProductSizeUOM = "MOLI_ProductSizeUOM";
+
+	/** Set Product Size UOM.
+	  * Product Size UOM
+	  */
+	public void setMOLI_ProductSizeUOM (String MOLI_ProductSizeUOM);
+
+	/** Get Product Size UOM.
+	  * Product Size UOM
+	  */
+	public String getMOLI_ProductSizeUOM();
 
     /** Column name MOLI_SyncPrefix */
     public static final String COLUMNNAME_MOLI_SyncPrefix = "MOLI_SyncPrefix";
@@ -679,6 +735,24 @@ public interface I_M_Product
 
 	/** Get Sync Prefix	  */
 	public String getMOLI_SyncPrefix();
+
+    /** Column name MOLI_TagLabel */
+    public static final String COLUMNNAME_MOLI_TagLabel = "MOLI_TagLabel";
+
+	/** Set TagLabel	  */
+	public void setMOLI_TagLabel (String MOLI_TagLabel);
+
+	/** Get TagLabel	  */
+	public String getMOLI_TagLabel();
+
+    /** Column name MOLI_TagLabelExt */
+    public static final String COLUMNNAME_MOLI_TagLabelExt = "MOLI_TagLabelExt";
+
+	/** Set TagLabel Extended	  */
+	public void setMOLI_TagLabelExt (String MOLI_TagLabelExt);
+
+	/** Get TagLabel Extended	  */
+	public String getMOLI_TagLabelExt();
 
     /** Column name M_PartType_ID */
     public static final String COLUMNNAME_M_PartType_ID = "M_PartType_ID";
