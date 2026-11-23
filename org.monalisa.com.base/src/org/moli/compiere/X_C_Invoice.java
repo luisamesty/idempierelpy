@@ -35,7 +35,7 @@ public class X_C_Invoice extends PO implements I_C_Invoice, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20241009L;
+	private static final long serialVersionUID = 20260805L;
 
     /** Standard Constructor */
     public X_C_Invoice (Properties ctx, int C_Invoice_ID, String trxName)
@@ -77,6 +77,10 @@ public class X_C_Invoice extends PO implements I_C_Invoice, I_Persistent
 // @IsSOTrx@
 			setIsTaxIncluded (false);
 			setIsTransferred (false);
+			setMOLI_IsExcluded (false);
+// N
+			setMOL_IsVerified (false);
+// N
 			setM_PriceList_ID (0);
 			setPaymentRule (null);
 // P
@@ -128,6 +132,10 @@ public class X_C_Invoice extends PO implements I_C_Invoice, I_Persistent
 // @IsSOTrx@
 			setIsTaxIncluded (false);
 			setIsTransferred (false);
+			setMOLI_IsExcluded (false);
+// N
+			setMOL_IsVerified (false);
+// N
 			setM_PriceList_ID (0);
 			setPaymentRule (null);
 // P
@@ -179,6 +187,10 @@ public class X_C_Invoice extends PO implements I_C_Invoice, I_Persistent
 // @IsSOTrx@
 			setIsTaxIncluded (false);
 			setIsTransferred (false);
+			setMOLI_IsExcluded (false);
+// N
+			setMOL_IsVerified (false);
+// N
 			setM_PriceList_ID (0);
 			setPaymentRule (null);
 // P
@@ -230,6 +242,10 @@ public class X_C_Invoice extends PO implements I_C_Invoice, I_Persistent
 // @IsSOTrx@
 			setIsTaxIncluded (false);
 			setIsTransferred (false);
+			setMOLI_IsExcluded (false);
+// N
+			setMOL_IsVerified (false);
+// N
 			setM_PriceList_ID (0);
 			setPaymentRule (null);
 // P
@@ -1516,6 +1532,57 @@ public class X_C_Invoice extends PO implements I_C_Invoice, I_Persistent
 		return false;
 	}
 
+	/** Set Amt IVA0.
+		@param MOLI_AmtIVA0 Amt IVA0
+	*/
+	public void setMOLI_AmtIVA0 (BigDecimal MOLI_AmtIVA0)
+	{
+		throw new IllegalArgumentException ("MOLI_AmtIVA0 is virtual column");	}
+
+	/** Get Amt IVA0.
+		@return Amt IVA0	  */
+	public BigDecimal getMOLI_AmtIVA0()
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_MOLI_AmtIVA0);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Amt IVA10.
+		@param MOLI_AmtIVA10 Amt IVA10
+	*/
+	public void setMOLI_AmtIVA10 (BigDecimal MOLI_AmtIVA10)
+	{
+		throw new IllegalArgumentException ("MOLI_AmtIVA10 is virtual column");	}
+
+	/** Get Amt IVA10.
+		@return Amt IVA10	  */
+	public BigDecimal getMOLI_AmtIVA10()
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_MOLI_AmtIVA10);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Amt IVA5.
+		@param MOLI_AmtIVA5 Amt IVA5
+	*/
+	public void setMOLI_AmtIVA5 (BigDecimal MOLI_AmtIVA5)
+	{
+		throw new IllegalArgumentException ("MOLI_AmtIVA5 is virtual column");	}
+
+	/** Get Amt IVA5.
+		@return Amt IVA5	  */
+	public BigDecimal getMOLI_AmtIVA5()
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_MOLI_AmtIVA5);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
 	/** Set Auth No.
 		@param MOLI_AuthNo Auth No
 	*/
@@ -1544,6 +1611,24 @@ public class X_C_Invoice extends PO implements I_C_Invoice, I_Persistent
 	public String getMOLI_Cdc()
 	{
 		return (String)get_Value(COLUMNNAME_MOLI_Cdc);
+	}
+
+	/** Set MOLI_C_Invoice(ID).
+		@param MOLI_C_Invoice_ID MOLI_C_Invoice(ID)
+	*/
+	public void setMOLI_C_Invoice_ID (int MOLI_C_Invoice_ID)
+	{
+		throw new IllegalArgumentException ("MOLI_C_Invoice_ID is virtual column");	}
+
+	/** Get MOLI_C_Invoice(ID).
+		@return MOLI_C_Invoice(ID)
+	  */
+	public int getMOLI_C_Invoice_ID()
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_MOLI_C_Invoice_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Devolución y Ajuste de precios = 1 */
@@ -1760,6 +1845,43 @@ public class X_C_Invoice extends PO implements I_C_Invoice, I_Persistent
 		return (String)get_Value(COLUMNNAME_MOLI_InvoiceNo);
 	}
 
+	/** Set Invoice Reference.
+		@param MOLI_InvoiceReference Invoice Reference
+	*/
+	public void setMOLI_InvoiceReference (String MOLI_InvoiceReference)
+	{
+		set_Value (COLUMNNAME_MOLI_InvoiceReference, MOLI_InvoiceReference);
+	}
+
+	/** Get Invoice Reference.
+		@return Invoice Reference	  */
+	public String getMOLI_InvoiceReference()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_InvoiceReference);
+	}
+
+	/** Set Excluded.
+		@param MOLI_IsExcluded Excluded
+	*/
+	public void setMOLI_IsExcluded (boolean MOLI_IsExcluded)
+	{
+		set_Value (COLUMNNAME_MOLI_IsExcluded, Boolean.valueOf(MOLI_IsExcluded));
+	}
+
+	/** Get Excluded.
+		@return Excluded	  */
+	public boolean isMOLI_IsExcluded()
+	{
+		Object oo = get_Value(COLUMNNAME_MOLI_IsExcluded);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
 	/** Set Timbrado Asociado.
 		@param MOLI_LinkAuthId Timbrado Asociado
 	*/
@@ -1803,6 +1925,48 @@ public class X_C_Invoice extends PO implements I_C_Invoice, I_Persistent
 	public String getMOLI_PreImpNO()
 	{
 		return (String)get_Value(COLUMNNAME_MOLI_PreImpNO);
+	}
+
+	/** Set Invoice Verified.
+		@param MOL_IsVerified Invoice Verified
+	*/
+	public void setMOL_IsVerified (boolean MOL_IsVerified)
+	{
+		set_Value (COLUMNNAME_MOL_IsVerified, Boolean.valueOf(MOL_IsVerified));
+	}
+
+	/** Get Invoice Verified.
+		@return Invoice Verified
+	  */
+	public boolean isMOL_IsVerified()
+	{
+		Object oo = get_Value(COLUMNNAME_MOL_IsVerified);
+		if (oo != null)
+		{
+			 if (oo instanceof Boolean)
+				 return ((Boolean)oo).booleanValue();
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	/** Set Tax Base.
+		@param MOLI_TaxCLBase Custom Tax Base
+	*/
+	public void setMOLI_TaxCLBase (BigDecimal MOLI_TaxCLBase)
+	{
+		set_Value (COLUMNNAME_MOLI_TaxCLBase, MOLI_TaxCLBase);
+	}
+
+	/** Get Tax Base.
+		@return Custom Tax Base
+	  */
+	public BigDecimal getMOLI_TaxCLBase()
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_MOLI_TaxCLBase);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
 	}
 
 	public org.compiere.model.I_M_PriceList getM_PriceList() throws RuntimeException

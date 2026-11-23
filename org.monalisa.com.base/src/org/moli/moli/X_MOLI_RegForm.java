@@ -21,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
 import org.compiere.model.*;
+import org.compiere.util.KeyNamePair;
 
 /** Generated Model for MOLI_RegForm
  *  @author iDempiere (generated)
@@ -32,7 +33,7 @@ public class X_MOLI_RegForm extends PO implements I_MOLI_RegForm, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20250213L;
+	private static final long serialVersionUID = 20260908L;
 
     /** Standard Constructor */
     public X_MOLI_RegForm (Properties ctx, int MOLI_RegForm_ID, String trxName)
@@ -439,8 +440,12 @@ public class X_MOLI_RegForm extends PO implements I_MOLI_RegForm, I_Persistent
 	public static final String MOLI_ACTIVITY_ModificaciónDeComposición = "MC";
 	/** Nuevo Registro = NR */
 	public static final String MOLI_ACTIVITY_NuevoRegistro = "NR";
+	/** No Iniciado = PR */
+	public static final String MOLI_ACTIVITY_NoIniciado = "PR";
 	/** Renovación de Registro = RR */
 	public static final String MOLI_ACTIVITY_RenovaciónDeRegistro = "RR";
+	/** Registro Vencido = VO */
+	public static final String MOLI_ACTIVITY_RegistroVencido = "VO";
 	/** Set Actividad.
 		@param MOLI_Activity Actividad
 	*/
@@ -734,6 +739,21 @@ public class X_MOLI_RegForm extends PO implements I_MOLI_RegForm, I_Persistent
 		return (String)get_Value(COLUMNNAME_MOLI_RegGenName);
 	}
 
+	/** Set Product Grade.
+		@param MOLI_RegGrade Product Grade
+	*/
+	public void setMOLI_RegGrade (String MOLI_RegGrade)
+	{
+		set_Value (COLUMNNAME_MOLI_RegGrade, MOLI_RegGrade);
+	}
+
+	/** Get Product Grade.
+		@return Product Grade	  */
+	public String getMOLI_RegGrade()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_RegGrade);
+	}
+
 	/** Set Reg Presentation Form.
 		@param MOLI_RegPresentationForm Reg Presentation Form
 	*/
@@ -747,6 +767,21 @@ public class X_MOLI_RegForm extends PO implements I_MOLI_RegForm, I_Persistent
 	public String getMOLI_RegPresentationForm()
 	{
 		return (String)get_Value(COLUMNNAME_MOLI_RegPresentationForm);
+	}
+
+	/** Set Product Variety.
+		@param MOLI_RegVariety Product Variety
+	*/
+	public void setMOLI_RegVariety (String MOLI_RegVariety)
+	{
+		set_Value (COLUMNNAME_MOLI_RegVariety, MOLI_RegVariety);
+	}
+
+	/** Get Product Variety.
+		@return Product Variety	  */
+	public String getMOLI_RegVariety()
+	{
+		return (String)get_Value(COLUMNNAME_MOLI_RegVariety);
 	}
 
 	/** Set RUC.
@@ -808,6 +843,14 @@ public class X_MOLI_RegForm extends PO implements I_MOLI_RegForm, I_Persistent
 	{
 		return (String)get_Value(COLUMNNAME_Name);
 	}
+
+    /** Get Record ID/ColumnName
+        @return ID/ColumnName pair
+      */
+    public KeyNamePair getKeyNamePair()
+    {
+        return new KeyNamePair(get_ID(), getName());
+    }
 
 	/** Set Phone.
 		@param Phone Identifies a telephone number
