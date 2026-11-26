@@ -41,7 +41,8 @@ public class MOLIImportHikCentralToRow extends SvrProcess {
 
     private IProcessUI processMonitor = null;
     private String paramMsg = "";
-
+    private String fechasMsg = "";
+    
     private static final String EVENT_TS_EXPR = "COALESCE(datetime, (datetrx + timetrx))";
 
     @Override
@@ -123,6 +124,12 @@ public class MOLIImportHikCentralToRow extends SvrProcess {
         cal.set(Calendar.MILLISECOND, 999);
         p_RefDateEnd = new Timestamp(cal.getTimeInMillis());
 
+        fechasMsg += "Fecha / Hora actualizadas:  DateIni=" + p_RefDateIni
+                + " | DateEnd=" + p_RefDateEnd
+                + "\r\n";
+        log.warning(fechasMsg);
+        fechasMsg += fechasMsg;
+        
         String countSql = "SELECT COUNT(*) FROM ( "
                 + "SELECT DISTINCT ON (pin, event_ts) id "
                 + "FROM ( "
